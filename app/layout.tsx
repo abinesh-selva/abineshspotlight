@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Syne, Outfit } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const syne = Syne({
@@ -17,9 +18,25 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://abineshspotlight.online'),
   title: 'Abinesh S — Full Stack Engineer & WordPress Developer',
   description:
     'Full Stack Engineer and Senior WordPress Developer with 3+ years delivering production-grade websites for global clients. React, Next.js, PHP, Flutter, AI/LLM integration.',
+  keywords: [
+    'Full Stack Engineer',
+    'WordPress Developer',
+    'Next.js Developer',
+    'React Developer',
+    'Flutter Developer',
+    'AI Integration',
+    'Abinesh',
+    'Portfolio',
+  ],
+  authors: [{ name: 'Abinesh S', url: 'https://abineshspotlight.online' }],
+  creator: 'Abinesh S',
+  alternates: {
+    canonical: 'https://abineshspotlight.online',
+  },
   openGraph: {
     title: 'Abinesh S — Full Stack Engineer & WordPress Developer',
     description: 'Delivering production-grade websites for Unbounce, OGP, ElasticPath, PBC, and more.',
@@ -27,6 +44,30 @@ export const metadata: Metadata = {
     siteName: 'Abinesh S',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Abinesh S — Full Stack Engineer & WordPress Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Abinesh S — Full Stack Engineer & WordPress Developer',
+    description: 'Delivering production-grade websites for Unbounce, OGP, ElasticPath, PBC, and more.',
+    images: ['/images/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
@@ -35,6 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${syne.variable} ${outfit.variable} scroll-smooth`}>
       <body className="font-sans bg-canvas text-ink antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   )

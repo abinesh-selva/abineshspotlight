@@ -23,6 +23,30 @@ const services = [
     desc: 'Cross-platform Flutter apps and AI/LLM feature integration — voice tracking, OCR, and intelligent interfaces.',
     tags: ['Flutter', 'AI / LLM', 'Supabase'],
   },
+  {
+    num: '05',
+    title: 'E-commerce & Payments',
+    desc: 'Product discovery platforms, curated storefronts, and end-to-end checkout flows with Razorpay integration — built to convert.',
+    tags: ['Next.js', 'Razorpay', 'Tailwind CSS'],
+  },
+  {
+    num: '06',
+    title: 'SaaS Product Development',
+    desc: 'Full-scale SaaS apps from zero to launch — dashboards, onboarding flows, role-based access, and subscription-ready architecture.',
+    tags: ['Next.js', 'Supabase', 'Vercel'],
+  },
+  {
+    num: '07',
+    title: 'Support & Customer Portals',
+    desc: 'Centralised support platforms with ticketing, knowledge base, and user communication tools tailored for growing businesses.',
+    tags: ['Next.js', 'React', 'REST API'],
+  },
+  {
+    num: '08',
+    title: 'Business & Brand Websites',
+    desc: 'Local businesses, B2B traders, and service brands — fast, well-structured websites with clear conversion paths and strong brand identity.',
+    tags: ['WordPress', 'ACF', 'Custom Theme'],
+  },
 ]
 
 export default function Services() {

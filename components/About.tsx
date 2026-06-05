@@ -10,7 +10,7 @@ const experience = [
   },
   {
     title: 'Freelance Full Stack Developer',
-    company: 'Futentra',
+    company: 'Gradiolex',
     companyClass: 'text-mist/60',
     period: '2025 – Now',
     desc: 'End-to-end products for startups — React/Next.js, Flutter mobile apps, AI/LLM integration, and Razorpay payment systems. Scoping, design, development, and deployment.',

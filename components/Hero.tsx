@@ -31,7 +31,7 @@ export default function Hero() {
 
           <div>
             <p className="text-[10px] font-mono text-mist/50 uppercase tracking-[0.22em] mb-2">Agency</p>
-            <p className="text-ink font-semibold text-sm">Futentra</p>
+            <p className="text-ink font-semibold text-sm">Gradiolex</p>
             <p className="text-mist text-xs mt-1 font-mono">Freelance · Open to roles</p>
           </div>
 
@@ -48,7 +48,7 @@ export default function Hero() {
               See my work →
             </a>
             <a
-              href="/resume/Abinesh-Resume.pdf"
+              href="/resume/Abinesh_Full_Stack_Web_Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-3 border border-rule text-mist text-sm font-medium hover:border-accent hover:text-accent transition-all text-center"

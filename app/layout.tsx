@@ -44,20 +44,11 @@ export const metadata: Metadata = {
     siteName: 'Abinesh S',
     locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Abinesh S — Full Stack Engineer & WordPress Developer',
-      },
-    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Abinesh S — Full Stack Engineer & WordPress Developer',
     description: 'Delivering production-grade websites for Unbounce, OGP, ElasticPath, PBC, and more.',
-    images: ['/images/og-image.png'],
   },
   robots: {
     index: true,

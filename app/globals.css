@@ -62,16 +62,6 @@
 .service-row:hover .service-desc  { color: rgba(15, 55, 40, 0.70); }
 .service-row:hover .service-tag   { border-color: rgba(15, 55, 40, 0.25); color: rgba(15, 55, 40, 0.65); }
 
-/* ── Project card — gold bottom bar ────────────────────────────── */
-.project-card { position: relative; }
-.project-card::after {
-  content: '';
-  position: absolute; left: 0; bottom: 0;
-  width: 0; height: 3px;
-  background-color: #DCBC7D;
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.project-card:hover::after { width: 100%; }
 
 /* ── Reveal animation ──────────────────────────────────────────── */
 .reveal-text {

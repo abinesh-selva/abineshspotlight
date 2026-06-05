@@ -58,13 +58,29 @@ export default function Contact() {
               Available for freelance work and open to interesting full-time roles.
               I read everything and reply within 24 hours.
             </p>
-            <a
-              href="mailto:mailtoabineshselva@gmail.com"
-              className="group inline-flex items-end gap-2 text-lg md:text-xl font-bold text-ink hover:text-accent transition-colors break-all mb-12"
-            >
-              mailtoabineshselva@gmail.com
-              <span className="text-accent group-hover:text-forest transition-colors text-2xl leading-none mb-0.5">→</span>
-            </a>
+
+            <div className="flex flex-col gap-5 mb-12">
+              <div>
+                <p className="text-[10px] font-mono text-mist/40 uppercase tracking-widest mb-2">Personal</p>
+                <a
+                  href="mailto:mailtoabineshselva@gmail.com"
+                  className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors break-all"
+                >
+                  mailtoabineshselva@gmail.com
+                  <span className="text-accent group-hover:text-forest transition-colors text-xl leading-none mb-0.5">→</span>
+                </a>
+              </div>
+              <div>
+                <p className="text-[10px] font-mono text-mist/40 uppercase tracking-widest mb-2">Gradiolex · Project enquiries</p>
+                <a
+                  href="mailto:gradiolex@gmail.com"
+                  className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors break-all"
+                >
+                  gradiolex@gmail.com
+                  <span className="text-accent group-hover:text-forest transition-colors text-xl leading-none mb-0.5">→</span>
+                </a>
+              </div>
+            </div>
             <div className="flex flex-wrap gap-8">
               <a href="https://linkedin.com/in/abinesh-selva/" target="_blank" rel="noopener noreferrer"
                 className="text-sm font-mono text-mist hover:text-accent transition-colors">LinkedIn →</a>
@@ -72,7 +88,7 @@ export default function Contact() {
                 className="text-sm font-mono text-mist hover:text-accent transition-colors">GitHub →</a>
               <a href="https://www.instagram.com/sak_abinesh/" target="_blank" rel="noopener noreferrer"
                 className="text-sm font-mono text-mist hover:text-accent transition-colors">Instagram →</a>
-              <a href="https://gradiolex.vercel.app" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/company/gradiolex" target="_blank" rel="noopener noreferrer"
                 className="text-sm font-mono text-mist hover:text-accent transition-colors">Gradiolex →</a>
             </div>
           </div>
@@ -225,8 +241,10 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-rule flex flex-col sm:flex-row justify-between gap-4 text-xs font-mono text-ink">
-          <p>© {new Date().getFullYear()} Abinesh Selva. All rights reserved.</p>
+        <div className="mt-14 pt-8 border-t border-rule flex flex-col sm:flex-row justify-between gap-4 text-xs font-mono text-mist/50">
+          <p>
+            © {new Date().getFullYear()} abineshspotlight.online. All rights reserved.
+          </p>
           <a href="#hero" className="hover:text-accent transition-colors">Back to top ↑</a>
         </div>
       </div>

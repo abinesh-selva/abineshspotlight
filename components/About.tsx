@@ -17,14 +17,14 @@ const experience = [
   },
   {
     title: 'Full Stack Developer',
-    company: 'Agency',
+    company: 'FUEiNT Technologies',
     companyClass: 'text-mist/60',
     period: '2021 – 2022',
     desc: '20+ enterprise WordPress sites. Legacy PHP to modern MVC migrations. Pixel-perfect Figma-to-code delivery.',
   },
   {
     title: 'Junior Developer',
-    company: 'Entry-level · Web Development',
+    company: 'Entry-level · FUEiNT Technologies',
     companyClass: 'text-mist/60',
     period: '2020 – 2021',
     desc: null,
@@ -40,7 +40,7 @@ export default function About() {
           {/* Left */}
           <div className="lg:col-span-5 reveal-text">
             <h2 className="font-display font-bold text-4xl md:text-5xl text-ink leading-[1.05] mb-8">
-              Building the web,<br />one commit at a time.
+              Building the web, one commit at a time.
             </h2>
             <div className="space-y-5 text-mist text-sm leading-relaxed">
               <p>

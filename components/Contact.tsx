@@ -1,14 +1,65 @@
 'use client'
 
-import { useState, useRef, FormEvent } from 'react'
+import { useState, useRef, useEffect, FormEvent } from 'react'
 
 type FormState = 'idle' | 'loading' | 'success' | 'error'
+
+type CurrencyInfo = { currency: string; locale: string; rate: number }
+
+const CURRENCY_MAP: Record<string, CurrencyInfo> = {
+  US: { currency: 'USD', locale: 'en-US', rate: 1 },
+  CA: { currency: 'CAD', locale: 'en-CA', rate: 1.36 },
+  IN: { currency: 'INR', locale: 'en-IN', rate: 83 },
+  AU: { currency: 'AUD', locale: 'en-AU', rate: 1.53 },
+  AE: { currency: 'AED', locale: 'en-AE', rate: 3.67 },
+  GB: { currency: 'GBP', locale: 'en-GB', rate: 0.79 },
+  DE: { currency: 'EUR', locale: 'de-DE', rate: 0.92 },
+  FR: { currency: 'EUR', locale: 'fr-FR', rate: 0.92 },
+  SG: { currency: 'SGD', locale: 'en-SG', rate: 1.34 },
+  JP: { currency: 'JPY', locale: 'ja-JP', rate: 149 },
+  BR: { currency: 'BRL', locale: 'pt-BR', rate: 4.97 },
+  MX: { currency: 'MXN', locale: 'es-MX', rate: 17.15 },
+  ZA: { currency: 'ZAR', locale: 'en-ZA', rate: 18.6 },
+  NZ: { currency: 'NZD', locale: 'en-NZ', rate: 1.63 },
+  PH: { currency: 'PHP', locale: 'en-PH', rate: 56 },
+}
+
+function fmt(usd: number, info: CurrencyInfo) {
+  return new Intl.NumberFormat(info.locale, {
+    style: 'currency',
+    currency: info.currency,
+    maximumFractionDigits: 0,
+  }).format(Math.round(usd * info.rate))
+}
+
+function budgetOptions(info: CurrencyInfo) {
+  const f = (n: number) => fmt(n, info)
+  return [
+    { label: `Upto ${f(1000)}`,            value: `Upto ${f(1000)} (${info.currency})` },
+    { label: `${f(1000)} – ${f(5000)}`,   value: `${f(1000)} – ${f(5000)} (${info.currency})` },
+    { label: `${f(5000)} – ${f(10000)}`,  value: `${f(5000)} – ${f(10000)} (${info.currency})` },
+    { label: `${f(10000)} – ${f(25000)}`, value: `${f(10000)} – ${f(25000)} (${info.currency})` },
+    { label: `${f(25000)}+`,              value: `${f(25000)}+ (${info.currency})` },
+    { label: "Let's discuss",             value: "Let's discuss" },
+  ]
+}
 
 export default function Contact() {
   const [state, setState] = useState<FormState>('idle')
   const [errorMsg, setErrorMsg] = useState('')
   const [fileName, setFileName] = useState('')
+  const [currencyInfo, setCurrencyInfo] = useState<CurrencyInfo>(CURRENCY_MAP.US)
   const formRef = useRef<HTMLFormElement>(null)
+
+  useEffect(() => {
+    fetch('https://ipapi.co/json/')
+      .then((r) => r.json())
+      .then((data) => {
+        const info = CURRENCY_MAP[data.country_code as string]
+        if (info) setCurrencyInfo(info)
+      })
+      .catch(() => {})
+  }, [])
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFileName(e.target.files?.[0]?.name ?? '')
@@ -60,6 +111,16 @@ export default function Contact() {
             </p>
 
             <div className="flex flex-col gap-5 mb-12">
+              <div>
+                <p className="text-[10px] font-mono text-mist/40 uppercase tracking-widest mb-2">Phone / WhatsApp</p>
+                <a
+                  href="tel:+919042972156"
+                  className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors"
+                >
+                  +91 90429 72156
+                  <span className="text-accent group-hover:text-forest transition-colors text-xl leading-none mb-0.5">→</span>
+                </a>
+              </div>
               <div>
                 <p className="text-[10px] font-mono text-mist/40 uppercase tracking-widest mb-2">Personal</p>
                 <a
@@ -160,17 +221,16 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="budget" className="block text-[10px] font-mono text-mist/50 uppercase tracking-wider mb-2">Budget *</label>
+                      <label htmlFor="budget" className="block text-[10px] font-mono text-mist/50 uppercase tracking-wider mb-2">
+                        Budget * <span className="text-mist/30 normal-case font-normal">({currencyInfo.currency})</span>
+                      </label>
                       <div className="relative">
                         <select id="budget" name="budget" required
                           className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent transition-all text-sm font-mono cursor-pointer">
                           <option value="" disabled>Select budget...</option>
-                          <option value="Under $1,000">Under $1,000</option>
-                          <option value="$1,000 – $5,000">$1,000 – $5,000</option>
-                          <option value="$5,000 – $10,000">$5,000 – $10,000</option>
-                          <option value="$10,000 – $25,000">$10,000 – $25,000</option>
-                          <option value="$25,000+">$25,000+</option>
-                          <option value="Let's discuss">Let&apos;s discuss</option>
+                          {budgetOptions(currencyInfo).map((opt) => (
+                            <option key={opt.value} value={opt.value}>{opt.label}</option>
+                          ))}
                         </select>
                         <svg className="absolute right-4 top-1/2 -translate-y-1/2 w-3 h-3 text-mist pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                       </div>

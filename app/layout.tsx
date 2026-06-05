@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Syne, Outfit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import WhatsAppFloat from '@/components/WhatsAppFloat'
 import './globals.css'
 
 const syne = Syne({
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${syne.variable} ${outfit.variable} scroll-smooth`}>
       <body className="font-sans bg-canvas text-ink antialiased">
         {children}
+        <WhatsAppFloat />
         <Analytics />
       </body>
     </html>

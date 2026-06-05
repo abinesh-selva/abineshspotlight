@@ -7,45 +7,45 @@ const services = [
   },
   {
     num: '02',
+    title: 'Business & Brand Websites',
+    desc: 'Local businesses, B2B traders, and service brands — fast, well-structured websites with clear conversion paths and strong brand identity.',
+    tags: ['WordPress', 'ACF', 'Custom Theme'],
+  },
+  {
+    num: '03',
     title: 'Headless WordPress',
     desc: 'WordPress as CMS, React or Next.js at the front. Content via REST or GraphQL — fast, secure, scalable.',
     tags: ['WPGraphQL', 'Next.js', 'Vercel'],
   },
   {
-    num: '03',
-    title: 'Performance & SEO',
-    desc: 'Core Web Vitals audits, E-E-A-T implementation, structured data, and technical fixes that move the needle.',
-    tags: ['Core Web Vitals', 'Schema', 'E-E-A-T'],
-  },
-  {
     num: '04',
-    title: 'Mobile & AI',
-    desc: 'Cross-platform Flutter apps and AI/LLM feature integration — voice tracking, OCR, and intelligent interfaces.',
-    tags: ['Flutter', 'AI / LLM', 'Supabase'],
-  },
-  {
-    num: '05',
     title: 'E-commerce & Payments',
     desc: 'Product discovery platforms, curated storefronts, and end-to-end checkout flows with Razorpay integration — built to convert.',
     tags: ['Next.js', 'Razorpay', 'Tailwind CSS'],
   },
   {
-    num: '06',
+    num: '05',
     title: 'SaaS Product Development',
     desc: 'Full-scale SaaS apps from zero to launch — dashboards, onboarding flows, role-based access, and subscription-ready architecture.',
     tags: ['Next.js', 'Supabase', 'Vercel'],
   },
   {
-    num: '07',
+    num: '06',
     title: 'Support & Customer Portals',
     desc: 'Centralised support platforms with ticketing, knowledge base, and user communication tools tailored for growing businesses.',
     tags: ['Next.js', 'React', 'REST API'],
   },
   {
+    num: '07',
+    title: 'Performance & SEO',
+    desc: 'Core Web Vitals audits, E-E-A-T implementation, structured data, and technical fixes that move the needle.',
+    tags: ['Core Web Vitals', 'Schema', 'E-E-A-T'],
+  },
+  {
     num: '08',
-    title: 'Business & Brand Websites',
-    desc: 'Local businesses, B2B traders, and service brands — fast, well-structured websites with clear conversion paths and strong brand identity.',
-    tags: ['WordPress', 'ACF', 'Custom Theme'],
+    title: 'Mobile & AI',
+    desc: 'Cross-platform Flutter apps and AI/LLM feature integration — voice tracking, OCR, and intelligent interfaces.',
+    tags: ['Flutter', 'AI / LLM', 'Supabase'],
   },
 ]
 

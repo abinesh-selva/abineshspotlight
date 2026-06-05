@@ -4,10 +4,6 @@ export default function Hero() {
       <div className="container mx-auto px-6 md:px-12 flex flex-col justify-center py-6 md:py-10 pt-32 md:pt-36">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-rule pb-5 gap-4 md:gap-0">
           <span className="flex items-center gap-3 text-xs font-mono text-mist uppercase tracking-widest">
-            <span className="relative flex items-center justify-center w-3 h-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-              <span className="relative w-2 h-2 rounded-full bg-accent inline-block" />
-            </span>
             Available for new projects
           </span>
           <span className="text-xs font-mono text-mist/50 uppercase tracking-widest">
@@ -16,8 +12,8 @@ export default function Hero() {
         </div>
 
         <h1 className="font-display font-black leading-[0.82] tracking-tighter select-none pt-8">
-          <span className="block text-5xl md:text-8xl lg:text-[180px] text-ink">Abinesh</span>
-          <span className="block text-5xl md:text-8xl lg:text-[180px] text-accent">Selva</span>
+          <span className="block text-5xl md:text-8xl lg:text-[150px] text-ink">Abinesh <span className="text-5xl md:text-8xl lg:text-[150px] text-accent">S</span></span>
+          
         </h1>
       </div>
 

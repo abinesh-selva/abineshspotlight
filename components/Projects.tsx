@@ -183,12 +183,12 @@ export default function Projects() {
           <div className="mb-14">
             {showBothGroups && (
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-xs font-mono uppercase tracking-widest text-canvas/30">Enterprise experience</span>
+                <span className="text-xs font-mono uppercase tracking-widest text-canvas text-opacity-30">Enterprise experience</span>
                 <div className="flex-1 h-px bg-canvas/10" />
               </div>
             )}
 
-            <p className="text-canvas/30 text-xs font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
+            <p className="text-canvas text-opacity-30 text-xs font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
               Delivered under{' '}
               <span className="text-accent/70 hover:text-accent">
                 FueInt Technologies
@@ -209,7 +209,7 @@ export default function Projects() {
           <div>
             {showBothGroups && (
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-xs font-mono uppercase tracking-widest text-canvas/30">Freelance — Gradiolex</span>
+                <span className="text-xs font-mono uppercase tracking-widest text-canvas text-opacity-30">Freelance — Gradiolex</span>
                 <div className="flex-1 h-px bg-canvas/10" />
                 <a
                   href={GRADIOLEX_SITE}
@@ -236,19 +236,19 @@ export default function Projects() {
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
-    <article className="group flex flex-col border border-canvas/10 hover:border-accent/40 bg-canvas/5 transition-all duration-300 p-6 h-full">
+    <article className="group flex flex-col border border-canvas border-opacity-10 hover:border-accent/40 bg-canvas/5 transition-all duration-300 p-6 h-full">
       {/* Top row */}
       <div className="flex items-start justify-between mb-6">
         <span className="text-xs font-mono text-canvas/25">
           {String(index).padStart(2, '0')}
         </span>
-        <span className="text-[10px] font-mono uppercase tracking-widest text-canvas/30 border border-canvas/10 px-2 py-0.5">
+        <span className="text-xs font-mono uppercase tracking-widest text-canvas text-opacity-30 border border-canvas border-opacity-10 px-2 py-0.5">
           {project.group === 'enterprise' ? 'FueInt' : 'Gradiolex'}
         </span>
       </div>
 
       {/* Role */}
-      <span className="text-[10px] font-mono text-accent uppercase tracking-widest mb-2">
+      <span className="text-xs font-mono text-accent uppercase tracking-widest mb-2">
         {project.role}
       </span>
 
@@ -267,7 +267,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         {project.stack.map((s) => (
           <span
             key={s}
-            className="text-[10px] font-mono text-canvas/35 border border-canvas/10 px-2 py-1 group-hover:border-canvas/20 transition-colors"
+            className="text-xs font-mono text-canvas text-opacity-40 border border-canvas border-opacity-10 px-2 py-1 group-hover:border-canvas border-opacity-20 transition-colors"
           >
             {s}
           </span>

@@ -57,7 +57,7 @@ export default function Blog() {
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6 border-t border-rule group-hover:border-accent/40 transition-colors duration-300">

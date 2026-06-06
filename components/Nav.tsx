@@ -66,14 +66,14 @@ export default function Nav() {
 
           <button
             id="mobile-nav-toggle"
-            className={`md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] z-50 relative${menuOpen ? ' is-open' : ''}`}
+            className={`md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 z-50 relative${menuOpen ? ' is-open' : ''}`}
             aria-label="Toggle mobile menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((o) => !o)}
           >
-            <span id="ham-line-1" className="block w-6 h-[2px] bg-ink transition-all duration-300 origin-center" />
-            <span id="ham-line-2" className="block w-6 h-[2px] bg-ink transition-all duration-300" />
-            <span id="ham-line-3" className="block w-4 h-[2px] bg-ink transition-all duration-300 origin-center ml-auto" />
+            <span id="ham-line-1" className="block w-6 h-0.5 bg-ink transition-all duration-300 origin-center" />
+            <span id="ham-line-2" className="block w-6 h-0.5 bg-ink transition-all duration-300" />
+            <span id="ham-line-3" className="block w-4 h-0.5 bg-ink transition-all duration-300 origin-center ml-auto" />
           </button>
         </div>
       </header>
@@ -103,7 +103,7 @@ export default function Nav() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={close}
-          className="mobile-nav-link inline-flex items-center gap-3 px-8 py-4 border border-canvas/20 text-sm font-bold text-canvas hover:text-accent hover:border-accent transition-all"
+          className="mobile-nav-link inline-flex items-center gap-3 px-8 py-4 border border-canvas border-opacity-20 text-sm font-bold text-canvas hover:text-accent hover:border-accent transition-all"
         >
           View Resume →
         </a>

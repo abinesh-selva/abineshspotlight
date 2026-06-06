@@ -1,4 +1,12 @@
+"use client";
+
+import { useState } from "react";
+import ScrambleText, { useScramble } from "./ScrambleText";
+
 export default function Hero() {
+  const [isHovered, setIsHovered] = useState(false);
+  const scrambledName = useScramble("Abinesh", 0, 0.15); // Scrambles only on load (0), very slow (0.15)
+
   return (
     <section id="hero" className="relative bg-canvas flex flex-col overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 flex flex-col justify-center py-6 md:py-10 pt-32 md:pt-36">
@@ -11,29 +19,56 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className="font-display font-black leading-[0.82] tracking-tighter select-none pt-8">
-          <span className="block text-5xl md:text-8xl lg:text-[150px] text-ink">Abinesh <span className="text-5xl md:text-8xl lg:text-[150px] text-accent">S</span></span>
-          
+        <h1 
+          className="group font-display font-black leading-none tracking-tighter select-none pt-8 cursor-default w-max"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className="relative">
+            {/* Revealed Text (Center) */}
+            <span className="absolute inset-0 flex items-center justify-center opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 z-10 pointer-events-none">
+              <span className="text-3xl md:text-4xl lg:text-5xl text-accent tracking-widest uppercase font-mono font-bold whitespace-nowrap drop-shadow-md">
+                <ScrambleText text="Full Stack Engineer" isHovered={isHovered} speed={0.3} />
+              </span>
+            </span>
+
+            {/* Top Half */}
+            <span 
+              className="block text-5xl md:text-8xl lg:text-[150px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6"
+              style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}
+            >
+              {scrambledName} <span className="text-accent">S</span>
+            </span>
+
+            {/* Bottom Half */}
+            <span 
+              className="absolute top-0 left-0 text-5xl md:text-8xl lg:text-[150px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6"
+              style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }}
+              aria-hidden="true"
+            >
+              {scrambledName} <span className="text-accent">S</span>
+            </span>
+          </div>
         </h1>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 pb-12 md:pb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-rule">
           <div>
-            <p className="text-[10px] font-mono text-mist uppercase tracking-[0.22em] mb-2">Role</p>
+            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Role</p>
             <p className="text-ink font-semibold text-sm">Full Stack Engineer</p>
             <p className="text-mist text-xs mt-1 font-mono">WordPress · React · Headless</p>
           </div>
 
           <div>
-            <p className="text-[10px] font-mono text-mist uppercase tracking-[0.22em] mb-2">Agency</p>
+            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Agency</p>
             <p className="text-ink font-semibold text-sm">Gradiolex</p>
             <p className="text-mist text-xs mt-1 font-mono">Freelance · Open to roles</p>
           </div>
 
           <div className="hidden md:block">
-            <p className="text-[10px] font-mono text-mist uppercase tracking-[0.22em] mb-2">Focuses on</p>
-            <p className="text-ink/70 text-sm leading-relaxed">Fast, accessible websites that rank and convert.</p>
+            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Focuses on</p>
+            <p className="text-ink text-opacity-70 text-sm leading-relaxed">Fast, accessible websites that rank and convert.</p>
           </div>
 
           <div className="flex flex-col gap-3">

@@ -39,7 +39,7 @@ export default function About() {
 
           {/* Left */}
           <div className="lg:col-span-5 reveal-text">
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-ink leading-[1.05] mb-8">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-ink leading-none mb-8">
               Building the web, one commit at a time.
             </h2>
             <div className="space-y-5 text-mist text-sm leading-relaxed">
@@ -52,7 +52,7 @@ export default function About() {
                 Day-to-day: architecting projects with ACF and Gutenberg, wiring React into CMS
                 environments, and digging into the technical SEO problems others avoid.
               </p>
-              <blockquote className="border-l-[3px] border-accent pl-5 text-ink/75 italic">
+              <blockquote className="border-l-4 border-accent pl-5 text-ink text-opacity-75 italic">
                 &ldquo;Fast websites shouldn&apos;t be a premium feature — they should be the baseline.&rdquo;
               </blockquote>
             </div>
@@ -71,7 +71,7 @@ export default function About() {
 
           {/* Right: Experience */}
           <div className="lg:col-span-7">
-            <p className="text-[10px] font-mono text-mist uppercase tracking-[0.25em] mb-8">Experience</p>
+            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-8">Experience</p>
 
             <div className="divide-y divide-rule">
               {experience.map((exp) => (

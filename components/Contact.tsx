@@ -112,7 +112,7 @@ export default function Contact() {
 
             <div className="flex flex-col gap-5 mb-12">
               <div>
-                <p className="text-[10px] font-mono text-mist uppercase tracking-widest mb-2">Phone / WhatsApp</p>
+                <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Phone / WhatsApp</p>
                 <a
                   href="tel:+919042972156"
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors"
@@ -122,7 +122,7 @@ export default function Contact() {
                 </a>
               </div>
               <div>
-                <p className="text-[10px] font-mono text-mist uppercase tracking-widest mb-2">Personal</p>
+                <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Personal</p>
                 <a
                   href="mailto:mailtoabineshselva@gmail.com"
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors break-all"
@@ -132,7 +132,7 @@ export default function Contact() {
                 </a>
               </div>
               <div>
-                <p className="text-[10px] font-mono text-mist uppercase tracking-widest mb-2">Gradiolex · Project enquiries</p>
+                <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Gradiolex · Project enquiries</p>
                 <a
                   href="mailto:gradiolex@gmail.com"
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors break-all"
@@ -183,28 +183,28 @@ export default function Contact() {
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-5" encType="multipart/form-data">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="name" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Name *</label>
+                      <label htmlFor="name" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Name *</label>
                       <input type="text" id="name" name="name" required placeholder="Your name"
-                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent/5 transition-all text-sm font-mono" />
+                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-sm font-mono" />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Email *</label>
+                      <label htmlFor="email" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Email *</label>
                       <input type="email" id="email" name="email" required placeholder="you@example.com"
-                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent/5 transition-all text-sm font-mono" />
+                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-sm font-mono" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="company" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Company *</label>
+                      <label htmlFor="company" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Company *</label>
                       <input type="text" id="company" name="company" required placeholder="Company name"
-                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent/5 transition-all text-sm font-mono" />
+                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-sm font-mono" />
                     </div>
                     <div>
-                      <label htmlFor="project_type" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Project Type *</label>
+                      <label htmlFor="project_type" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Project Type *</label>
                       <div className="relative">
                         <select id="project_type" name="project_type" required
-                          className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent focus:bg-accent/5 transition-all text-sm font-mono cursor-pointer">
+                          className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-sm font-mono cursor-pointer">
                           <option value="" disabled>Select type...</option>
                           <option value="WordPress Development">WordPress Development</option>
                           <option value="React / Next.js">React / Next.js</option>
@@ -221,7 +221,7 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="budget" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">
+                      <label htmlFor="budget" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">
                         Budget * <span className="text-mist normal-case font-normal">({currencyInfo.currency})</span>
                       </label>
                       <div className="relative">
@@ -236,7 +236,7 @@ export default function Contact() {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="timeline" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Timeline *</label>
+                      <label htmlFor="timeline" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Timeline *</label>
                       <div className="relative">
                         <select id="timeline" name="timeline" required
                           className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent transition-all text-sm font-mono cursor-pointer">
@@ -253,13 +253,13 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Message *</label>
+                    <label htmlFor="message" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Message *</label>
                     <textarea id="message" name="message" required rows={4} placeholder="Tell me about your project..."
                       className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent transition-all resize-none text-sm font-mono" />
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">
                       Attachment <span className="text-mist normal-case font-normal">(PDF, DOC, PNG, ZIP · max 5MB)</span>
                     </label>
                     <label htmlFor="file"

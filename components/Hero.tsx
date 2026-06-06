@@ -5,7 +5,10 @@ import ScrambleText, { useScramble } from "./ScrambleText";
 
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
-  const scrambledName = useScramble("Abinesh", 0, 0.15); // Scrambles only on load (0), very slow (0.15)
+  const scrambledFull = useScramble("Abinesh S", 0, 0.15); // Scrambles only on load (0), very slow (0.15)
+  const parts = scrambledFull.split(" ");
+  const firstPart = parts[0];
+  const lastPart = parts.slice(1).join(" ");
 
   return (
     <section id="hero" className="relative bg-canvas flex flex-col overflow-hidden">
@@ -27,26 +30,26 @@ export default function Hero() {
           <div className="relative">
             {/* Revealed Text (Center) */}
             <span className="absolute inset-0 flex items-center justify-center opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 z-10 pointer-events-none">
-              <span className="text-3xl md:text-4xl lg:text-5xl text-accent tracking-widest uppercase font-mono font-bold whitespace-nowrap drop-shadow-md">
+              <span className="text-sm md:text-2xl lg:text-4xl xl:text-5xl text-accent tracking-[0.2em] md:tracking-widest uppercase font-mono font-bold whitespace-nowrap drop-shadow-md">
                 <ScrambleText text="Full Stack Engineer" isHovered={isHovered} speed={0.3} />
               </span>
             </span>
 
             {/* Top Half */}
             <span 
-              className="block text-5xl md:text-8xl lg:text-[150px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6"
+              className="block text-4xl md:text-8xl lg:text-[150px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6"
               style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}
             >
-              {scrambledName} <span className="text-accent">S</span>
+              {firstPart} <span className="text-accent">{lastPart}</span>
             </span>
 
             {/* Bottom Half */}
             <span 
-              className="absolute top-0 left-0 text-5xl md:text-8xl lg:text-[150px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6"
+              className="absolute top-0 left-0 text-4xl md:text-8xl lg:text-[150px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6"
               style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }}
               aria-hidden="true"
             >
-              {scrambledName} <span className="text-accent">S</span>
+              {firstPart} <span className="text-accent">{lastPart}</span>
             </span>
           </div>
         </h1>

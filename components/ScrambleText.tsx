@@ -19,7 +19,7 @@ export function useScramble(text: string, trigger: boolean | number, speed: numb
         text
           .split("")
           .map((char, index) => {
-            if (index < iteration || char === " ") {
+            if (index < Math.floor(iteration) || char === " ") {
               return text[index];
             }
             return CHARS[Math.floor(Math.random() * CHARS.length)];

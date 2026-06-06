@@ -63,33 +63,6 @@ const projects: Project[] = [
 
   // ── Freelance via Gradiolex ─────────────────────────────────────────
   {
-    name: 'MySupportInfo',
-    role: 'Full Stack Developer',
-    category: 'Next.js',
-    group: 'freelance',
-    challenge: 'A customer support portal designed to centralise ticketing, knowledge base, and user communication for growing businesses.',
-    stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
-    url: 'https://mysupportinfo.vercel.app',
-  },
-  {
-    name: 'Instatrove',
-    role: 'Full Stack Developer',
-    category: 'Next.js',
-    group: 'freelance',
-    challenge: 'An e-commerce and product discovery platform with curated browsing, wishlist, and seamless checkout flow.',
-    stack: ['Next.js', 'Tailwind', 'Razorpay', 'Vercel'],
-    url: 'https://instatrove.vercel.app',
-  },
-  {
-    name: 'MoneyArk',
-    role: 'Full Stack Developer',
-    category: 'Flutter',
-    group: 'freelance',
-    challenge: 'A full-scale personal finance app with AI-powered financial assistant, OCR receipt scanning, and voice expense tracking.',
-    stack: ['Flutter', 'React', 'Supabase', 'LLM', 'OCR'],
-    url: 'https://moneyark.vercel.app',
-  },
-  {
     name: 'NaviCakes',
     role: 'WordPress Developer',
     category: 'WordPress',
@@ -109,6 +82,15 @@ const projects: Project[] = [
     urlLabel: 'View Dev Site',
   },
   {
+    name: 'MySupportInfo',
+    role: 'Full Stack Developer',
+    category: 'Next.js',
+    group: 'freelance',
+    challenge: 'A customer support portal designed to centralise ticketing, knowledge base, and user communication for growing businesses.',
+    stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
+    url: 'https://mysupportinfo.vercel.app',
+  },
+  {
     name: 'One Tap Secure',
     role: 'Full Stack Developer',
     category: 'Next.js',
@@ -117,12 +99,31 @@ const projects: Project[] = [
     stack: ['Next.js', 'React', 'Tailwind'],
     url: 'https://onetapsecure.vercel.app',
   },
+  {
+    name: 'MoneyArk',
+    role: 'Full Stack Developer',
+    category: 'Flutter',
+    group: 'freelance',
+    challenge: 'A full-scale personal finance app with AI-powered financial assistant, OCR receipt scanning, and voice expense tracking.',
+    stack: ['Flutter', 'React', 'Supabase', 'LLM', 'OCR'],
+    url: 'https://moneyark.vercel.app',
+  },
+  {
+    name: 'Instatrove',
+    role: 'Full Stack Developer',
+    category: 'Next.js',
+    group: 'freelance',
+    challenge: 'An e-commerce and product discovery platform with curated browsing, wishlist, and seamless checkout flow.',
+    stack: ['Next.js', 'Tailwind', 'Razorpay', 'Vercel'],
+    url: 'https://instatrove.vercel.app',
+  },
 ]
 
 const filters = ['All', 'Enterprise', 'Freelance', 'WordPress', 'Next.js', 'Flutter', 'CMS', 'Drupal']
 
 const FUEINT_URL = 'https://fueint.com'
 const GRADIOLEX_LINKEDIN = 'https://www.linkedin.com/company/gradiolex'
+const GRADIOLEX_SITE = 'https://gradiolex.vercel.app/'
 
 export default function Projects() {
   const [active, setActive] = useState('All')
@@ -148,11 +149,11 @@ export default function Projects() {
         </h2>
         <p className="text-canvas/40 text-sm font-mono mb-10 md:mb-16 max-w-2xl leading-relaxed">
           Work spans two tracks — enterprise delivery under{' '}
-          <a href={FUEINT_URL} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+          <span className="text-accent hover:underline">
             FueInt Technologies
-          </a>
+          </span>
           , and independent builds under my freelance studio{' '}
-          <a href={GRADIOLEX_LINKEDIN} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+          <a href={GRADIOLEX_SITE} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
             Gradiolex
           </a>
           .
@@ -189,9 +190,9 @@ export default function Projects() {
 
             <p className="text-canvas/30 text-xs font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
               Delivered under{' '}
-              <a href={FUEINT_URL} target="_blank" rel="noopener noreferrer" className="text-accent/70 hover:text-accent">
+              <span className="text-accent/70 hover:text-accent">
                 FueInt Technologies
-              </a>
+              </span>
               . All work completed under their client contracts. Logos and brand names belong to their respective owners.
             </p>
 
@@ -211,12 +212,12 @@ export default function Projects() {
                 <span className="text-xs font-mono uppercase tracking-widest text-canvas/30">Freelance — Gradiolex</span>
                 <div className="flex-1 h-px bg-canvas/10" />
                 <a
-                  href={GRADIOLEX_LINKEDIN}
+                  href={GRADIOLEX_SITE}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs font-mono text-canvas/40 hover:text-accent transition-colors border border-canvas/15 px-3 py-1 hover:border-accent"
                 >
-                  LinkedIn ↗
+                  Link ↗
                 </a>
               </div>
             )}

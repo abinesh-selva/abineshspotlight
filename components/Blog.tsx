@@ -65,7 +65,7 @@ export default function Blog() {
                   <span className="text-sm font-mono text-accent uppercase tracking-widest">
                     {article.category}
                   </span>
-                  <span className="text-sm font-mono text-mist/50">{article.readTime}</span>
+                  <span className="text-sm font-mono text-mist">{article.readTime}</span>
                 </div>
                 <h3 className="text-ink font-semibold text-base leading-snug group-hover:text-forest transition-colors duration-300">
                   {article.title}

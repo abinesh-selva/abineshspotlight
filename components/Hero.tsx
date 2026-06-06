@@ -6,7 +6,7 @@ export default function Hero() {
           <span className="flex items-center gap-3 text-xs font-mono text-mist uppercase tracking-widest">
             Available for new projects
           </span>
-          <span className="text-xs font-mono text-mist/50 uppercase tracking-widest">
+          <span className="text-xs font-mono text-mist uppercase tracking-widest">
             Tamil Nadu, India · {new Date().getFullYear()}
           </span>
         </div>
@@ -20,19 +20,19 @@ export default function Hero() {
       <div className="container mx-auto px-6 md:px-12 pb-12 md:pb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-rule">
           <div>
-            <p className="text-[10px] font-mono text-mist/50 uppercase tracking-[0.22em] mb-2">Role</p>
+            <p className="text-[10px] font-mono text-mist uppercase tracking-[0.22em] mb-2">Role</p>
             <p className="text-ink font-semibold text-sm">Full Stack Engineer</p>
             <p className="text-mist text-xs mt-1 font-mono">WordPress · React · Headless</p>
           </div>
 
           <div>
-            <p className="text-[10px] font-mono text-mist/50 uppercase tracking-[0.22em] mb-2">Agency</p>
+            <p className="text-[10px] font-mono text-mist uppercase tracking-[0.22em] mb-2">Agency</p>
             <p className="text-ink font-semibold text-sm">Gradiolex</p>
             <p className="text-mist text-xs mt-1 font-mono">Freelance · Open to roles</p>
           </div>
 
           <div className="hidden md:block">
-            <p className="text-[10px] font-mono text-mist/50 uppercase tracking-[0.22em] mb-2">Focuses on</p>
+            <p className="text-[10px] font-mono text-mist uppercase tracking-[0.22em] mb-2">Focuses on</p>
             <p className="text-ink/70 text-sm leading-relaxed">Fast, accessible websites that rank and convert.</p>
           </div>
 
@@ -44,7 +44,7 @@ export default function Hero() {
               See my work →
             </a>
             <a
-              href="/resume/Abinesh_Full_Stack_Web_Developer.pdf"
+              href="/resume/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-3 border border-rule text-mist text-sm font-medium hover:border-accent hover:text-accent transition-all text-center"

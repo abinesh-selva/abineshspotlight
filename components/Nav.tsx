@@ -56,7 +56,7 @@ export default function Nav() {
           </nav>
 
           <a
-            href="/resume/Abinesh_Full_Stack_Web_Developer.pdf"
+            href="/resume/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-rule text-sm font-medium text-mist hover:text-accent hover:border-accent transition-all z-50"
@@ -99,7 +99,7 @@ export default function Nav() {
           ))}
         </nav>
         <a
-          href="/resume/Abinesh_Full_Stack_Web_Developer.pdf"
+          href="/resume/Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           onClick={close}

@@ -68,7 +68,7 @@ export default function Services() {
               key={service.num}
               className="service-row reveal-text group px-10 py-10 md:py-12 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start cursor-default"
             >
-              <span className="service-num font-mono text-xs text-mist/40 md:col-span-1 md:pt-1.5 transition-colors">
+              <span className="service-num font-mono text-xs text-mist md:col-span-1 md:pt-1.5 transition-colors">
                 {service.num}
               </span>
               <div className="md:col-span-4">
@@ -85,7 +85,7 @@ export default function Services() {
                 {service.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="service-tag text-xs font-mono text-mist/60 border border-rule px-2.5 py-1 transition-colors"
+                    className="service-tag text-xs font-mono text-mist border border-rule px-2.5 py-1 transition-colors"
                   >
                     {tag}
                   </span>

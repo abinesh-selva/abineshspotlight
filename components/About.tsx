@@ -11,21 +11,21 @@ const experience = [
   {
     title: 'Freelance Full Stack Developer',
     company: 'Gradiolex',
-    companyClass: 'text-mist/60',
+    companyClass: 'text-mist',
     period: '2025 – Now',
     desc: 'End-to-end products for startups — React/Next.js, Flutter mobile apps, AI/LLM integration, and Razorpay payment systems. Scoping, design, development, and deployment.',
   },
   {
     title: 'Full Stack Developer',
     company: 'FUEiNT Technologies',
-    companyClass: 'text-mist/60',
+    companyClass: 'text-mist',
     period: '2021 – 2022',
     desc: '20+ enterprise WordPress sites. Legacy PHP to modern MVC migrations. Pixel-perfect Figma-to-code delivery.',
   },
   {
     title: 'Junior Developer',
     company: 'Entry-level · FUEiNT Technologies',
-    companyClass: 'text-mist/60',
+    companyClass: 'text-mist',
     period: '2020 – 2021',
     desc: null,
   },
@@ -71,7 +71,7 @@ export default function About() {
 
           {/* Right: Experience */}
           <div className="lg:col-span-7">
-            <p className="text-[10px] font-mono text-mist/50 uppercase tracking-[0.25em] mb-8">Experience</p>
+            <p className="text-[10px] font-mono text-mist uppercase tracking-[0.25em] mb-8">Experience</p>
 
             <div className="divide-y divide-rule">
               {experience.map((exp) => (
@@ -86,7 +86,7 @@ export default function About() {
                         <p className="text-mist text-sm leading-relaxed mt-3 max-w-lg">{exp.desc}</p>
                       )}
                     </div>
-                    <span className="text-xs font-mono text-mist/40 whitespace-nowrap pt-0.5 shrink-0">
+                    <span className="text-xs font-mono text-mist whitespace-nowrap pt-0.5 shrink-0">
                       {exp.period}
                     </span>
                   </div>

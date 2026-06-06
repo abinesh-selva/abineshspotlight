@@ -112,7 +112,7 @@ export default function Contact() {
 
             <div className="flex flex-col gap-5 mb-12">
               <div>
-                <p className="text-[10px] font-mono text-mist/40 uppercase tracking-widest mb-2">Phone / WhatsApp</p>
+                <p className="text-[10px] font-mono text-mist uppercase tracking-widest mb-2">Phone / WhatsApp</p>
                 <a
                   href="tel:+919042972156"
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors"
@@ -122,7 +122,7 @@ export default function Contact() {
                 </a>
               </div>
               <div>
-                <p className="text-[10px] font-mono text-mist/40 uppercase tracking-widest mb-2">Personal</p>
+                <p className="text-[10px] font-mono text-mist uppercase tracking-widest mb-2">Personal</p>
                 <a
                   href="mailto:mailtoabineshselva@gmail.com"
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors break-all"
@@ -132,7 +132,7 @@ export default function Contact() {
                 </a>
               </div>
               <div>
-                <p className="text-[10px] font-mono text-mist/40 uppercase tracking-widest mb-2">Gradiolex · Project enquiries</p>
+                <p className="text-[10px] font-mono text-mist uppercase tracking-widest mb-2">Gradiolex · Project enquiries</p>
                 <a
                   href="mailto:gradiolex@gmail.com"
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors break-all"
@@ -183,12 +183,12 @@ export default function Contact() {
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-5" encType="multipart/form-data">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="name" className="block text-[10px] font-mono text-mist/50 uppercase tracking-wider mb-2">Name *</label>
+                      <label htmlFor="name" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Name *</label>
                       <input type="text" id="name" name="name" required placeholder="Your name"
                         className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent/5 transition-all text-sm font-mono" />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-[10px] font-mono text-mist/50 uppercase tracking-wider mb-2">Email *</label>
+                      <label htmlFor="email" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Email *</label>
                       <input type="email" id="email" name="email" required placeholder="you@example.com"
                         className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent/5 transition-all text-sm font-mono" />
                     </div>
@@ -196,12 +196,12 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="company" className="block text-[10px] font-mono text-mist/50 uppercase tracking-wider mb-2">Company *</label>
+                      <label htmlFor="company" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Company *</label>
                       <input type="text" id="company" name="company" required placeholder="Company name"
                         className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent/5 transition-all text-sm font-mono" />
                     </div>
                     <div>
-                      <label htmlFor="project_type" className="block text-[10px] font-mono text-mist/50 uppercase tracking-wider mb-2">Project Type *</label>
+                      <label htmlFor="project_type" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Project Type *</label>
                       <div className="relative">
                         <select id="project_type" name="project_type" required
                           className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent focus:bg-accent/5 transition-all text-sm font-mono cursor-pointer">
@@ -221,8 +221,8 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="budget" className="block text-[10px] font-mono text-mist/50 uppercase tracking-wider mb-2">
-                        Budget * <span className="text-mist/30 normal-case font-normal">({currencyInfo.currency})</span>
+                      <label htmlFor="budget" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">
+                        Budget * <span className="text-mist normal-case font-normal">({currencyInfo.currency})</span>
                       </label>
                       <div className="relative">
                         <select id="budget" name="budget" required
@@ -236,7 +236,7 @@ export default function Contact() {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="timeline" className="block text-[10px] font-mono text-mist/50 uppercase tracking-wider mb-2">Timeline *</label>
+                      <label htmlFor="timeline" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Timeline *</label>
                       <div className="relative">
                         <select id="timeline" name="timeline" required
                           className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent transition-all text-sm font-mono cursor-pointer">
@@ -253,24 +253,24 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-[10px] font-mono text-mist/50 uppercase tracking-wider mb-2">Message *</label>
+                    <label htmlFor="message" className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">Message *</label>
                     <textarea id="message" name="message" required rows={4} placeholder="Tell me about your project..."
                       className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent transition-all resize-none text-sm font-mono" />
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono text-mist/50 uppercase tracking-wider mb-2">
-                      Attachment <span className="text-mist/30 normal-case font-normal">(PDF, DOC, PNG, ZIP · max 5MB)</span>
+                    <label className="block text-[10px] font-mono text-mist uppercase tracking-wider mb-2">
+                      Attachment <span className="text-mist normal-case font-normal">(PDF, DOC, PNG, ZIP · max 5MB)</span>
                     </label>
                     <label htmlFor="file"
                       className="flex items-center justify-center gap-3 p-5 border border-dashed border-rule cursor-pointer hover:border-accent transition-all group">
-                      <svg className="w-4 h-4 text-mist/30 group-hover:text-accent transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-mist group-hover:text-accent transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                       </svg>
                       {fileName ? (
                         <span className="text-xs text-accent font-mono">📎 {fileName}</span>
                       ) : (
-                        <span className="text-mist/50 text-xs font-mono">
+                        <span className="text-mist text-xs font-mono">
                           Drop file or <span className="text-accent group-hover:text-forest transition-colors">browse</span>
                         </span>
                       )}
@@ -301,7 +301,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-rule flex flex-col sm:flex-row justify-between gap-4 text-xs font-mono text-mist/50">
+        <div className="mt-14 pt-8 border-t border-rule flex flex-col sm:flex-row justify-between gap-4 text-xs font-mono text-mist">
           <p>
             © {new Date().getFullYear()} abineshspotlight.online. All rights reserved.
           </p>

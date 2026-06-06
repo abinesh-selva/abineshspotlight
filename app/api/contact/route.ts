@@ -96,12 +96,26 @@ export async function POST(req: NextRequest) {
     const fileNote    = file && file.size > 0 ? `[attached: ${file.name}]` : ''
 
     const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
-    await appendToSheet([timestamp, name, email, company, projectType, budget, timeline, message, fileNote])
+    
+    const tasks: Promise<void>[] = []
+    
+    tasks.push(appendToSheet([timestamp, name, email, company, projectType, budget, timeline, message, fileNote]))
 
     if (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD) {
-      sendEmail(name, email, company, projectType, budget, timeline, message).catch((err) =>
-        console.error('Email send failed (non-blocking):', err)
-      )
+      tasks.push(sendEmail(name, email, company, projectType, budget, timeline, message))
+    }
+
+    const results = await Promise.allSettled(tasks)
+    const allFailed = tasks.length > 0 && results.every(r => r.status === 'rejected')
+
+    results.forEach((result, i) => {
+      if (result.status === 'rejected') {
+        console.error(`Contact method ${i} failed:`, result.reason)
+      }
+    })
+
+    if (allFailed) {
+      throw new Error('All message delivery methods failed.')
     }
 
     return NextResponse.json({ success: true })

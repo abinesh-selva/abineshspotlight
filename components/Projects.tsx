@@ -7,6 +7,7 @@ type Project = {
   role: string
   category: string
   group: 'enterprise' | 'freelance'
+  subGroup?: 'client' | 'utility'
   challenge: string
   stack: string[]
   url: string | null
@@ -67,6 +68,7 @@ const projects: Project[] = [
     role: 'WordPress Developer',
     category: 'WordPress',
     group: 'freelance',
+    subGroup: 'client',
     challenge: 'Local bakery website with custom ordering, gallery, and brand identity.',
     stack: ['WordPress', 'Custom Theme', 'SCSS'],
     url: 'https://navibakesandcakes.vercel.app/',
@@ -76,6 +78,7 @@ const projects: Project[] = [
     role: 'WordPress Developer',
     category: 'WordPress',
     group: 'freelance',
+    subGroup: 'client',
     challenge: 'B2B wholesale cement and steel trader website with product catalogue and trade enquiry flows.',
     stack: ['WordPress', 'ACF', 'Pantheon'],
     url: 'https://dev-sri-dhanamoorthy-traders.pantheonsite.io',
@@ -86,6 +89,7 @@ const projects: Project[] = [
     role: 'Full Stack Developer',
     category: 'Next.js',
     group: 'freelance',
+    subGroup: 'utility',
     challenge: 'A customer support portal designed to centralise ticketing, knowledge base, and user communication for growing businesses.',
     stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
     url: 'https://mysupportinfo.vercel.app',
@@ -95,6 +99,7 @@ const projects: Project[] = [
     role: 'Full Stack Developer',
     category: 'Next.js',
     group: 'freelance',
+    subGroup: 'utility',
     challenge: 'A security-focused platform with clean, trust-driven UI and streamlined onboarding for end-user credential management.',
     stack: ['Next.js', 'React', 'Tailwind'],
     url: 'https://onetapsecure.vercel.app',
@@ -104,6 +109,7 @@ const projects: Project[] = [
     role: 'Full Stack Developer',
     category: 'Flutter',
     group: 'freelance',
+    subGroup: 'utility',
     challenge: 'A full-scale personal finance app with AI-powered financial assistant, OCR receipt scanning, and voice expense tracking.',
     stack: ['Flutter', 'React', 'Supabase', 'LLM', 'OCR'],
     url: 'https://moneyark.vercel.app',
@@ -113,6 +119,7 @@ const projects: Project[] = [
     role: 'Full Stack Developer',
     category: 'Next.js',
     group: 'freelance',
+    subGroup: 'utility',
     challenge: 'An e-commerce and product discovery platform with curated browsing, wishlist, and seamless checkout flow.',
     stack: ['Next.js', 'Tailwind', 'Razorpay', 'Vercel'],
     url: 'https://instatrove.vercel.app',
@@ -222,11 +229,42 @@ export default function Projects() {
               </div>
             )}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filtered.filter((p) => p.group === 'freelance').map((p, i) => (
-                <ProjectCard key={p.name} project={p} index={i + 1} />
-              ))}
-            </div>
+            {(() => {
+              const clients = filtered.filter((p) => p.group === 'freelance' && p.subGroup === 'client')
+              const utilities = filtered.filter((p) => p.group === 'freelance' && p.subGroup === 'utility')
+              
+              return (
+                <>
+                  {clients.length > 0 && (
+                    <div className="mb-10">
+                      <h4 className="text-sm font-mono text-canvas/50 mb-4 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        Clients
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {clients.map((p, i) => (
+                          <ProjectCard key={p.name} project={p} index={i + 1} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {utilities.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-mono text-canvas/50 mb-4 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        Utility Tools
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {utilities.map((p, i) => (
+                          <ProjectCard key={p.name} project={p} index={clients.length + i + 1} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </>
+              )
+            })()}
           </div>
         )}
       </div>

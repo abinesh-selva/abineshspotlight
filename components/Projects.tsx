@@ -124,6 +124,26 @@ const projects: Project[] = [
     stack: ['Next.js', 'Tailwind', 'Razorpay', 'Vercel'],
     url: 'https://instatrove.vercel.app',
   },
+  {
+    name: 'How Long To Go',
+    role: 'Full Stack Developer',
+    category: 'Next.js',
+    group: 'freelance',
+    subGroup: 'utility',
+    challenge: 'A sleek utility app for calculating and tracking the time remaining until specific dates, events, and milestones.',
+    stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
+    url: 'https://howlongtogo.vercel.app/',
+  },
+  {
+    name: 'Tamil Calendar',
+    role: 'Full Stack Developer',
+    category: 'Next.js',
+    group: 'freelance',
+    subGroup: 'utility',
+    challenge: 'A digital Tamil calendar providing daily panchangam details, auspicious dates, and festival information.',
+    stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
+    url: 'https://tamilcalendar.vercel.app/',
+  },
 ]
 
 const filters = ['All', 'Enterprise', 'Freelance', 'WordPress', 'Next.js', 'Flutter', 'CMS', 'Drupal']

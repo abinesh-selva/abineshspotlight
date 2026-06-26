@@ -55,7 +55,7 @@ export default function Services() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between">
           <h2 className="font-display font-bold text-4xl md:text-5xl text-ink leading-tight mb-10 md:mb-20">
-            What I offer
+            My expertise.
           </h2>
           <p className="text-mist max-w-xs text-sm leading-relaxed mb-8">
             Working with startups and established brands to build things that perform in the real world.

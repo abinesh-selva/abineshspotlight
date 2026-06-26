@@ -7,7 +7,7 @@ type Project = {
   role: string
   category: string
   group: 'enterprise' | 'freelance'
-  subGroup?: 'client' | 'utility'
+  subGroup?: 'client' | 'utility' | 'domestic'
   challenge: string
   stack: string[]
   url: string | null
@@ -144,6 +144,36 @@ const projects: Project[] = [
     stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
     url: 'https://tamilcalendar.vercel.app/',
   },
+  {
+    name: 'Videoclips',
+    role: 'Video Editor UI',
+    category: 'React',
+    group: 'freelance',
+    subGroup: 'domestic',
+    challenge: 'A powerful and interactive video editor UI built with React and Canvas, allowing users to clip, arrange, and edit video sequences directly in the browser.',
+    stack: ['React', 'Canvas API', 'UI Design'],
+    url: null,
+  },
+  {
+    name: 'Parithadam',
+    role: 'Web Platform',
+    category: 'Next.js',
+    group: 'freelance',
+    subGroup: 'domestic',
+    challenge: 'A modern web platform integrating seamless payments and transactional emails for secure and fast user experiences.',
+    stack: ['Next.js 15', 'Razorpay', 'Nodemailer'],
+    url: null,
+  },
+  {
+    name: 'Developer Academy Quiz',
+    role: 'Mobile App · Education',
+    category: 'Flutter',
+    group: 'freelance',
+    subGroup: 'domestic',
+    challenge: 'A cross-platform mobile application providing engaging quizzes for developers. Built with a focus on smooth UI and secure user authentication.',
+    stack: ['Flutter', 'Firebase Auth', 'Dart'],
+    url: null,
+  },
 ]
 
 const filters = ['All', 'Enterprise', 'Freelance', 'WordPress', 'Next.js', 'Flutter', 'CMS', 'Drupal']
@@ -250,6 +280,7 @@ export default function Projects() {
             {(() => {
               const clients = filtered.filter((p) => p.group === 'freelance' && p.subGroup === 'client')
               const utilities = filtered.filter((p) => p.group === 'freelance' && p.subGroup === 'utility')
+              const domestic = filtered.filter((p) => p.group === 'freelance' && p.subGroup === 'domestic')
               
               return (
                 <>
@@ -268,7 +299,7 @@ export default function Projects() {
                   )}
 
                   {utilities.length > 0 && (
-                    <div>
+                    <div className="mb-10">
                       <h4 className="text-sm font-mono text-canvas/50 mb-4 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
                         Utility Tools
@@ -276,6 +307,20 @@ export default function Projects() {
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {utilities.map((p, i) => (
                           <ProjectCard key={p.name} project={p} index={clients.length + i + 1} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {domestic.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-mono text-canvas/50 mb-4 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        Domestic Projects
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {domestic.map((p, i) => (
+                          <ProjectCard key={p.name} project={p} index={clients.length + utilities.length + i + 1} />
                         ))}
                       </div>
                     </div>

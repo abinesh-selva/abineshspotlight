@@ -194,8 +194,8 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="company" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Company *</label>
-                      <input type="text" id="company" name="company" required placeholder="Company name"
+                      <label htmlFor="company" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Company <span className="normal-case font-normal">(Optional)</span></label>
+                      <input type="text" id="company" name="company" placeholder="Company name"
                         className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-sm font-mono" />
                     </div>
                     <div>
@@ -210,6 +210,8 @@ export default function Contact() {
                           <option value="Technical SEO">Technical SEO</option>
                           <option value="Full Stack Development">Full Stack Development</option>
                           <option value="UI / UX Design">UI / UX Design</option>
+                          <option value="Consulting / Advice">Consulting / Advice</option>
+                          <option value="Just saying hi">Just saying hi!</option>
                           <option value="Other">Other</option>
                         </select>
                         <svg className="absolute right-4 top-1/2 -translate-y-1/2 w-3 h-3 text-mist pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -290,7 +292,7 @@ export default function Contact() {
                         Sending...
                       </>
                     ) : (
-                      'Send Project Brief →'
+                      'Send Message →'
                     )}
                   </button>
                 </form>

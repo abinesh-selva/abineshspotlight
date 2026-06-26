@@ -2,32 +2,39 @@ const tags = ['Headless WP', 'Technical SEO', 'ACF Pro', 'GraphQL', 'Core Web Vi
 
 const experience = [
   {
-    title: 'WordPress Developer',
-    company: 'FUEiNT Technologies',
-    companyClass: 'text-forest',
-    period: '2022 – 2026',
-    desc: 'Custom WordPress themes and plugins for 20+ global client sites in Agile/Scrum teams. ACF architectures, Gutenberg blocks, performance work that cut LCP by ~30%, and a sitemap fix that restored crawlability on 1,700+ indexed URLs.',
-  },
-  {
-    title: 'Freelance Full Stack Developer',
+    title: 'Founder & principal',
     company: 'Gradiolex',
-    companyClass: 'text-mist',
-    period: '2025 – Now',
-    desc: 'End-to-end products for startups — React/Next.js, Flutter mobile apps, AI/LLM integration, and Razorpay payment systems. Scoping, design, development, and deployment.',
+    companyClass: 'text-forest',
+    period: '2025 — Present',
+    desc: 'End-to-end web product delivery for local businesses and startups — scoping, design, development, and deployment. Managing client relationships independently and scaling architecture for repeat use.',
   },
   {
-    title: 'Full Stack Developer',
-    company: 'FUEiNT Technologies',
+    title: 'Senior Web Developer | WordPress Engineer',
+    company: 'Enterprise experience — via FueInt Technologies',
     companyClass: 'text-mist',
-    period: '2021 – 2022',
-    desc: '20+ enterprise WordPress sites. Legacy PHP to modern MVC migrations. Pixel-perfect Figma-to-code delivery.',
+    period: 'Jan 2025 — May 2026',
+    desc: 'Engineered and delivered production-grade web platforms for global enterprise clients including Unbounce, TractionComplete, Intiveo, PPIC, OpenGovernmentPartnership, Premier Boxing Champions, and ElasticPath. Operating in a high-stakes agency environment, I specialized in architecting custom CMS solutions across WordPress, Drupal, and Craft CMS. My work focused heavily on custom theme development, building scalable integration UIs, and executing deep performance optimizations—such as reducing Largest Contentful Paint (LCP) by ~30%—to ensure these enterprise platforms loaded lightning fast and met strict scalability standards.',
   },
   {
-    title: 'Junior Developer',
-    company: 'Entry-level · FUEiNT Technologies',
+    title: 'Frontend Developer | WordPress Developer',
+    company: 'Enterprise experience — via FueInt Technologies',
     companyClass: 'text-mist',
-    period: '2020 – 2021',
-    desc: null,
+    period: 'Jan 2023 — Dec 2024',
+    desc: 'Converted Figma designs into responsive WordPress websites. Built reusable Gutenberg blocks and ACF components, maintained client websites, optimized performance, and resolved production issues.',
+  },
+  {
+    title: 'Intern',
+    company: 'Enterprise experience — via FueInt Technologies',
+    companyClass: 'text-mist',
+    period: 'Jul 2022 — Dec 2022',
+    desc: 'Assisted in WordPress website development, bug fixing, content updates, responsive UI implementation, and testing while learning modern web development workflows and version control.',
+  },
+  {
+    title: 'B.E. Computer Science & Engineering',
+    company: 'Vidyaa Vikas College of Engineering (Anna University)',
+    companyClass: 'text-mist',
+    period: '2016 — 2020',
+    desc: 'Foundational programming in HTML, CSS, JavaScript, PHP, and web technologies — the basis for a full-stack development career. Active in Kabbadi.',
   },
 ]
 
@@ -81,7 +88,15 @@ export default function About() {
                       <h3 className="text-ink font-semibold text-base group-hover:text-accent transition-colors">
                         {exp.title}
                       </h3>
-                      <p className={`text-xs font-mono mt-1 font-medium ${exp.companyClass}`}>{exp.company}</p>
+                      <p className={`text-xs font-mono mt-1 font-medium ${exp.companyClass}`}>
+                        {exp.company === 'Gradiolex' ? (
+                          <a href="https://gradiolex.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1">
+                            Gradiolex ↗
+                          </a>
+                        ) : (
+                          exp.company
+                        )}
+                      </p>
                       {exp.desc && (
                         <p className="text-mist text-sm leading-relaxed mt-3 max-w-lg">{exp.desc}</p>
                       )}

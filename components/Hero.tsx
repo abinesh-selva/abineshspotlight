@@ -65,7 +65,9 @@ export default function Hero() {
 
           <div>
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Agency</p>
-            <p className="text-ink font-semibold text-sm">Gradiolex</p>
+            <a href="https://gradiolex.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-ink font-semibold text-sm hover:text-accent transition-colors">
+              Gradiolex ↗
+            </a>
             <p className="text-mist text-xs mt-1 font-mono">Freelance · Open to roles</p>
           </div>
 

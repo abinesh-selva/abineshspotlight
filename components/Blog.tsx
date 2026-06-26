@@ -35,7 +35,7 @@ export default function Blog() {
           <a
             href="https://fueint.com/authors/abinesh-s"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="hidden md:inline-flex group items-center gap-2 text-sm font-mono text-canvas/50 hover:text-accent transition-colors"
           >
             All articles{' '}
@@ -49,7 +49,7 @@ export default function Blog() {
               key={article.title}
               href={article.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="reveal-text group block overflow-hidden hover:border-accent transition-colors duration-300 bg-canvas"
             >
               <div className="relative h-52 overflow-hidden">
@@ -79,7 +79,7 @@ export default function Blog() {
           <a
             href="https://fueint.com/authors/abinesh-s"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="text-sm font-mono text-canvas/50 hover:text-accent transition-colors"
           >
             All articles →

@@ -147,8 +147,6 @@ const projects: Project[] = [
 ]
 
 const filters = ['All', 'Enterprise', 'Freelance', 'WordPress', 'Next.js', 'Flutter', 'CMS', 'Drupal']
-
-const FUEINT_URL = 'https://fueint.com'
 const GRADIOLEX_LINKEDIN = 'https://www.linkedin.com/company/gradiolex'
 const GRADIOLEX_SITE = 'https://gradiolex.vercel.app/'
 

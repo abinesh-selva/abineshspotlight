@@ -143,12 +143,10 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex flex-wrap gap-8">
-              <a href="https://linkedin.com/in/abinesh-selva/" target="_blank" rel="noopener noreferrer"
+              <a href="https://linkedin.com/in/abineshselvarasu/" target="_blank" rel="noopener noreferrer"
                 className="text-sm font-mono text-mist hover:text-accent transition-colors">LinkedIn →</a>
-              <a href="https://github.com/abinesh-selva" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/abineshselvarasu" target="_blank" rel="noopener noreferrer"
                 className="text-sm font-mono text-mist hover:text-accent transition-colors">GitHub →</a>
-              <a href="https://www.instagram.com/sak_abinesh/" target="_blank" rel="noopener noreferrer"
-                className="text-sm font-mono text-mist hover:text-accent transition-colors">Instagram →</a>
               <a href="https://www.linkedin.com/company/gradiolex" target="_blank" rel="noopener noreferrer"
                 className="text-sm font-mono text-mist hover:text-accent transition-colors">Gradiolex →</a>
             </div>

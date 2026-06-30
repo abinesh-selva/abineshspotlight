@@ -54,7 +54,7 @@ export default function Services() {
     <section id="services" className="py-16 bg-canvas">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-ink leading-tight mb-10 md:mb-20">
+          <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight mb-10 md:mb-20">
             My expertise.
           </h2>
           <p className="text-mist max-w-xs text-sm leading-relaxed mb-8">
@@ -72,7 +72,7 @@ export default function Services() {
                 {service.num}
               </span>
               <div className="md:col-span-4">
-                <h3 className="service-title font-display font-bold text-2xl md:text-3xl text-ink transition-colors duration-300">
+                <h3 className="service-title font-display font-normal text-2xl md:text-3xl text-ink transition-colors duration-300">
                   {service.title}
                 </h3>
               </div>

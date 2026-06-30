@@ -102,7 +102,7 @@ export default function Contact() {
 
           {/* Left */}
           <div className="reveal-text">
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-ink leading-tight mb-8">
+            <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight mb-8">
               Got a project?<br />Let&apos;s talk.
             </h2>
             <p className="text-mist leading-relaxed mb-10 max-w-sm text-sm">

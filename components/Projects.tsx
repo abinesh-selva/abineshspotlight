@@ -199,7 +199,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-16 bg-ink">
       <div className="container mx-auto px-6 md:px-12">
-        <h2 className="font-display font-bold text-4xl md:text-6xl text-canvas tracking-tight leading-tight mb-4 md:mb-6">
+        <h2 className="font-display font-normal text-4xl md:text-6xl text-canvas tracking-tight leading-tight mb-4 md:mb-6">
           Selected projects.
         </h2>
         <p className="text-canvas/40 text-sm font-mono mb-10 md:mb-16 max-w-2xl leading-relaxed">
@@ -354,7 +354,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       </span>
 
       {/* Name */}
-      <h3 className="font-display font-bold text-xl md:text-2xl text-canvas leading-tight mb-4 group-hover:text-accent transition-colors duration-300">
+      <h3 className="font-display font-normal text-xl md:text-2xl text-canvas leading-tight mb-4 group-hover:text-accent transition-colors duration-300">
         {project.name}
       </h3>
 

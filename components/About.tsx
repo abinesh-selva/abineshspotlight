@@ -46,7 +46,7 @@ export default function About() {
 
           {/* Left */}
           <div className="lg:col-span-5 reveal-text">
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-ink leading-none mb-8">
+            <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-none mb-8">
               Building the web, one commit at a time.
             </h2>
             <div className="space-y-5 text-mist text-sm leading-relaxed">

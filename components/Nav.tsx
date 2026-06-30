@@ -92,7 +92,7 @@ export default function Nav() {
               key={link.label}
               href={link.url}
               onClick={close}
-              className="mobile-nav-link font-display font-bold text-5xl text-canvas hover:text-accent transition-colors tracking-tight"
+              className="mobile-nav-link font-display font-normal text-5xl text-canvas hover:text-accent transition-colors tracking-tight"
             >
               {link.label}
             </a>

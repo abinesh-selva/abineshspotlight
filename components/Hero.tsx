@@ -5,10 +5,10 @@ import ScrambleText, { useScramble } from "./ScrambleText";
 
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
-  const scrambledFull = useScramble("Abinesh S", 0, 0.15); // Scrambles only on load (0), very slow (0.15)
-  const parts = scrambledFull.split(" ");
+  const scrambledFull = useScramble("Abinesh.S", 0, 0.15); // Scrambles only on load (0), very slow (0.15)
+  const parts = scrambledFull.split(".");
   const firstPart = parts[0];
-  const lastPart = parts.slice(1).join(" ");
+  const lastPart = parts.length > 1 ? "." + parts.slice(1).join(".") : "";
 
   return (
     <section id="hero" className="relative bg-canvas flex flex-col overflow-hidden">
@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
 
         <h1 
-          className="group font-display font-black leading-none tracking-tighter select-none pt-8 cursor-default w-max"
+          className="group font-display font-semibold leading-none tracking-tighter uppercase select-none pt-8 cursor-default w-max"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -37,19 +37,19 @@ export default function Hero() {
 
             {/* Top Half */}
             <span 
-              className="block text-4xl md:text-8xl lg:text-[150px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6"
+              className="block text-7xl md:text-9xl lg:text-[250px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6"
               style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}
             >
-              {firstPart} <span className="text-accent">{lastPart}</span>
+              {firstPart}<span className="text-accent">{lastPart}</span>
             </span>
 
             {/* Bottom Half */}
             <span 
-              className="absolute top-0 left-0 text-4xl md:text-8xl lg:text-[150px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6"
+              className="absolute top-0 left-0 text-7xl md:text-9xl lg:text-[250px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6"
               style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }}
               aria-hidden="true"
             >
-              {firstPart} <span className="text-accent">{lastPart}</span>
+              {firstPart}<span className="text-accent">{lastPart}</span>
             </span>
           </div>
         </h1>

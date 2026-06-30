@@ -10,7 +10,7 @@ export default function Skills() {
         <div className="flex items-center gap-10 animate-marquee whitespace-nowrap w-max">
           {row1.map((tech, i) => (
             <React.Fragment key={`r1-${i}`}>
-              <span className="font-display font-bold text-2xl sm:text-3xl md:text-5xl text-canvas/10 hover:text-canvas transition-colors duration-300 cursor-default select-none uppercase tracking-tight">
+              <span className="font-display font-normal text-2xl sm:text-3xl md:text-5xl text-canvas/10 hover:text-canvas transition-colors duration-300 cursor-default select-none uppercase tracking-tight">
                 {tech}
               </span>
               <span className="text-accent text-xl select-none">·</span>
@@ -23,7 +23,7 @@ export default function Skills() {
         <div className="flex items-center gap-10 animate-marquee-reverse whitespace-nowrap w-max">
           {row2.map((tech, i) => (
             <React.Fragment key={`r2-${i}`}>
-              <span className="font-display font-bold text-2xl sm:text-3xl md:text-5xl text-canvas/10 hover:text-accent transition-colors duration-300 cursor-default select-none uppercase tracking-tight">
+              <span className="font-display font-normal text-2xl sm:text-3xl md:text-5xl text-canvas/10 hover:text-accent transition-colors duration-300 cursor-default select-none uppercase tracking-tight">
                 {tech}
               </span>
               <span className="text-canvas/15 text-xl select-none">·</span>

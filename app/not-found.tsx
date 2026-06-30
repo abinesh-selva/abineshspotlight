@@ -77,7 +77,7 @@ export default function NotFound() {
       {/* Floating Elements Background */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div 
-          className="absolute text-[20vw] font-display font-bold text-forest opacity-30 select-none"
+          className="absolute text-[20vw] font-display font-normal text-forest opacity-30 select-none"
           style={{ 
             top: '5%', left: '-5%',
             transform: `translate(${parallaxX * 1.5}px, ${parallaxY * 1.5}px)`
@@ -86,7 +86,7 @@ export default function NotFound() {
           404
         </div>
         <div 
-          className="absolute text-[15vw] font-display font-bold text-forest opacity-20 select-none"
+          className="absolute text-[15vw] font-display font-normal text-forest opacity-20 select-none"
           style={{ 
             bottom: '10%', right: '-5%',
             transform: `translate(${parallaxX * -1}px, ${parallaxY * -1}px)`
@@ -104,19 +104,19 @@ export default function NotFound() {
         }}
       >
         <div className="relative group cursor-default">
-          <h1 className="font-display text-[120px] md:text-[180px] leading-none font-bold tracking-tighter text-accent mix-blend-screen relative z-10 select-none">
+          <h1 className="font-display text-[120px] md:text-[180px] leading-none font-normal tracking-tighter text-accent mix-blend-screen relative z-10 select-none">
             404
           </h1>
           {/* Glitch text shadow effect */}
-          <h1 className="font-display text-[120px] md:text-[180px] leading-none font-bold tracking-tighter text-blush absolute top-0 left-0 -ml-[4px] opacity-70 mix-blend-screen z-0 animate-pulse select-none">
+          <h1 className="font-display text-[120px] md:text-[180px] leading-none font-normal tracking-tighter text-blush absolute top-0 left-0 -ml-[4px] opacity-70 mix-blend-screen z-0 animate-pulse select-none">
             404
           </h1>
-          <h1 className="font-display text-[120px] md:text-[180px] leading-none font-bold tracking-tighter text-mist absolute top-0 left-0 ml-[4px] mt-[2px] opacity-70 mix-blend-screen z-0 animate-pulse select-none" style={{ animationDelay: '0.2s' }}>
+          <h1 className="font-display text-[120px] md:text-[180px] leading-none font-normal tracking-tighter text-mist absolute top-0 left-0 ml-[4px] mt-[2px] opacity-70 mix-blend-screen z-0 animate-pulse select-none" style={{ animationDelay: '0.2s' }}>
             404
           </h1>
         </div>
         
-        <h2 className="text-3xl md:text-5xl font-bold text-paper font-display mb-2">
+        <h2 className="text-3xl md:text-5xl font-normal text-paper font-display mb-2">
           Page not found
         </h2>
         

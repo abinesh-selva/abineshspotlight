@@ -94,7 +94,7 @@ export default function Blog() {
             {article.readTime}
           </span>
         </div>
-        <h3 className="text-white font-bold text-lg md:text-xl leading-snug group-hover:text-accent transition-colors duration-300">
+        <h3 className="text-white font-display text-xl md:text-2xl leading-snug group-hover:text-accent transition-colors duration-300">
           {article.title}
         </h3>
       </div>
@@ -105,7 +105,7 @@ export default function Blog() {
     <section id="blog" className="py-28 md:py-36 bg-ink">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-accent leading-tight">
+          <h2 className="font-display font-normal text-4xl md:text-5xl text-accent leading-tight">
             Things I&apos;ve<br />written.
           </h2>
           <a

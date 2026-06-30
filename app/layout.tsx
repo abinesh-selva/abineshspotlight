@@ -1,20 +1,22 @@
 import type { Metadata } from 'next'
-import { Syne, Outfit } from 'next/font/google'
+import { Albert_Sans, DM_Serif_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 import './globals.css'
 
-const syne = Syne({
+const dmSerifDisplay = DM_Serif_Display({
   subsets: ['latin'],
-  weight: ['700', '800'],
+  weight: ['400'],
+  style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap',
 })
 
-const outfit = Outfit({
+const albertSans = Albert_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
   variable: '--font-sans',
   display: 'swap',
 })
@@ -69,7 +71,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${syne.variable} ${outfit.variable} scroll-smooth`}>
+    <html lang="en" className={`${dmSerifDisplay.variable} ${albertSans.variable} scroll-smooth`}>
       <body className="font-sans bg-canvas text-ink antialiased">
         {children}
         <WhatsAppFloat />

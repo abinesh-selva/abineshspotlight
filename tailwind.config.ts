@@ -19,7 +19,8 @@ const config: Config = {
       },
       fontFamily: {
         sans:    ['var(--font-sans)', 'sans-serif'],
-        display: ['var(--font-display)', 'sans-serif'],
+        display: ['var(--font-display)', 'serif'],
+        mono:    ['var(--font-sans)', 'sans-serif'],
       },
       animation: {
         'marquee':         'marquee-left 38s linear infinite',

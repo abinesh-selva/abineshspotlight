@@ -14,10 +14,10 @@ export default function Hero() {
     <section id="hero" className="relative bg-canvas flex flex-col overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 flex flex-col justify-center py-6 md:py-10 pt-32 md:pt-36">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-rule pb-5 gap-4 md:gap-0">
-          <span className="flex items-center gap-3 text-base font-mono text-mist uppercase tracking-widest">
+          <span className="flex items-center gap-3 text-xs font-mono text-mist uppercase tracking-widest">
             Open To Work
           </span>
-          <span className="text-base font-mono text-mist uppercase tracking-widest">
+          <span className="text-xs font-mono text-mist uppercase tracking-widest">
             Tamil Nadu, India · {new Date().getFullYear()}
           </span>
         </div>
@@ -51,13 +51,13 @@ export default function Hero() {
       <div className="container mx-auto px-6 md:px-12 pb-12 md:pb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-rule">
           <div>
-            <p className="text-base font-mono text-mist uppercase tracking-widest mb-2">Role</p>
+            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Role</p>
             <p className="text-ink font-semibold text-base">Full Stack Engineer</p>
             <p className="text-mist text-base mt-1 font-mono">WordPress · React · Headless</p>
           </div>
 
           <div>
-            <p className="text-base font-mono text-mist uppercase tracking-widest mb-2">Studio</p>
+            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Studio</p>
             <a href="https://gradiolex.vercel.app/" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-1 text-ink font-semibold text-base hover:text-accent transition-colors">
               Gradiolex
               <svg className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

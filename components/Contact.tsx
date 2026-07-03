@@ -211,12 +211,12 @@ export default function Contact() {
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-5" encType="multipart/form-data">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="name" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Name *</label>
+                      <label htmlFor="name" className="block text-sm font-mono text-mist uppercase tracking-wider mb-2">Name *</label>
                       <input type="text" id="name" name="name" required placeholder="Your name"
                         className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-base font-mono" />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Email *</label>
+                      <label htmlFor="email" className="block text-sm font-mono text-mist uppercase tracking-wider mb-2">Email *</label>
                       <input type="email" id="email" name="email" required placeholder="you@example.com"
                         className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-base font-mono" />
                     </div>
@@ -224,12 +224,12 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="company" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Company <span className="normal-case font-normal">(Optional)</span></label>
+                      <label htmlFor="company" className="block text-sm font-mono text-mist uppercase tracking-wider mb-2">Company <span className="normal-case font-normal">(Optional)</span></label>
                       <input type="text" id="company" name="company" placeholder="Company name"
                         className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-base font-mono" />
                     </div>
                     <div>
-                      <label htmlFor="project_type" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Project Type *</label>
+                      <label htmlFor="project_type" className="block text-sm font-mono text-mist uppercase tracking-wider mb-2">Project Type *</label>
                       <div className="relative">
                         <select id="project_type" name="project_type" required
                           className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-base font-mono cursor-pointer">
@@ -251,7 +251,7 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="budget" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">
+                      <label htmlFor="budget" className="block text-sm font-mono text-mist uppercase tracking-wider mb-2">
                         Budget * <span className="text-mist normal-case font-normal">({currencyInfo.currency})</span>
                       </label>
                       <div className="relative">
@@ -266,7 +266,7 @@ export default function Contact() {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="timeline" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Timeline *</label>
+                      <label htmlFor="timeline" className="block text-sm font-mono text-mist uppercase tracking-wider mb-2">Timeline *</label>
                       <div className="relative">
                         <select id="timeline" name="timeline" required
                           className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent transition-all text-base font-mono cursor-pointer">
@@ -283,13 +283,13 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Message *</label>
+                    <label htmlFor="message" className="block text-sm font-mono text-mist uppercase tracking-wider mb-2">Message *</label>
                     <textarea id="message" name="message" required rows={4} placeholder="Tell me about your project..."
                       className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent transition-all resize-none text-base font-mono" />
                   </div>
 
                   <div>
-                    <label className="block text-base font-mono text-mist uppercase tracking-wider mb-2">
+                    <label className="block text-sm font-mono text-mist uppercase tracking-wider mb-2">
                       Attachment <span className="text-mist normal-case font-normal">(PDF, DOC, PNG, ZIP · max 5MB)</span>
                     </label>
                     <label htmlFor="file"

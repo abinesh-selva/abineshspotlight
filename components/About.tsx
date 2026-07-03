@@ -90,8 +90,11 @@ export default function About() {
                       </h3>
                       <p className={`text-xs font-mono mt-1 font-medium ${exp.companyClass}`}>
                         {exp.company === 'Gradiolex' ? (
-                          <a href="https://gradiolex.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1">
-                            Gradiolex ↗
+                          <a href="https://gradiolex.vercel.app/" target="_blank" rel="noopener noreferrer" className="group/link hover:text-accent transition-colors inline-flex items-center gap-1">
+                            Gradiolex
+                            <svg className="w-3 h-3 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
                           </a>
                         ) : (
                           exp.company
@@ -109,7 +112,6 @@ export default function About() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

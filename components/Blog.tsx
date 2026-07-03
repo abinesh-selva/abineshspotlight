@@ -115,7 +115,11 @@ export default function Blog() {
             className="hidden md:inline-flex group items-center gap-2 text-sm font-mono text-canvas/50 hover:text-accent transition-colors"
           >
             All articles{' '}
-            <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
+            <span className="group-hover:translate-x-1 transition-transform inline-flex items-center">
+              <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
           </a>
         </div>
 
@@ -145,9 +149,12 @@ export default function Blog() {
             href="https://fueint.com/authors/abinesh-s"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="text-sm font-mono text-canvas/50 hover:text-accent transition-colors"
+            className="group text-sm font-mono text-canvas/50 hover:text-accent transition-colors inline-flex items-center gap-1.5"
           >
-            All articles →
+            All articles
+            <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </a>
         </div>
       </div>

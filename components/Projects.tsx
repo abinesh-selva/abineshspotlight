@@ -270,9 +270,12 @@ export default function Projects() {
                   href={GRADIOLEX_SITE}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-mono text-canvas/40 hover:text-accent transition-colors border border-canvas/15 px-3 py-1 hover:border-accent"
+                  className="group text-xs font-mono text-canvas/40 hover:text-accent transition-colors border border-canvas/15 px-3 py-1 hover:border-accent inline-flex items-center gap-1"
                 >
-                  Link ↗
+                  Link
+                  <svg className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
                 </a>
               </div>
             )}
@@ -384,7 +387,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           className="inline-flex items-center gap-2 text-xs font-mono font-bold text-canvas/50 hover:text-accent transition-colors group/link w-fit mt-auto"
         >
           {project.urlLabel ?? 'Visit Project'}
-          <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+          <span className="group-hover/link:translate-x-1 transition-transform inline-flex items-center">
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </span>
         </a>
       ) : (
         <span className="text-xs font-mono text-canvas/25 italic mt-auto">Case study coming soon</span>

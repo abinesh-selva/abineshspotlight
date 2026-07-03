@@ -118,7 +118,11 @@ export default function Contact() {
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors"
                 >
                   +91 90429 72156
-                  <span className="text-accent group-hover:text-forest transition-colors text-xl leading-none mb-0.5">→</span>
+                  <span className="text-accent group-hover:text-forest transition-colors inline-flex items-center mb-0.5">
+                    <svg className="w-5 h-5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </span>
                 </a>
               </div>
               <div>
@@ -128,7 +132,11 @@ export default function Contact() {
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors break-all"
                 >
                   mailtoabineshselva@gmail.com
-                  <span className="text-accent group-hover:text-forest transition-colors text-xl leading-none mb-0.5">→</span>
+                  <span className="text-accent group-hover:text-forest transition-colors inline-flex items-center mb-0.5">
+                    <svg className="w-5 h-5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </span>
                 </a>
               </div>
               <div>
@@ -138,17 +146,36 @@ export default function Contact() {
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors break-all"
                 >
                   gradiolex@gmail.com
-                  <span className="text-accent group-hover:text-forest transition-colors text-xl leading-none mb-0.5">→</span>
+                  <span className="text-accent group-hover:text-forest transition-colors inline-flex items-center mb-0.5">
+                    <svg className="w-5 h-5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </span>
                 </a>
               </div>
             </div>
             <div className="flex flex-wrap gap-8">
               <a href="https://linkedin.com/in/abineshselvarasu/" target="_blank" rel="noopener noreferrer"
-                className="text-sm font-mono text-mist hover:text-accent transition-colors">LinkedIn →</a>
+                className="group text-sm font-mono text-mist hover:text-accent transition-colors inline-flex items-center gap-1">
+                LinkedIn
+                <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
               <a href="https://github.com/abineshselvarasu" target="_blank" rel="noopener noreferrer"
-                className="text-sm font-mono text-mist hover:text-accent transition-colors">GitHub →</a>
+                className="group text-sm font-mono text-mist hover:text-accent transition-colors inline-flex items-center gap-1">
+                GitHub
+                <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
               <a href="https://www.linkedin.com/company/gradiolex" target="_blank" rel="noopener noreferrer"
-                className="text-sm font-mono text-mist hover:text-accent transition-colors">Gradiolex →</a>
+                className="group text-sm font-mono text-mist hover:text-accent transition-colors inline-flex items-center gap-1">
+                Gradiolex
+                <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
             </div>
           </div>
 
@@ -166,8 +193,11 @@ export default function Contact() {
                   <h4 className="text-ink font-bold text-xl mb-2">Message sent.</h4>
                   <p className="text-mist text-sm">I&apos;ll get back to you within 24 hours.</p>
                 </div>
-                <button onClick={reset} className="text-sm font-mono text-accent hover:text-forest transition-colors">
-                  Send another →
+                <button onClick={reset} className="group text-sm font-mono text-accent hover:text-forest transition-colors inline-flex items-center gap-1">
+                  Send another
+                  <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                 </button>
               </div>
             ) : (
@@ -281,7 +311,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={state === 'loading'}
-                    className="w-full py-4 bg-accent text-white font-bold text-sm tracking-wide hover:bg-forest transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="group w-full py-4 bg-accent text-white font-bold text-sm tracking-wide hover:bg-forest transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {state === 'loading' ? (
                       <>
@@ -292,7 +322,12 @@ export default function Contact() {
                         Sending...
                       </>
                     ) : (
-                      'Send Message →'
+                      <span className="inline-flex items-center gap-1.5">
+                        Send Message
+                        <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                      </span>
                     )}
                   </button>
                 </form>
@@ -302,10 +337,13 @@ export default function Contact() {
         </div>
 
         <div className="mt-14 pt-8 border-t border-rule flex flex-col sm:flex-row justify-between gap-4 text-xs font-mono text-mist">
-          <p>
             © {new Date().getFullYear()} abineshspotlight.online. All rights reserved.
-          </p>
-          <a href="#hero" className="hover:text-accent transition-colors">Back to top ↑</a>
+          <a href="#hero" className="group hover:text-accent transition-colors inline-flex items-center gap-1">
+            Back to top
+            <svg className="w-3.5 h-3.5 transition-transform group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>

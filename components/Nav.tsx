@@ -59,7 +59,7 @@ export default function Nav() {
             href="/resume/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-rule text-sm font-medium text-mist hover:text-accent hover:border-accent transition-all z-50"
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-rule text-sm font-bold text-white bg-forest hover:bg-accent hover:text-forest transition-all z-50"
           >
             Resume
           </a>
@@ -103,9 +103,12 @@ export default function Nav() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={close}
-          className="mobile-nav-link inline-flex items-center gap-3 px-8 py-4 border border-canvas border-opacity-20 text-sm font-bold text-canvas hover:text-accent hover:border-accent transition-all"
+          className="group mobile-nav-link inline-flex items-center gap-3 px-8 py-4 border border-canvas border-opacity-20 text-sm font-bold text-canvas hover:text-accent hover:border-accent transition-all"
         >
-          View Resume →
+          View Resume
+          <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </a>
       </div>
     </>

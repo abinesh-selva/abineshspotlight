@@ -178,7 +178,7 @@ const projects: Project[] = [
     subGroup: 'utility',
     challenge: 'A digital Tamil calendar providing daily panchangam details, auspicious dates, and festival information.',
     stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
-    url: 'https://tamilcalendar.vercel.app/',
+    url: 'https://tamilcalendar.netlify.app/',
   },
   {
     name: 'Andaman Guru & Package',

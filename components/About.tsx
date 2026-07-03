@@ -68,7 +68,7 @@ export default function About() {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1.5 text-xs font-mono text-mist border border-rule hover:border-accent hover:text-accent transition-all cursor-default"
+                  className="px-3 py-1.5 text-base font-mono text-mist border border-rule hover:border-accent hover:text-accent transition-all cursor-default"
                 >
                   {tag}
                 </span>

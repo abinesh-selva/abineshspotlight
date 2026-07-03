@@ -343,10 +343,10 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     <article className="group flex flex-col border border-canvas border-opacity-10 hover:border-accent/40 bg-canvas/5 transition-all duration-300 p-6 h-full">
       {/* Top row */}
       <div className="flex items-start justify-between mb-6">
-        <span className="text-xs font-mono text-canvas/25">
+        <span className="text-xs font-mono text-canvas/25 group-hover:border-canvas group-hover:text-white">
           {String(index).padStart(2, '0')}
         </span>
-        <span className="text-xs font-mono uppercase tracking-widest text-canvas text-opacity-30 border border-canvas border-opacity-10 px-2 py-0.5">
+        <span className="text-xs font-mono uppercase tracking-widest text-canvas text-opacity-30 border border-canvas border-opacity-10 group-hover:border-canvas group-hover:text-white px-2 py-0.5">
           {project.group === 'enterprise' ? 'FueInt' : 'Gradiolex'}
         </span>
       </div>
@@ -371,7 +371,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         {project.stack.map((s) => (
           <span
             key={s}
-            className="text-xs font-mono text-canvas text-opacity-40 border border-canvas border-opacity-10 px-2 py-1 group-hover:border-canvas border-opacity-20 transition-colors"
+            className="text-xs font-mono text-canvas text-opacity-40 border border-canvas border-opacity-10 px-2 py-1 group-hover:border-canvas group-hover:text-white border-opacity-20 transition-colors"
           >
             {s}
           </span>

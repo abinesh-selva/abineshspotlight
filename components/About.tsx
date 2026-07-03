@@ -1,4 +1,4 @@
-const tags = ['Headless WP', 'Technical SEO', 'ACF Pro', 'GraphQL', 'Core Web Vitals', 'Flutter', 'AI / LLM', 'Custom Plugins']
+const tags = ['WordPress Customization', 'Custom Theme', 'Custom Hooks', 'Technical SEO', 'MySQL', 'ACF Pro', 'PHP', 'Core Web Vitals', 'Headless WP', 'Flutter', 'AI / LLM']
 
 const experience = [
   {
@@ -10,21 +10,21 @@ const experience = [
   },
   {
     title: 'Senior Web Developer | WordPress Engineer',
-    company: 'Enterprise experience — via FueInt Technologies',
+    company: 'Enterprise experience — FueInt Technologies',
     companyClass: 'text-mist',
     period: 'Jan 2025 — May 2026',
     desc: 'Engineered and delivered production-grade web platforms for global enterprise clients including Unbounce, TractionComplete, Intiveo, PPIC, OpenGovernmentPartnership, Premier Boxing Champions, and ElasticPath. Operating in a high-stakes agency environment, I specialized in architecting custom CMS solutions across WordPress, Drupal, and Craft CMS. My work focused heavily on custom theme development, building scalable integration UIs, and executing deep performance optimizations—such as reducing Largest Contentful Paint (LCP) by ~30%—to ensure these enterprise platforms loaded lightning fast and met strict scalability standards.',
   },
   {
     title: 'Frontend Developer | WordPress Developer',
-    company: 'Enterprise experience — via FueInt Technologies',
+    company: 'Enterprise experience — FueInt Technologies',
     companyClass: 'text-mist',
     period: 'Jan 2023 — Dec 2024',
     desc: 'Converted Figma designs into responsive WordPress websites. Built reusable Gutenberg blocks and ACF components, maintained client websites, optimized performance, and resolved production issues.',
   },
   {
     title: 'Intern',
-    company: 'Enterprise experience — via FueInt Technologies',
+    company: 'Enterprise experience — FueInt Technologies',
     companyClass: 'text-mist',
     period: 'Jul 2022 — Dec 2022',
     desc: 'Assisted in WordPress website development, bug fixing, content updates, responsive UI implementation, and testing while learning modern web development workflows and version control.',
@@ -49,7 +49,7 @@ export default function About() {
             <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-none mb-8">
               Building the web, one commit at a time.
             </h2>
-            <div className="space-y-5 text-mist text-sm leading-relaxed">
+            <div className="space-y-5 text-mist text-base leading-relaxed">
               <p>
                 I&apos;m Abinesh — a full stack engineer and senior WordPress developer with 3+ years
                 delivering production-grade websites for global clients. Shipping since 2022, focused
@@ -78,7 +78,7 @@ export default function About() {
 
           {/* Right: Experience */}
           <div className="lg:col-span-7">
-            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-8">Experience</p>
+            <p className="text-base font-mono text-mist uppercase tracking-widest mb-8">Experience</p>
 
             <div className="divide-y divide-rule">
               {experience.map((exp) => (
@@ -101,10 +101,10 @@ export default function About() {
                         )}
                       </p>
                       {exp.desc && (
-                        <p className="text-mist text-sm leading-relaxed mt-3 max-w-lg">{exp.desc}</p>
+                        <p className="text-mist text-base leading-relaxed mt-3 max-w-lg">{exp.desc}</p>
                       )}
                     </div>
-                    <span className="text-xs font-mono text-mist whitespace-nowrap pt-0.5 shrink-0">
+                    <span className="text-base font-mono text-mist whitespace-nowrap pt-0.5 shrink-0">
                       {exp.period}
                     </span>
                   </div>

@@ -105,14 +105,14 @@ export default function Contact() {
             <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight mb-8">
               Got a project?<br />Let&apos;s talk.
             </h2>
-            <p className="text-mist leading-relaxed mb-10 max-w-sm text-sm">
+            <p className="text-mist leading-relaxed mb-10 max-w-sm text-base">
               Available for freelance work and open to interesting full-time roles.
               I read everything and reply within 24 hours.
             </p>
 
             <div className="flex flex-col gap-5 mb-12">
               <div>
-                <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Phone / WhatsApp</p>
+                <p className="text-base font-mono text-mist uppercase tracking-widest mb-2">Phone / WhatsApp</p>
                 <a
                   href="tel:+919042972156"
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors"
@@ -126,7 +126,7 @@ export default function Contact() {
                 </a>
               </div>
               <div>
-                <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Personal</p>
+                <p className="text-base font-mono text-mist uppercase tracking-widest mb-2">Personal</p>
                 <a
                   href="mailto:mailtoabineshselva@gmail.com"
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors break-all"
@@ -140,7 +140,7 @@ export default function Contact() {
                 </a>
               </div>
               <div>
-                <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Gradiolex · Project enquiries</p>
+                <p className="text-base font-mono text-mist uppercase tracking-widest mb-2">Gradiolex · Project enquiries</p>
                 <a
                   href="mailto:gradiolex@gmail.com"
                   className="group inline-flex items-end gap-2 text-base md:text-lg font-bold text-ink hover:text-accent transition-colors break-all"
@@ -156,21 +156,21 @@ export default function Contact() {
             </div>
             <div className="flex flex-wrap gap-8">
               <a href="https://linkedin.com/in/abineshselvarasu/" target="_blank" rel="noopener noreferrer"
-                className="group text-sm font-mono text-mist hover:text-accent transition-colors inline-flex items-center gap-1">
+                className="group text-base font-mono text-mist hover:text-accent transition-colors inline-flex items-center gap-1">
                 LinkedIn
                 <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
               <a href="https://github.com/abineshselvarasu" target="_blank" rel="noopener noreferrer"
-                className="group text-sm font-mono text-mist hover:text-accent transition-colors inline-flex items-center gap-1">
+                className="group text-base font-mono text-mist hover:text-accent transition-colors inline-flex items-center gap-1">
                 GitHub
                 <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
               <a href="https://www.linkedin.com/company/gradiolex" target="_blank" rel="noopener noreferrer"
-                className="group text-sm font-mono text-mist hover:text-accent transition-colors inline-flex items-center gap-1">
+                className="group text-base font-mono text-mist hover:text-accent transition-colors inline-flex items-center gap-1">
                 Gradiolex
                 <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7" />
@@ -191,9 +191,9 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-ink font-bold text-xl mb-2">Message sent.</h4>
-                  <p className="text-mist text-sm">I&apos;ll get back to you within 24 hours.</p>
+                  <p className="text-mist text-base">I&apos;ll get back to you within 24 hours.</p>
                 </div>
-                <button onClick={reset} className="group text-sm font-mono text-accent hover:text-forest transition-colors inline-flex items-center gap-1">
+                <button onClick={reset} className="group text-base font-mono text-accent hover:text-forest transition-colors inline-flex items-center gap-1">
                   Send another
                   <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7" />
@@ -204,35 +204,35 @@ export default function Contact() {
               <>
                 {state === 'error' && (
                   <div className="mb-6 p-4 border border-red-200 bg-red-50">
-                    <p className="text-red-600 text-sm font-mono">{errorMsg}</p>
+                    <p className="text-red-600 text-base font-mono">{errorMsg}</p>
                   </div>
                 )}
 
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-5" encType="multipart/form-data">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="name" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Name *</label>
+                      <label htmlFor="name" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Name *</label>
                       <input type="text" id="name" name="name" required placeholder="Your name"
-                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-sm font-mono" />
+                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-base font-mono" />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Email *</label>
+                      <label htmlFor="email" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Email *</label>
                       <input type="email" id="email" name="email" required placeholder="you@example.com"
-                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-sm font-mono" />
+                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-base font-mono" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="company" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Company <span className="normal-case font-normal">(Optional)</span></label>
+                      <label htmlFor="company" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Company <span className="normal-case font-normal">(Optional)</span></label>
                       <input type="text" id="company" name="company" placeholder="Company name"
-                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-sm font-mono" />
+                        className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-base font-mono" />
                     </div>
                     <div>
-                      <label htmlFor="project_type" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Project Type *</label>
+                      <label htmlFor="project_type" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Project Type *</label>
                       <div className="relative">
                         <select id="project_type" name="project_type" required
-                          className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-sm font-mono cursor-pointer">
+                          className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent focus:bg-accent bg-opacity-5 transition-all text-base font-mono cursor-pointer">
                           <option value="" disabled>Select type...</option>
                           <option value="WordPress Development">WordPress Development</option>
                           <option value="React / Next.js">React / Next.js</option>
@@ -251,12 +251,12 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="budget" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">
+                      <label htmlFor="budget" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">
                         Budget * <span className="text-mist normal-case font-normal">({currencyInfo.currency})</span>
                       </label>
                       <div className="relative">
                         <select id="budget" name="budget" required
-                          className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent transition-all text-sm font-mono cursor-pointer">
+                          className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent transition-all text-base font-mono cursor-pointer">
                           <option value="" disabled>Select budget...</option>
                           {budgetOptions(currencyInfo).map((opt) => (
                             <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -266,10 +266,10 @@ export default function Contact() {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="timeline" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Timeline *</label>
+                      <label htmlFor="timeline" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Timeline *</label>
                       <div className="relative">
                         <select id="timeline" name="timeline" required
-                          className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent transition-all text-sm font-mono cursor-pointer">
+                          className="w-full appearance-none bg-paper border border-rule px-4 py-3 text-ink focus:outline-none focus:border-accent transition-all text-base font-mono cursor-pointer">
                           <option value="" disabled>Select timeline...</option>
                           <option value="ASAP">ASAP</option>
                           <option value="1 – 3 Months">1 – 3 Months</option>
@@ -283,13 +283,13 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">Message *</label>
+                    <label htmlFor="message" className="block text-base font-mono text-mist uppercase tracking-wider mb-2">Message *</label>
                     <textarea id="message" name="message" required rows={4} placeholder="Tell me about your project..."
-                      className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent transition-all resize-none text-sm font-mono" />
+                      className="w-full bg-paper border border-rule px-4 py-3 text-ink placeholder-mist/30 focus:outline-none focus:border-accent transition-all resize-none text-base font-mono" />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono text-mist uppercase tracking-wider mb-2">
+                    <label className="block text-base font-mono text-mist uppercase tracking-wider mb-2">
                       Attachment <span className="text-mist normal-case font-normal">(PDF, DOC, PNG, ZIP · max 5MB)</span>
                     </label>
                     <label htmlFor="file"
@@ -298,9 +298,9 @@ export default function Contact() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                       </svg>
                       {fileName ? (
-                        <span className="text-xs text-accent font-mono">📎 {fileName}</span>
+                        <span className="text-base text-accent font-mono">📎 {fileName}</span>
                       ) : (
-                        <span className="text-mist text-xs font-mono">
+                        <span className="text-mist text-base font-mono">
                           Drop file or <span className="text-accent group-hover:text-forest transition-colors">browse</span>
                         </span>
                       )}
@@ -311,7 +311,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={state === 'loading'}
-                    className="group w-full py-4 bg-accent text-white font-bold text-sm tracking-wide hover:bg-forest transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="group w-full py-4 bg-accent text-white font-bold text-base tracking-wide hover:bg-forest transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {state === 'loading' ? (
                       <>
@@ -336,7 +336,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-rule flex flex-col sm:flex-row justify-between gap-4 text-xs font-mono text-mist">
+        <div className="mt-14 pt-8 border-t border-rule flex flex-col sm:flex-row justify-between gap-4 text-base font-mono text-mist">
             © {new Date().getFullYear()} abineshspotlight.online. All rights reserved.
           <a href="#hero" className="group hover:text-accent transition-colors inline-flex items-center gap-1">
             Back to top

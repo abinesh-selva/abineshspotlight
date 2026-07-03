@@ -87,10 +87,10 @@ export default function Blog() {
       <div className="absolute inset-0 bg-gradient-to-t from-[#081729]/95 via-[#081729]/40 to-transparent pointer-events-none" />
       <div className="absolute bottom-6 left-5 right-5 z-10">
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="text-xs font-mono text-accent uppercase tracking-widest bg-black/60 px-2 py-1 rounded-md backdrop-blur-sm border border-white/10">
+          <span className="text-base font-mono text-accent uppercase tracking-widest bg-black/60 px-2 py-1 rounded-md backdrop-blur-sm border border-white/10">
             {article.category}
           </span>
-          <span className="text-xs font-mono text-mist bg-black/60 px-2 py-1 rounded-md backdrop-blur-sm border border-white/10">
+          <span className="text-base font-mono text-mist bg-black/60 px-2 py-1 rounded-md backdrop-blur-sm border border-white/10">
             {article.readTime}
           </span>
         </div>
@@ -112,7 +112,7 @@ export default function Blog() {
             href="https://fueint.com/authors/abinesh-s"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="hidden md:inline-flex group items-center gap-2 text-sm font-mono text-canvas/50 hover:text-accent transition-colors"
+            className="hidden md:inline-flex group items-center gap-2 text-base font-mono text-canvas/50 hover:text-accent transition-colors"
           >
             All articles{' '}
             <span className="group-hover:translate-x-1 transition-transform inline-flex items-center">
@@ -149,7 +149,7 @@ export default function Blog() {
             href="https://fueint.com/authors/abinesh-s"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="group text-sm font-mono text-canvas/50 hover:text-accent transition-colors inline-flex items-center gap-1.5"
+            className="group text-base font-mono text-canvas/50 hover:text-accent transition-colors inline-flex items-center gap-1.5"
           >
             All articles
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

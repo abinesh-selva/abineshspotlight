@@ -61,6 +61,42 @@ const projects: Project[] = [
     stack: ['WordPress', 'ACF Pro', 'PHP', 'Plugin Dev'],
     url: 'https://www.tractioncomplete.com',
   },
+  {
+    name: 'PPIC',
+    role: 'WordPress Developer',
+    category: 'WordPress',
+    group: 'enterprise',
+    challenge: 'Custom theme development, complex block architectures, and content migrations for a policy research and analysis center.',
+    stack: ['WordPress', 'PHP', 'ACF Pro', 'CSS'],
+    url: null,
+  },
+  {
+    name: 'Intiveo',
+    role: 'WordPress Developer',
+    category: 'WordPress',
+    group: 'enterprise',
+    challenge: 'Custom WordPress components, interactive element integrations, and conversion flow optimization for a patient communication SaaS.',
+    stack: ['WordPress', 'PHP', 'JavaScript', 'ACF Pro'],
+    url: null,
+  },
+  {
+    name: 'Loopio',
+    role: 'WordPress Developer',
+    category: 'WordPress',
+    group: 'enterprise',
+    challenge: 'Marketing website architecture, ACF modular layouts, and performance tuning for a leading RFP response software.',
+    stack: ['WordPress', 'PHP', 'ACF Pro', 'Webpack'],
+    url: null,
+  },
+  {
+    name: 'Insightly',
+    role: 'WordPress Developer',
+    category: 'WordPress',
+    group: 'enterprise',
+    challenge: 'Marketing site optimization, Gutenberg blocks, and CRM form integrations for a popular CRM platform website.',
+    stack: ['WordPress', 'PHP', 'ACF Pro', 'CRM Integration'],
+    url: null,
+  },
 
   // ── Freelance via Gradiolex ─────────────────────────────────────────
   {
@@ -82,7 +118,7 @@ const projects: Project[] = [
     challenge: 'B2B wholesale cement and steel trader website with product catalogue and trade enquiry flows.',
     stack: ['WordPress', 'ACF', 'Pantheon'],
     url: 'https://dev-sri-dhanamoorthy-traders.pantheonsite.io',
-    urlLabel: 'View Dev Site',
+    urlLabel: 'Visit Project',
   },
   {
     name: 'MySupportInfo',
@@ -145,33 +181,43 @@ const projects: Project[] = [
     url: 'https://tamilcalendar.vercel.app/',
   },
   {
-    name: 'Videoclips',
-    role: 'Video Editor UI',
-    category: 'React',
-    group: 'freelance',
+    name: 'Andaman Guru & Package',
+    role: 'React Developer',
+    category: 'Next.js',
+    group: 'enterprise',
     subGroup: 'domestic',
-    challenge: 'A powerful and interactive video editor UI built with React and Canvas, allowing users to clip, arrange, and edit video sequences directly in the browser.',
-    stack: ['React', 'Canvas API', 'UI Design'],
+    challenge: 'Migrated the legacy WordPress website to React/Next.js as a major development effort across all pages to modernize performance and user experience.',
+    stack: ['Next.js', 'React', 'Tailwind'],
+    url: null,
+  },
+  {
+    name: 'Siswa',
+    role: 'Mobile App Developer',
+    category: 'Flutter',
+    group: 'enterprise',
+    subGroup: 'domestic',
+    challenge: 'A cross-platform mobile application designed for student collaboration, academic tracking, and real-time notifications.',
+    stack: ['Flutter', 'Firebase', 'Dart', 'State Management'],
+    url: null,
+  },
+  {
+    name: 'Naicee',
+    role: 'Next.js Developer',
+    category: 'Next.js',
+    group: 'enterprise',
+    subGroup: 'domestic',
+    challenge: 'Built a web platform dedicated to preserving native Tamil Nadu dog breeds, featuring multilingual support, breed search filters, adopt workflows, and optimized image galleries.',
+    stack: ['Next.js', 'React', 'Tailwind'],
     url: null,
   },
   {
     name: 'Parithadam',
     role: 'Web Platform',
     category: 'Next.js',
-    group: 'freelance',
+    group: 'enterprise',
     subGroup: 'domestic',
-    challenge: 'A modern web platform integrating seamless payments and transactional emails for secure and fast user experiences.',
-    stack: ['Next.js 15', 'Razorpay', 'Nodemailer'],
-    url: null,
-  },
-  {
-    name: 'Developer Academy Quiz',
-    role: 'Mobile App · Education',
-    category: 'Flutter',
-    group: 'freelance',
-    subGroup: 'domestic',
-    challenge: 'A cross-platform mobile application providing engaging quizzes for developers. Built with a focus on smooth UI and secure user authentication.',
-    stack: ['Flutter', 'Firebase Auth', 'Dart'],
+    challenge: 'Taste the purity of nature with Parithadam — your destination for 100% natural honey, traditional snacks, and chemical-free rice. Every product is crafted with love and care from our farms to your home.',
+    stack: ['Next.js 15', 'React', 'Tailwind', 'Nodemailer'],
     url: null,
   },
 ]
@@ -202,7 +248,7 @@ export default function Projects() {
         <h2 className="font-display font-normal text-4xl md:text-6xl text-canvas tracking-tight leading-tight mb-4 md:mb-6">
           Selected projects.
         </h2>
-        <p className="text-canvas/40 text-sm font-mono mb-10 md:mb-16 max-w-2xl leading-relaxed">
+        <p className="text-canvas/40 text-base font-mono mb-10 md:mb-16 max-w-2xl leading-relaxed">
           Work spans two tracks — enterprise delivery under{' '}
           <span className="text-accent hover:underline">
             FueInt Technologies
@@ -221,7 +267,7 @@ export default function Projects() {
               <button
                 key={f}
                 onClick={() => setActive(f)}
-                className={`px-5 py-2 text-sm font-mono font-medium transition-all duration-300 ${
+                className={`px-5 py-2 text-base font-mono font-medium transition-all duration-300 ${
                   active === f
                     ? 'bg-accent text-ink scale-105'
                     : 'bg-canvas/10 text-canvas/50 border border-canvas/15 hover:bg-accent/20 hover:text-canvas'
@@ -238,24 +284,47 @@ export default function Projects() {
           <div className="mb-14">
             {showBothGroups && (
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-xs font-mono uppercase tracking-widest text-canvas text-opacity-30">Enterprise experience</span>
+                <span className="text-base font-mono uppercase tracking-widest text-canvas text-opacity-30">Enterprise experience</span>
                 <div className="flex-1 h-px bg-canvas/10" />
               </div>
             )}
 
-            <p className="text-canvas text-opacity-30 text-xs font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
-              Delivered under{' '}
-              <span className="text-accent/70 hover:text-accent">
-                FueInt Technologies
-              </span>
-              . All work completed under their client contracts. Logos and brand names belong to their respective owners.
+            <p className="text-canvas text-opacity-30 text-base font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
+              Delivered under <span className="text-accent/70 hover:text-accent">FueInt Technologies</span> via <span className="text-accent/70 hover:text-accent">Dialed In Design (Canada)</span>. Projects delivered as part of agency client work. All trademarks belong to their respective owners.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filtered.filter((p) => p.group === 'enterprise').map((p, i) => (
-                <ProjectCard key={p.name} project={p} index={i + 1} />
-              ))}
-            </div>
+            {(() => {
+              const globalProjects = filtered.filter((p) => p.group === 'enterprise' && p.subGroup !== 'domestic')
+              const domesticProjects = filtered.filter((p) => p.group === 'enterprise' && p.subGroup === 'domestic')
+              
+              return (
+                <>
+                  {globalProjects.length > 0 && (
+                    <div className="mb-10">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {globalProjects.map((p, i) => (
+                          <ProjectCard key={p.name} project={p} index={i + 1} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {domesticProjects.length > 0 && (
+                    <div>
+                      <h4 className="text-base font-mono text-canvas/50 mb-4 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        Domestic Projects
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {domesticProjects.map((p, i) => (
+                          <ProjectCard key={p.name} project={p} index={globalProjects.length + i + 1} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </>
+              )
+            })()}
           </div>
         )}
 
@@ -264,13 +333,13 @@ export default function Projects() {
           <div>
             {showBothGroups && (
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-xs font-mono uppercase tracking-widest text-canvas text-opacity-30">Freelance — Gradiolex</span>
+                <span className="text-base font-mono uppercase tracking-widest text-canvas text-opacity-30">Freelance — Gradiolex</span>
                 <div className="flex-1 h-px bg-canvas/10" />
                 <a
                   href={GRADIOLEX_SITE}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group text-xs font-mono text-canvas/40 hover:text-accent transition-colors border border-canvas/15 px-3 py-1 hover:border-accent inline-flex items-center gap-1"
+                  className="group text-base font-mono text-canvas/40 hover:text-accent transition-colors border border-canvas/15 px-3 py-1 hover:border-accent inline-flex items-center gap-1"
                 >
                   Link
                   <svg className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -289,7 +358,7 @@ export default function Projects() {
                 <>
                   {clients.length > 0 && (
                     <div className="mb-10">
-                      <h4 className="text-sm font-mono text-canvas/50 mb-4 flex items-center gap-2">
+                      <h4 className="text-base font-mono text-canvas/50 mb-4 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
                         Clients
                       </h4>
@@ -303,7 +372,7 @@ export default function Projects() {
 
                   {utilities.length > 0 && (
                     <div className="mb-10">
-                      <h4 className="text-sm font-mono text-canvas/50 mb-4 flex items-center gap-2">
+                      <h4 className="text-base font-mono text-canvas/50 mb-4 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
                         Utility Tools
                       </h4>
@@ -317,7 +386,7 @@ export default function Projects() {
 
                   {domestic.length > 0 && (
                     <div>
-                      <h4 className="text-sm font-mono text-canvas/50 mb-4 flex items-center gap-2">
+                      <h4 className="text-base font-mono text-canvas/50 mb-4 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
                         Domestic Projects
                       </h4>
@@ -343,12 +412,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     <article className="group flex flex-col border border-canvas border-opacity-10 hover:border-accent/40 bg-canvas/5 transition-all duration-300 p-6 h-full">
       {/* Top row */}
       <div className="flex items-start justify-between mb-6">
-        <span className="text-xs font-mono text-canvas/25 group-hover:border-canvas group-hover:text-white">
+        <span className="text-base font-mono text-canvas/25 group-hover:border-canvas group-hover:text-white">
           {String(index).padStart(2, '0')}
         </span>
-        <span className="text-xs font-mono uppercase tracking-widest text-canvas text-opacity-30 border border-canvas border-opacity-10 group-hover:border-canvas group-hover:text-white px-2 py-0.5">
-          {project.group === 'enterprise' ? 'FueInt' : 'Gradiolex'}
-        </span>
+        <div className="flex flex-col items-end gap-1">
+          <span className="text-xs font-mono uppercase tracking-widest text-canvas text-opacity-30 border border-canvas border-opacity-10 group-hover:border-canvas group-hover:text-white px-2 py-0.5">
+            {project.group === 'enterprise' ? 'FueInt' : 'Gradiolex'}
+          </span>
+        </div>
       </div>
 
       {/* Role */}
@@ -362,7 +433,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       </h3>
 
       {/* Description */}
-      <p className="text-canvas/50 text-sm leading-relaxed mb-6 flex-1">
+      <p className="text-canvas/50 text-base leading-relaxed mb-6 flex-1">
         {project.challenge}
       </p>
 
@@ -371,7 +442,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         {project.stack.map((s) => (
           <span
             key={s}
-            className="text-xs font-mono text-canvas text-opacity-40 border border-canvas border-opacity-10 px-2 py-1 group-hover:border-canvas group-hover:text-white border-opacity-20 transition-colors"
+            className="text-sm font-mono text-canvas text-opacity-40 border border-canvas border-opacity-10 px-2 py-1 group-hover:border-canvas group-hover:text-white border-opacity-20 transition-colors"
           >
             {s}
           </span>
@@ -379,7 +450,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       </div>
 
       {/* Link */}
-      {project.url ? (
+      {project.url && (
         <a
           href={project.url}
           target="_blank"
@@ -393,8 +464,6 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             </svg>
           </span>
         </a>
-      ) : (
-        <span className="text-xs font-mono text-canvas/25 italic mt-auto">Case study coming soon</span>
       )}
     </article>
   )

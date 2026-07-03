@@ -46,13 +46,13 @@ export default function Nav() {
 
           <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.url} className="nav-link text-sm font-medium text-forest hover:text-ink hover:font-bold transition-colors tracking-wide pb-0.5">
+              <a key={link.label} href={link.url} className="nav-link text-base font-medium text-forest hover:text-ink hover:font-bold transition-colors tracking-wide pb-0.5">
                 {link.label}
               </a>
             ))}
           </nav>
 
-          <a href="/resume/Resume.pdf" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-rule text-sm font-bold text-white bg-forest hover:bg-accent hover:text-forest transition-all z-50">
+          <a href="/resume/Resume.pdf" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-rule text-base font-bold text-white bg-forest hover:bg-accent hover:text-forest transition-all z-50">
             Resume
           </a>
 
@@ -73,7 +73,7 @@ export default function Nav() {
             </a>
           ))}
         </nav>
-        <a href="/resume/Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={close} className="group mobile-nav-link inline-flex items-center gap-3 px-8 py-4 border border-canvas border-opacity-20 text-sm font-bold text-canvas hover:text-accent hover:border-accent transition-all">
+        <a href="/resume/Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={close} className="group mobile-nav-link inline-flex items-center gap-3 px-8 py-4 border border-canvas border-opacity-20 text-base font-bold text-canvas hover:text-accent hover:border-accent transition-all">
           View Resume
           <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M12 5l7 7-7 7" />

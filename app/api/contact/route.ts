@@ -6,6 +6,7 @@ const SPREADSHEET_ID = process.env.GOOGLE_SHEETS_ID ?? '1yA7VTc7ZyMWOgLrbJ-fMHLE
 const SHEET_NAME = 'Leads'
 
 async function getAccessToken(clientEmail: string, privateKey: string): Promise<string> {
+  const formattedKey = privateKey.replace(/\\n/g, '\n')
   const now = Math.floor(Date.now() / 1000)
   const header = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url')
   const claim = Buffer.from(JSON.stringify({
@@ -18,7 +19,7 @@ async function getAccessToken(clientEmail: string, privateKey: string): Promise<
 
   const signer = createSign('RSA-SHA256')
   signer.update(`${header}.${claim}`)
-  const sig = signer.sign(privateKey, 'base64url')
+  const sig = signer.sign(formattedKey, 'base64url')
 
   const res = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
@@ -35,7 +36,22 @@ async function getAccessToken(clientEmail: string, privateKey: string): Promise<
 }
 
 async function appendToSheet(row: string[]) {
-  const creds = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON ?? '{}')
+  const envJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON
+  if (!envJson) {
+    throw new Error('GOOGLE_SERVICE_ACCOUNT_JSON environment variable is missing on Netlify.')
+  }
+  
+  let creds
+  try {
+    creds = JSON.parse(envJson)
+  } catch (parseErr) {
+    throw new Error(`Failed to parse GOOGLE_SERVICE_ACCOUNT_JSON JSON string: ${(parseErr as Error).message}`)
+  }
+
+  if (!creds.client_email || !creds.private_key) {
+    throw new Error('GOOGLE_SERVICE_ACCOUNT_JSON is missing client_email or private_key fields.')
+  }
+
   const token = await getAccessToken(creds.client_email, creds.private_key)
 
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${encodeURIComponent(SHEET_NAME + '!A:I')}:append?valueInputOption=USER_ENTERED`

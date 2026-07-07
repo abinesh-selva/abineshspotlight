@@ -131,12 +131,21 @@ export async function POST(req: NextRequest) {
     })
 
     if (allFailed) {
-      throw new Error('All message delivery methods failed.')
+      // Find the specific rejection reasons
+      const reasons = results
+        .filter((r): r is PromiseRejectedResult => r.status === 'rejected')
+        .map(r => r.reason instanceof Error ? r.reason.message : String(r.reason))
+        .join(' | ')
+      throw new Error(`All message delivery methods failed. Reasons: ${reasons}`)
     }
 
     return NextResponse.json({ success: true })
   } catch (err) {
     console.error('Contact form error:', err)
-    return NextResponse.json({ success: false, message: 'Failed to send message.' }, { status: 500 })
+    return NextResponse.json({ 
+      success: false, 
+      message: 'Failed to send message.', 
+      error: err instanceof Error ? err.message : String(err) 
+    }, { status: 500 })
   }
 }

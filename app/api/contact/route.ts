@@ -38,7 +38,7 @@ async function getAccessToken(clientEmail: string, privateKey: string): Promise<
 async function appendToSheet(row: string[]) {
   const envJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON
   if (!envJson) {
-    throw new Error('GOOGLE_SERVICE_ACCOUNT_JSON environment variable is missing on Netlify.')
+    throw new Error('GOOGLE_SERVICE_ACCOUNT_JSON environment variable is missing.')
   }
   
   let creds

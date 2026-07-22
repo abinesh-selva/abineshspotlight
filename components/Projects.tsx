@@ -35,6 +35,15 @@ const projects: Project[] = [
     url: 'https://www.opengovpartnership.org',
   },
   {
+    name: 'Open Gov Week',
+    role: 'WordPress Developer',
+    category: 'WordPress',
+    group: 'enterprise',
+    challenge: 'Large-scale CMS and Custom Post Type architecture for an international initiative spanning 75+ governments and millions of annual visitors.',
+    stack: ['WordPress', 'ACF Pro', 'CPT', 'REST API'],
+    url: 'https://www.opengovweek.org',
+  },
+  {
     name: 'ElasticPath',
     role: 'Craft CMS Developer',
     category: 'CMS',
@@ -51,6 +60,15 @@ const projects: Project[] = [
     challenge: 'Security hardening and performance work for a major US boxing promoter, including live fight-night features built to handle peak concurrency.',
     stack: ['Drupal', 'PHP', 'Security', 'Performance'],
     url: 'https://www.premierboxingchampions.com',
+  },
+  {
+    name: 'DialedIn',
+    role: 'Drupal Developer',
+    category: 'Drupal',
+    group: 'enterprise',
+    challenge: 'Developed and maintained a Drupal-based website for a cloud contact center platform, focusing on custom features, performance improvements, and ongoing site maintenance.',
+    stack: ['Drupal', 'PHP', 'JavaScript', 'Performance'],
+    url: 'https://dialedin.ca/',
   },
   {
     name: 'Traction Complete',
@@ -179,6 +197,16 @@ const projects: Project[] = [
     challenge: 'A digital Tamil calendar providing daily panchangam details, auspicious dates, and festival information.',
     stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
     url: 'https://tamilcalendar.netlify.app/',
+  },
+  {
+    name: 'FUEiNT Technologies',
+    role: 'Next.js Developer',
+    category: 'Next.js',
+    group: 'enterprise',
+    subGroup: 'domestic',
+    challenge: 'Revamped the company website by rebuilding the old platform in Next.js, improving performance, modernizing the UI, and creating a scalable codebase for future growth.',
+    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    url: null,
   },
   {
     name: 'Andaman Guru & Package',

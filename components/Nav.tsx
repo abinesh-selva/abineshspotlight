@@ -39,12 +39,12 @@ export default function Nav() {
         className={scrolled ? 'is-scrolled fixed w-full top-0 z-50' : 'fixed w-full top-0 z-50'}
         role="banner"
       >
-        <div className="container mx-auto px-6 md:px-12 h-16 md:h-20 flex items-center justify-between">
+        <div className="container mx-auto px-6 lg:px-12 h-16 lg:h-20 flex items-center justify-between">
           <a href="#hero" aria-label="Abinesh — Home" className="flex items-center gap-2 z-50">
-            <Image src="/logo.svg" alt="Abinesh Spotlight" width={48} height={48} className="h-10 md:h-12 w-auto object-contain select-none transition-transform hover:translate-x-1" />
+            <Image src="/logo.svg" alt="Abinesh Spotlight" width={48} height={48} className="h-10 lg:h-12 w-auto object-contain select-none transition-transform hover:translate-x-1" />
           </a>
 
-          <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-10">
+          <nav aria-label="Primary navigation" className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <a key={link.label} href={link.url} className="nav-link text-base font-medium text-forest hover:text-ink hover:font-bold transition-colors tracking-wide pb-0.5">
                 {link.label}
@@ -52,11 +52,11 @@ export default function Nav() {
             ))}
           </nav>
 
-          <a href="/resume/Resume.pdf" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-rule text-base font-bold text-white bg-forest hover:bg-accent hover:text-forest transition-all z-50">
+          <a href="/resume/Resume.pdf" target="_blank" rel="noopener noreferrer" className="hidden lg:inline-flex items-center gap-2 px-5 py-2 border border-rule text-base font-bold text-white bg-forest hover:bg-accent hover:text-forest transition-all z-50">
             Resume
           </a>
 
-          <button id="mobile-nav-toggle" className={`md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 z-50 relative${menuOpen ? ' is-open' : ''}`} aria-label="Toggle mobile menu" aria-expanded={menuOpen} onClick={() => setMenuOpen((o) => !o)}>
+          <button id="mobile-nav-toggle" className={`lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 z-50 relative${menuOpen ? ' is-open' : ''}`} aria-label="Toggle mobile menu" aria-expanded={menuOpen} onClick={() => setMenuOpen((o) => !o)}>
             <span id="ham-line-1" className="block w-6 h-0.5 bg-ink transition-all duration-300 origin-center" />
             <span id="ham-line-2" className="block w-6 h-0.5 bg-ink transition-all duration-300" />
             <span id="ham-line-3" className="block w-4 h-0.5 bg-ink transition-all duration-300 origin-center ml-auto" />

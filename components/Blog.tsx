@@ -103,7 +103,7 @@ export default function Blog() {
 
   return (
     <section id="blog" className="py-28 md:py-36 bg-ink">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
           <h2 className="font-display font-normal text-4xl md:text-5xl text-accent leading-tight">
             Things I&apos;ve<br />written.

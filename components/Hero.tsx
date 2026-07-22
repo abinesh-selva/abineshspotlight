@@ -12,7 +12,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative bg-canvas flex flex-col overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12 flex flex-col justify-center py-6 md:py-10 pt-32 md:pt-36">
+      <div className="container mx-auto px-6 flex flex-col justify-center py-6 md:py-10 pt-32 md:pt-36">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-rule pb-5 gap-4 md:gap-0">
           <span className="flex items-center gap-3 text-xs font-mono text-mist uppercase tracking-widest">
             Open To Work
@@ -36,19 +36,19 @@ export default function Hero() {
             </span>
 
             {/* Top Half */}
-            <span className="block text-7xl md:text-9xl lg:text-[250px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}>
+            <span className="block text-7xl md:text-9xl lg:text-[200px] xl:text-[250px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}>
               {firstPart}<span className="text-accent">{lastPart}</span>
             </span>
 
             {/* Bottom Half */}
-            <span className="absolute top-0 left-0 text-7xl md:text-9xl lg:text-[250px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6" style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }} aria-hidden="true">
+            <span className="top-0 left-0 text-7xl md:text-9xl lg:text-[200px] xl:text-[250px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6 absolute" style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }} aria-hidden="true">
               {firstPart}<span className="text-accent">{lastPart}</span>
             </span>
           </div>
         </h1>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 pb-12 md:pb-16">
+      <div className="container mx-auto px-6 pb-12 md:pb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-rule">
           <div>
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Role</p>

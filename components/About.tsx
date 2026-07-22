@@ -41,8 +41,8 @@ const experience = [
 export default function About() {
   return (
     <section id="about" className="py-16 bg-canvas">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-24">
 
           {/* Left */}
           <div className="lg:col-span-5 reveal-text">
@@ -83,28 +83,33 @@ export default function About() {
             <div className="divide-y divide-rule">
               {experience.map((exp) => (
                 <div key={exp.title} className="py-7 reveal-text group">
-                  <div className="flex items-start justify-between gap-6">
-                    <div>
+                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 md:gap-6">
+                    <div className="flex-grow min-w-0">
                       <h3 className="text-ink font-semibold text-base group-hover:text-accent transition-colors">
                         {exp.title}
                       </h3>
-                      <p className={`text-xs font-mono mt-1 font-medium ${exp.companyClass}`}>
-                        {exp.company === 'Gradiolex' ? (
-                          <a href="https://gradiolex.vercel.app/" target="_blank" rel="noopener noreferrer" className="group/link hover:text-accent transition-colors inline-flex items-center gap-1">
-                            Gradiolex
-                            <svg className="w-3 h-3 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                              <path d="M7 17L17 7M17 7H7M17 7V17" />
-                            </svg>
-                          </a>
-                        ) : (
-                          exp.company
-                        )}
-                      </p>
+                      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1">
+                        <span className={`text-xs font-mono font-medium ${exp.companyClass}`}>
+                          {exp.company === 'Gradiolex' ? (
+                            <a href="https://gradiolex.vercel.app/" target="_blank" rel="noopener noreferrer" className="group/link hover:text-accent transition-colors inline-flex items-center gap-1">
+                              Gradiolex
+                              <svg className="w-3 h-3 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                              </svg>
+                            </a>
+                          ) : (
+                            exp.company
+                          )}
+                        </span>
+                        <span className="text-xs font-mono text-mist md:hidden">
+                          • {exp.period}
+                        </span>
+                      </div>
                       {exp.desc && (
                         <p className="text-mist text-base leading-relaxed mt-3 max-w-lg">{exp.desc}</p>
                       )}
                     </div>
-                    <span className="text-base font-mono text-mist whitespace-nowrap pt-0.5 shrink-0">
+                    <span className="hidden md:block text-base font-mono text-mist whitespace-nowrap pt-0.5 shrink-0">
                       {exp.period}
                     </span>
                   </div>

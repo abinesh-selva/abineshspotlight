@@ -52,7 +52,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="py-16 bg-canvas">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between">
           <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight mb-10 md:mb-20">
             My expertise.

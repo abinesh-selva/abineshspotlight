@@ -272,7 +272,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-16 bg-ink">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6">
         <h2 className="font-display font-normal text-4xl md:text-6xl text-canvas tracking-tight leading-tight mb-4 md:mb-6">
           Selected projects.
         </h2>

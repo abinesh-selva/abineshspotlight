@@ -39,7 +39,7 @@ export default function Nav() {
         className={scrolled ? 'is-scrolled fixed w-full top-0 z-50' : 'fixed w-full top-0 z-50'}
         role="banner"
       >
-        <div className="container mx-auto px-6 lg:px-12 h-16 lg:h-20 flex items-center justify-between">
+        <div className="container mx-auto px-6 h-16 lg:h-20 flex items-center justify-between">
           <a href="#hero" aria-label="Abinesh — Home" className="flex items-center gap-2 z-50">
             <Image src="/logo.svg" alt="Abinesh Spotlight" width={48} height={48} className="h-10 lg:h-12 w-auto object-contain select-none transition-transform hover:translate-x-1" />
           </a>

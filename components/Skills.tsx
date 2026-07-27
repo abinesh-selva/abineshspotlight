@@ -199,18 +199,18 @@ export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState<SkillItem | null>(null)
 
   return (
-    <section id="skills" className="py-20 bg-ink overflow-hidden border-t border-canvas/10">
+    <section id="skills" className="py-20 bg-canvas overflow-hidden border-t border-rule">
       <div className="container mx-auto px-6">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 gap-6 reveal-text">
           <div>
-            <p className="text-xs font-mono text-canvas/40 uppercase tracking-widest mb-3">Technical Stack</p>
-            <h2 className="font-display font-normal text-4xl md:text-5xl text-canvas leading-tight">
+            <p className="text-xs font-mono text-forest uppercase tracking-widest mb-3 font-semibold">Technical Stack</p>
+            <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight">
               Skills & tools.
             </h2>
           </div>
-          <p className="text-canvas/40 max-w-xs text-sm font-mono leading-relaxed">
+          <p className="text-mist max-w-xs text-sm font-mono leading-relaxed">
             Technologies I use to architect, build, and ship production-grade web products.
           </p>
         </div>
@@ -219,13 +219,13 @@ export default function Skills() {
         <div className="relative overflow-hidden py-4 -mx-6 px-6 space-y-8 reveal-text">
           
           {/* Soft Left & Right Fade Gradient Masks */}
-          <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-24 sm:w-32 bg-gradient-to-r from-ink to-transparent z-20" />
-          <div className="pointer-events-none absolute top-0 bottom-0 right-0 w-24 sm:w-32 bg-gradient-to-l from-ink to-transparent z-20" />
+          <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-24 sm:w-32 bg-gradient-to-r from-canvas to-transparent z-20" />
+          <div className="pointer-events-none absolute top-0 bottom-0 right-0 w-24 sm:w-32 bg-gradient-to-l from-canvas to-transparent z-20" />
 
           {/* Row 1: Core Skills Track (Moving Left) */}
           <div>
             <div className="flex items-center gap-2 mb-3 px-3">
-              <span className="text-xs font-mono text-accent uppercase tracking-widest font-bold">
+              <span className="text-xs font-mono text-forest uppercase tracking-widest font-bold">
                 Core Skills
               </span>
             </div>
@@ -235,7 +235,7 @@ export default function Skills() {
                 <div
                   key={`r1-${item.name}-${idx}`}
                   onClick={() => setSelectedSkill(item)}
-                  className="w-auto shrink-0 mx-2.5 p-4 sm:p-5 rounded-2xl bg-canvas/5 hover:border-accent/50 hover:bg-canvas/10 hover:scale-105 transition-all duration-300 cursor-pointer group flex flex-col items-center justify-center text-center shadow-md"
+                  className="w-auto shrink-0 mx-2.5 p-4 sm:p-5 rounded-2xl bg-paper border border-rule hover:border-forest/40 hover:bg-paper/80 hover:scale-105 transition-all duration-300 cursor-pointer group flex flex-col items-center justify-center text-center shadow-sm"
                 >
                   {/* Accurate Logo Container */}
                   <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center mb-3 transition-transform group-hover:scale-110 ${item.color}`}>
@@ -243,7 +243,7 @@ export default function Skills() {
                   </div>
 
                   {/* Skill Name Below Logo */}
-                  <h3 className="font-mono font-normal text-xs sm:text-sm text-canvas group-hover:text-accent transition-colors">
+                  <h3 className="font-mono font-normal text-xs sm:text-sm text-ink group-hover:text-forest transition-colors">
                     {item.name}
                   </h3>
                 </div>
@@ -254,7 +254,7 @@ export default function Skills() {
           {/* Row 2: Tools & DevOps Track (Moving Right) */}
           <div>
             <div className="flex items-center gap-2 mb-3 px-3">
-              <span className="text-xs font-mono text-canvas/50 uppercase tracking-widest font-bold">
+              <span className="text-xs font-mono text-mist uppercase tracking-widest font-bold">
                 Tools & Performance
               </span>
             </div>
@@ -264,7 +264,7 @@ export default function Skills() {
                 <div
                   key={`r2-${item.name}-${idx}`}
                   onClick={() => setSelectedSkill(item)}
-                  className="w-auto shrink-0 mx-2.5 p-4 sm:p-5 rounded-2xl bg-canvas/5 hover:border-accent/50 hover:bg-canvas/10 hover:scale-105 transition-all duration-300 cursor-pointer group flex flex-col items-center justify-center text-center shadow-md"
+                  className="w-auto shrink-0 mx-2.5 p-4 sm:p-5 rounded-2xl bg-paper border border-rule hover:border-forest/40 hover:bg-paper/80 hover:scale-105 transition-all duration-300 cursor-pointer group flex flex-col items-center justify-center text-center shadow-sm"
                 >
                   {/* Accurate Logo Container */}
                   <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center mb-3 transition-transform group-hover:scale-110 ${item.color}`}>
@@ -272,7 +272,7 @@ export default function Skills() {
                   </div>
 
                   {/* Tool Name Below Logo */}
-                  <h3 className="font-mono font-normal text-xs sm:text-sm text-canvas group-hover:text-accent transition-colors">
+                  <h3 className="font-mono font-normal text-xs sm:text-sm text-ink group-hover:text-forest transition-colors">
                     {item.name}
                   </h3>
                 </div>
@@ -284,13 +284,13 @@ export default function Skills() {
 
         {/* Selected Item Detail Interactive Modal / Drawer */}
         {selectedSkill && (
-          <div className="fixed inset-0 bg-ink/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-ink border-2 border-accent p-6 md:p-8 max-w-lg w-full rounded-2xl shadow-2xl relative animate-fadeIn">
+          <div className="fixed inset-0 bg-ink/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+            <div className="bg-paper border-2 border-forest p-6 md:p-8 max-w-lg w-full rounded-2xl shadow-2xl relative animate-fadeIn">
               
               {/* Close button */}
               <button
                 onClick={() => setSelectedSkill(null)}
-                className="absolute top-4 right-4 w-8 h-8 rounded-full bg-canvas/10 border border-canvas/20 text-canvas/60 hover:text-canvas hover:border-accent flex items-center justify-center text-xs font-mono transition-all"
+                className="absolute top-4 right-4 w-8 h-8 rounded-full bg-canvas border border-rule text-mist hover:text-ink hover:border-forest flex items-center justify-center text-xs font-mono transition-all"
               >
                 ✕
               </button>
@@ -300,30 +300,30 @@ export default function Skills() {
                   {renderSkillIcon(selectedSkill.icon)}
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-accent font-bold px-2 py-0.5 rounded bg-accent/10 border border-accent/30">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-forest font-bold px-2 py-0.5 rounded bg-forest/10 border border-forest/20">
                     {selectedSkill.category}
                   </span>
-                  <h3 className="text-2xl font-display text-canvas font-normal mt-1">
+                  <h3 className="text-2xl font-display text-ink font-normal mt-1">
                     {selectedSkill.name}
                   </h3>
                 </div>
               </div>
 
               <div className="space-y-4 mb-6 text-xs font-mono">
-                <div className="bg-canvas/5 p-4 rounded-xl border border-canvas/10">
-                  <p className="text-canvas/40 uppercase tracking-widest text-[10px] mb-1">Proficiency Level</p>
-                  <p className="text-accent font-bold text-sm">{selectedSkill.level}</p>
+                <div className="bg-canvas p-4 rounded-xl border border-rule">
+                  <p className="text-mist uppercase tracking-widest text-[10px] mb-1">Proficiency Level</p>
+                  <p className="text-forest font-bold text-sm">{selectedSkill.level}</p>
                 </div>
 
-                <div className="bg-canvas/5 p-4 rounded-xl border border-canvas/10">
-                  <p className="text-canvas/40 uppercase tracking-widest text-[10px] mb-1">Enterprise Application</p>
-                  <p className="text-canvas/80 leading-relaxed">{selectedSkill.useCase}</p>
+                <div className="bg-canvas p-4 rounded-xl border border-rule">
+                  <p className="text-mist uppercase tracking-widest text-[10px] mb-1">Enterprise Application</p>
+                  <p className="text-ink/80 leading-relaxed">{selectedSkill.useCase}</p>
                 </div>
               </div>
 
               <button
                 onClick={() => setSelectedSkill(null)}
-                className="w-full py-3 rounded-xl bg-accent text-ink font-mono text-xs font-bold uppercase tracking-widest hover:bg-accent/90 transition-all shadow-md"
+                className="w-full py-3 rounded-xl bg-forest text-canvas font-mono text-xs font-bold uppercase tracking-widest hover:bg-forest/90 transition-all shadow-md"
               >
                 Close Details
               </button>

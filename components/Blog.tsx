@@ -102,17 +102,20 @@ export default function Blog() {
   );
 
   return (
-    <section id="blog" className="py-28 md:py-36 bg-ink">
+    <section id="blog" className="py-28 md:py-36 bg-canvas border-t border-rule">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
-          <h2 className="font-display font-normal text-4xl md:text-5xl text-accent leading-tight">
-            Things I&apos;ve written.
-          </h2>
+          <div>
+            <p className="text-xs font-mono text-forest uppercase tracking-widest mb-3 font-semibold">Publications</p>
+            <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight">
+              Things I&apos;ve written.
+            </h2>
+          </div>
           <a
             href="https://fueint.com/authors/abinesh-s"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="hidden md:inline-flex group items-center gap-2 text-base font-mono text-canvas/50 hover:text-accent transition-colors"
+            className="hidden md:inline-flex group items-center gap-2 text-base font-mono text-mist hover:text-forest transition-colors"
           >
             All articles{' '}
             <span className="group-hover:translate-x-1 transition-transform inline-flex items-center">
@@ -149,7 +152,7 @@ export default function Blog() {
             href="https://fueint.com/authors/abinesh-s"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="group text-base font-mono text-canvas/50 hover:text-accent transition-colors inline-flex items-center gap-1.5"
+            className="group text-base font-mono text-mist hover:text-forest transition-colors inline-flex items-center gap-1.5"
           >
             All articles
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

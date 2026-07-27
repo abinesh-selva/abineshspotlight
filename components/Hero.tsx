@@ -24,6 +24,7 @@ export default function Hero() {
         </div>
 
         <h1
+          aria-label="Abinesh Selvarasu — Senior WordPress Developer & Full Stack Engineer"
           className="group font-display font-semibold leading-none tracking-tighter uppercase select-none pt-8 cursor-default w-max"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -67,7 +68,7 @@ export default function Hero() {
           <div>
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Experience</p>
             <p className="text-ink font-semibold text-base">3+ Years</p>
-            <p className="text-mist text-sm mt-1 font-mono">Jul 2022 — Present</p>
+            <p className="text-mist text-sm mt-1 font-mono">Jul 2022 — May 2026</p>
           </div>
 
           <div className="hidden md:block">

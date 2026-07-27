@@ -308,11 +308,24 @@ export default function Projects() {
         {showIndependent && (
           <div>
             {showBothGroups && (
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-4">
                 <span className="text-xs font-mono uppercase tracking-widest text-canvas/30">Independent projects</span>
                 <div className="flex-1 h-px bg-canvas/10" />
               </div>
             )}
+
+            <p className="text-canvas/40 text-xs font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
+              Independent client work delivered under{' '}
+              <a
+                href="https://gradiolex.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline font-semibold"
+              >
+                Gradiolex
+              </a>{' '}
+              — highlighting custom web development, Next.js architecture, and end-to-end client execution.
+            </p>
 
             {(() => {
               const clients  = filtered.filter((p) => p.group === 'independent' && p.subGroup === 'client')

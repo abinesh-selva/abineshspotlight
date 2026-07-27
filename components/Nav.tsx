@@ -42,8 +42,8 @@ export default function Nav() {
         role="banner"
       >
         <div className="container mx-auto px-6 h-16 lg:h-20 flex items-center justify-between">
-          <a href="#hero" aria-label="Abinesh — Home" className="flex items-center gap-2 z-50">
-            <Image src="/logo.svg" alt="Abinesh Spotlight" width={48} height={48} className="h-10 lg:h-12 w-auto object-contain select-none transition-transform hover:translate-x-1" />
+          <a href="#hero" aria-label="Abinesh Selvarasu — Home" className="flex items-center gap-2 z-50">
+            <Image src="/logo.svg" alt="Abinesh Selvarasu — Portfolio Logo" width={48} height={48} className="h-10 lg:h-12 w-auto object-contain select-none transition-transform hover:translate-x-1" />
           </a>
 
           <nav aria-label="Primary navigation" className="hidden lg:flex items-center gap-10">

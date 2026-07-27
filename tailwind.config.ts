@@ -20,21 +20,10 @@ const config: Config = {
       fontFamily: {
         sans:    ['var(--font-sans)', 'sans-serif'],
         display: ['var(--font-display)', 'serif'],
-        mono:    ['var(--font-sans)', 'sans-serif'],
+        mono:    ['var(--font-sans)', 'monospace'],
       },
       animation: {
-        'marquee':         'marquee-left 38s linear infinite',
-        'marquee-reverse': 'marquee-right 38s linear infinite',
-      },
-      keyframes: {
-        'marquee-left': {
-          '0%':   { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-        'marquee-right': {
-          '0%':   { transform: 'translateX(-50%)' },
-          '100%': { transform: 'translateX(0)' },
-        },
+        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },

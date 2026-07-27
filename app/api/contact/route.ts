@@ -54,7 +54,7 @@ async function appendToSheet(row: string[]) {
 
   const token = await getAccessToken(creds.client_email, creds.private_key)
 
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${encodeURIComponent(SHEET_NAME + '!A:I')}:append?valueInputOption=USER_ENTERED`
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${encodeURIComponent(SHEET_NAME + '!A:H')}:append?valueInputOption=USER_ENTERED`
   const res = await fetch(url, {
     method: 'POST',
     headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
@@ -67,7 +67,13 @@ async function appendToSheet(row: string[]) {
   }
 }
 
-async function sendEmail(name: string, email: string, company: string, projectType: string, budget: string, timeline: string, message: string) {
+async function sendEmail(
+  name: string,
+  email: string,
+  company: string,
+  inquiryType: string,
+  message: string
+) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -80,19 +86,17 @@ async function sendEmail(name: string, email: string, company: string, projectTy
     from: `"${name}" <${process.env.GMAIL_USER}>`,
     to: process.env.GMAIL_USER ?? 'mailtoabineshselva@gmail.com',
     replyTo: email,
-    subject: `[Portfolio] New project brief from ${name} — ${company}`,
+    subject: `[Portfolio] Contact from ${name}${company ? ` — ${company}` : ''}`,
     html: `
-      <h2>New project brief</h2>
-      <table style="border-collapse:collapse;font-family:monospace;font-size:13px">
-        <tr><td style="padding:6px 16px 6px 0;color:#6B7565">Name</td><td><strong>${name}</strong></td></tr>
-        <tr><td style="padding:6px 16px 6px 0;color:#6B7565">Email</td><td><a href="mailto:${email}">${email}</a></td></tr>
-        <tr><td style="padding:6px 16px 6px 0;color:#6B7565">Company</td><td>${company}</td></tr>
-        <tr><td style="padding:6px 16px 6px 0;color:#6B7565">Project type</td><td>${projectType}</td></tr>
-        <tr><td style="padding:6px 16px 6px 0;color:#6B7565">Budget</td><td>${budget}</td></tr>
-        <tr><td style="padding:6px 16px 6px 0;color:#6B7565">Timeline</td><td>${timeline}</td></tr>
+      <h2>New contact inquiry</h2>
+      <table>
+        <tr><td><strong>Name</strong></td><td>${name}</td></tr>
+        <tr><td><strong>Email</strong></td><td><a href="mailto:${email}">${email}</a></td></tr>
+        <tr><td><strong>Company</strong></td><td>${company || 'N/A'}</td></tr>
+        <tr><td><strong>Inquiry type</strong></td><td>${inquiryType}</td></tr>
       </table>
       <br>
-      <p style="font-family:sans-serif;font-size:14px;white-space:pre-wrap">${message}</p>
+      <p>${message}</p>
     `,
   })
 }
@@ -104,9 +108,7 @@ export async function POST(req: NextRequest) {
     const name        = form.get('name')?.toString() ?? ''
     const email       = form.get('email')?.toString() ?? ''
     const company     = form.get('company')?.toString() ?? ''
-    const projectType = form.get('project_type')?.toString() ?? ''
-    const budget      = form.get('budget')?.toString() ?? ''
-    const timeline    = form.get('timeline')?.toString() ?? ''
+    const projectType = form.get('project_type')?.toString() ?? 'N/A'
     const message     = form.get('message')?.toString() ?? ''
     const file        = form.get('file') as File | null
     const fileNote    = file && file.size > 0 ? `[attached: ${file.name}]` : ''
@@ -115,10 +117,11 @@ export async function POST(req: NextRequest) {
     
     const tasks: Promise<void>[] = []
     
-    tasks.push(appendToSheet([timestamp, name, email, company, projectType, budget, timeline, message, fileNote]))
+    // Columns: Timestamp, Name, Email, Company, Inquiry Type, Message, File
+    tasks.push(appendToSheet([timestamp, name, email, company, projectType, message, fileNote]))
 
     if (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD) {
-      tasks.push(sendEmail(name, email, company, projectType, budget, timeline, message))
+      tasks.push(sendEmail(name, email, company, projectType, message))
     }
 
     const results = await Promise.allSettled(tasks)
@@ -131,7 +134,6 @@ export async function POST(req: NextRequest) {
     })
 
     if (allFailed) {
-      // Find the specific rejection reasons
       const reasons = results
         .filter((r): r is PromiseRejectedResult => r.status === 'rejected')
         .map(r => r.reason instanceof Error ? r.reason.message : String(r.reason))

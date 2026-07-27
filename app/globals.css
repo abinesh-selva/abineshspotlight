@@ -44,25 +44,6 @@
   background-color: #F5F1EC;
 }
 
-/* ── Service row — gold sweep on hover ─────────────────────────── */
-.service-row { position: relative; overflow: hidden; }
-.service-row::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-color: #DCBC7D;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 0;
-}
-.service-row:hover::before  { transform: scaleX(1); }
-.service-row > *            { position: relative; z-index: 1; }
-.service-row:hover .service-title { color: #0F3728; }
-.service-row:hover .service-num   { color: rgba(15, 55, 40, 0.45); }
-.service-row:hover .service-desc  { color: rgba(15, 55, 40, 0.70); }
-.service-row:hover .service-tag   { border-color: rgba(15, 55, 40, 0.25); color: rgba(15, 55, 40, 0.65); }
-
-
 /* ── Reveal animation ──────────────────────────────────────────── */
 .reveal-text {
   opacity: 0;
@@ -72,6 +53,12 @@
 .reveal-text.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── Focus visible styles (accessibility) ──────────────────────── */
+:focus-visible {
+  outline: 2px solid #DCBC7D;
+  outline-offset: 3px;
 }
 
 /* ── Custom scrollbar ──────────────────────────────────────────── */

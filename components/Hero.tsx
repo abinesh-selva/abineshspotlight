@@ -5,7 +5,7 @@ import ScrambleText, { useScramble } from "./ScrambleText";
 
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
-  const scrambledFull = useScramble("Abinesh.S", 0, 0.15); // Scrambles only on load (0), very slow (0.15)
+  const scrambledFull = useScramble("Abinesh.S", 0, 0.15);
   const parts = scrambledFull.split(".");
   const firstPart = parts[0];
   const lastPart = parts.length > 1 ? "." + parts.slice(1).join(".") : "";
@@ -14,7 +14,8 @@ export default function Hero() {
     <section id="hero" className="relative bg-canvas flex flex-col overflow-hidden">
       <div className="container mx-auto px-6 flex flex-col justify-center py-6 md:py-10 pt-32 md:pt-36">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-rule pb-5 gap-4 md:gap-0">
-          <span className="flex items-center gap-3 text-xs font-mono text-mist uppercase tracking-widest">
+          <span className="flex items-center gap-2 text-xs font-mono text-mist uppercase tracking-widest">
+            <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse" />
             Open To Work
           </span>
           <span className="text-xs font-mono text-mist uppercase tracking-widest">
@@ -22,7 +23,7 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 
+        <h1
           className="group font-display font-semibold leading-none tracking-tighter uppercase select-none pt-8 cursor-default w-max"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -36,12 +37,19 @@ export default function Hero() {
             </span>
 
             {/* Top Half */}
-            <span className="block text-7xl md:text-9xl lg:text-[200px] xl:text-[250px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}>
+            <span
+              className="block text-6xl sm:text-8xl md:text-9xl lg:text-[180px] xl:text-[230px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6"
+              style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}
+            >
               {firstPart}<span className="text-accent">{lastPart}</span>
             </span>
 
             {/* Bottom Half */}
-            <span className="top-0 left-0 text-7xl md:text-9xl lg:text-[200px] xl:text-[250px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6 absolute" style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }} aria-hidden="true">
+            <span
+              className="top-0 left-0 text-6xl sm:text-8xl md:text-9xl lg:text-[180px] xl:text-[230px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6 absolute"
+              style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }}
+              aria-hidden="true"
+            >
               {firstPart}<span className="text-accent">{lastPart}</span>
             </span>
           </div>
@@ -53,36 +61,41 @@ export default function Hero() {
           <div>
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Role</p>
             <p className="text-ink font-semibold text-base">Full Stack Engineer</p>
-            <p className="text-mist text-base mt-1 font-mono">WordPress · React · Headless</p>
+            <p className="text-mist text-sm mt-1 font-mono">WordPress · React · Headless</p>
           </div>
 
           <div>
-            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Studio</p>
-            <a href="https://gradiolex.vercel.app/" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-1 text-ink font-semibold text-base hover:text-accent transition-colors">
-              Gradiolex
-              <svg className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M7 17L17 7M17 7H7M17 7V17" />
-              </svg>
-            </a>
-            <p className="text-mist text-base mt-1 font-mono">Freelance · Open to roles</p>
+            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Experience</p>
+            <p className="text-ink font-semibold text-base">3+ Years</p>
+            <p className="text-mist text-sm mt-1 font-mono">Jul 2022 — Present</p>
           </div>
 
           <div className="hidden md:block">
-            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Focuses on</p>
-            <p className="text-ink text-opacity-70 text-base leading-relaxed">Fast, accessible websites that rank and convert.</p>
+            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Specialises in</p>
+            <p className="text-ink text-opacity-70 text-sm leading-relaxed">
+              Scalable platforms, Headless CMS, and performance-first engineering.
+            </p>
           </div>
 
           <div className="flex flex-col gap-3">
-            <a href="#projects" className="group px-5 py-3 bg-accent text-white text-base font-bold hover:bg-forest transition-colors hover:text-accent flex items-center justify-center gap-2">
+            <a
+              href="#projects"
+              className="group px-5 py-3 bg-accent text-white text-sm font-bold hover:bg-forest transition-colors hover:text-accent flex items-center justify-center gap-2"
+            >
               See my work
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
-            <a href="/resume/Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-5 py-3 border border-rule text-white text-base font-bold bg-forest hover:bg-accent hover:text-forest transition-all text-center flex items-center justify-center gap-2">
+            <a
+              href="/resume/Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 border border-rule text-white text-sm font-bold bg-forest hover:bg-accent hover:text-forest transition-all text-center flex items-center justify-center gap-2"
+            >
               Resume
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
               </svg>
             </a>
           </div>

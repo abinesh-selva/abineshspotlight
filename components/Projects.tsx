@@ -6,8 +6,8 @@ type Project = {
   name: string
   role: string
   category: string
-  group: 'enterprise' | 'freelance'
-  subGroup?: 'client' | 'utility' | 'domestic'
+  group: 'enterprise' | 'independent'
+  subGroup?: 'global' | 'client' | 'utility' | 'domestic'
   challenge: string
   stack: string[]
   url: string | null
@@ -39,7 +39,7 @@ const projects: Project[] = [
     role: 'WordPress Developer',
     category: 'WordPress',
     group: 'enterprise',
-    challenge: 'Large-scale CMS and Custom Post Type architecture for an international initiative spanning 75+ governments and millions of annual visitors.',
+    challenge: 'Custom CMS and taxonomy architecture for a major international open government event platform.',
     stack: ['WordPress', 'ACF Pro', 'CPT', 'REST API'],
     url: 'https://www.opengovweek.org',
   },
@@ -84,7 +84,7 @@ const projects: Project[] = [
     role: 'WordPress Developer',
     category: 'WordPress',
     group: 'enterprise',
-    challenge: 'Custom theme development, complex block architectures, and content migrations for a policy research and analysis center.',
+    challenge: 'Custom theme development, complex block architectures, and content migrations for a leading policy research and analysis center.',
     stack: ['WordPress', 'PHP', 'ACF Pro', 'CSS'],
     url: null,
   },
@@ -93,7 +93,7 @@ const projects: Project[] = [
     role: 'WordPress Developer',
     category: 'WordPress',
     group: 'enterprise',
-    challenge: 'Custom WordPress components, interactive element integrations, and conversion flow optimization for a patient communication SaaS.',
+    challenge: 'Custom WordPress components, interactive element integrations, and conversion flow optimisation for a patient communication SaaS.',
     stack: ['WordPress', 'PHP', 'JavaScript', 'ACF Pro'],
     url: null,
   },
@@ -102,7 +102,7 @@ const projects: Project[] = [
     role: 'WordPress Developer',
     category: 'WordPress',
     group: 'enterprise',
-    challenge: 'Marketing website architecture, ACF modular layouts, and performance tuning for a leading RFP response software.',
+    challenge: 'Marketing website architecture, ACF modular layouts, and performance tuning for a leading RFP response software platform.',
     stack: ['WordPress', 'PHP', 'ACF Pro', 'Webpack'],
     url: null,
   },
@@ -111,27 +111,27 @@ const projects: Project[] = [
     role: 'WordPress Developer',
     category: 'WordPress',
     group: 'enterprise',
-    challenge: 'Marketing site optimization, Gutenberg blocks, and CRM form integrations for a popular CRM platform website.',
+    challenge: 'Marketing site optimisation, Gutenberg blocks, and CRM form integrations for a popular CRM platform website.',
     stack: ['WordPress', 'PHP', 'ACF Pro', 'CRM Integration'],
     url: null,
   },
 
-  // ── Freelance via Gradiolex ─────────────────────────────────────────
+  // ── Independent Projects ─────────────────────────────────────────
   {
     name: 'NaviCakes',
-    role: 'WordPress Developer',
-    category: 'WordPress',
-    group: 'freelance',
+    role: 'Full Stack Developer',
+    category: 'Next.js',
+    group: 'independent',
     subGroup: 'client',
-    challenge: 'Local bakery website with custom ordering, gallery, and brand identity.',
-    stack: ['WordPress', 'Custom Theme', 'SCSS'],
+    challenge: 'Local bakery website with custom ordering, gallery, and brand identity — pixel-perfect from Figma to code.',
+    stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
     url: 'https://navibakesandcakes.vercel.app/',
   },
   {
     name: 'Sri Dhanamoorthy Traders',
     role: 'WordPress Developer',
     category: 'WordPress',
-    group: 'freelance',
+    group: 'independent',
     subGroup: 'client',
     challenge: 'B2B wholesale cement and steel trader website with product catalogue and trade enquiry flows.',
     stack: ['WordPress', 'ACF', 'Pantheon'],
@@ -142,61 +142,11 @@ const projects: Project[] = [
     name: 'MySupportInfo',
     role: 'Full Stack Developer',
     category: 'Next.js',
-    group: 'freelance',
+    group: 'independent',
     subGroup: 'utility',
     challenge: 'A customer support portal designed to centralise ticketing, knowledge base, and user communication for growing businesses.',
     stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
     url: 'https://mysupportinfo.vercel.app',
-  },
-  {
-    name: 'One Tap Secure',
-    role: 'Full Stack Developer',
-    category: 'Next.js',
-    group: 'freelance',
-    subGroup: 'utility',
-    challenge: 'A security-focused platform with clean, trust-driven UI and streamlined onboarding for end-user credential management.',
-    stack: ['Next.js', 'React', 'Tailwind'],
-    url: 'https://onetapsecure.vercel.app',
-  },
-  {
-    name: 'MoneyArk',
-    role: 'Full Stack Developer',
-    category: 'Flutter',
-    group: 'freelance',
-    subGroup: 'utility',
-    challenge: 'A full-scale personal finance app with AI-powered financial assistant, OCR receipt scanning, and voice expense tracking.',
-    stack: ['Flutter', 'React', 'Supabase', 'LLM', 'OCR'],
-    url: 'https://moneyark.vercel.app',
-  },
-  {
-    name: 'Instatrove',
-    role: 'Full Stack Developer',
-    category: 'Next.js',
-    group: 'freelance',
-    subGroup: 'utility',
-    challenge: 'An e-commerce and product discovery platform with curated browsing, wishlist, and seamless checkout flow.',
-    stack: ['Next.js', 'Tailwind', 'Razorpay', 'Vercel'],
-    url: 'https://instatrove.vercel.app',
-  },
-  {
-    name: 'How Long To Go',
-    role: 'Full Stack Developer',
-    category: 'Next.js',
-    group: 'freelance',
-    subGroup: 'utility',
-    challenge: 'A sleek utility app for calculating and tracking the time remaining until specific dates, events, and milestones.',
-    stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
-    url: 'https://howlongtogo.vercel.app/',
-  },
-  {
-    name: 'Tamil Calendar',
-    role: 'Full Stack Developer',
-    category: 'Next.js',
-    group: 'freelance',
-    subGroup: 'utility',
-    challenge: 'A digital Tamil calendar providing daily panchangam details, auspicious dates, and festival information.',
-    stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
-    url: 'https://tamilcalendar.netlify.app/',
   },
   {
     name: 'FUEiNT Technologies',
@@ -204,7 +154,7 @@ const projects: Project[] = [
     category: 'Next.js',
     group: 'enterprise',
     subGroup: 'domestic',
-    challenge: 'Revamped the company website by rebuilding the old platform in Next.js, improving performance, modernizing the UI, and creating a scalable codebase for future growth.',
+    challenge: 'Rebuilt the company website in Next.js, improving performance, modernising the UI, and creating a scalable codebase for future growth.',
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
     url: null,
   },
@@ -214,7 +164,7 @@ const projects: Project[] = [
     category: 'Next.js',
     group: 'enterprise',
     subGroup: 'domestic',
-    challenge: 'Migrated the legacy WordPress website to React/Next.js as a major development effort across all pages to modernize performance and user experience.',
+    challenge: 'Migrated a legacy WordPress website to React/Next.js to modernise performance and user experience.',
     stack: ['Next.js', 'React', 'Tailwind'],
     url: null,
   },
@@ -224,7 +174,7 @@ const projects: Project[] = [
     category: 'Flutter',
     group: 'enterprise',
     subGroup: 'domestic',
-    challenge: 'A cross-platform mobile application designed for student collaboration, academic tracking, and real-time notifications.',
+    challenge: 'A cross-platform mobile application for student collaboration, academic tracking, and real-time notifications.',
     stack: ['Flutter', 'Firebase', 'Dart', 'State Management'],
     url: null,
   },
@@ -234,7 +184,7 @@ const projects: Project[] = [
     category: 'Next.js',
     group: 'enterprise',
     subGroup: 'domestic',
-    challenge: 'Built a web platform dedicated to preserving native Tamil Nadu dog breeds, featuring multilingual support, breed search filters, adopt workflows, and optimized image galleries.',
+    challenge: 'A platform dedicated to preserving native Tamil Nadu dog breeds — multilingual support, breed search filters, adopt workflows, and optimised image galleries.',
     stack: ['Next.js', 'React', 'Tailwind'],
     url: null,
   },
@@ -244,15 +194,13 @@ const projects: Project[] = [
     category: 'Next.js',
     group: 'enterprise',
     subGroup: 'domestic',
-    challenge: 'Taste the purity of nature with Parithadam — your destination for 100% natural honey, traditional snacks, and chemical-free rice. Every product is crafted with love and care from our farms to your home.',
+    challenge: 'E-commerce platform for 100% natural honey, traditional snacks, and chemical-free rice — with Nodemailer-based order notifications.',
     stack: ['Next.js 15', 'React', 'Tailwind', 'Nodemailer'],
     url: null,
   },
 ]
 
-const filters = ['All', 'Enterprise', 'Freelance', 'WordPress', 'Next.js', 'Flutter', 'CMS', 'Drupal']
-const GRADIOLEX_LINKEDIN = 'https://www.linkedin.com/company/gradiolex'
-const GRADIOLEX_SITE = 'https://gradiolex.vercel.app/'
+const filters = ['All', 'Enterprise', 'Independent', 'WordPress', 'Next.js', 'Flutter', 'CMS', 'Drupal']
 
 export default function Projects() {
   const [active, setActive] = useState('All')
@@ -262,40 +210,39 @@ export default function Projects() {
       ? projects
       : active === 'Enterprise'
       ? projects.filter((p) => p.group === 'enterprise')
-      : active === 'Freelance'
-      ? projects.filter((p) => p.group === 'freelance')
+      : active === 'Independent'
+      ? projects.filter((p) => p.group === 'independent')
       : projects.filter((p) => p.category === active)
 
   const showEnterprise = filtered.some((p) => p.group === 'enterprise')
-  const showFreelance = filtered.some((p) => p.group === 'freelance')
-  const showBothGroups = showEnterprise && showFreelance
+  const showIndependent = filtered.some((p) => p.group === 'independent')
+  const showBothGroups = showEnterprise && showIndependent
 
   return (
     <section id="projects" className="py-16 bg-ink">
       <div className="container mx-auto px-6">
-        <h2 className="font-display font-normal text-4xl md:text-6xl text-canvas tracking-tight leading-tight mb-4 md:mb-6">
-          Selected projects.
-        </h2>
-        <p className="text-canvas/40 text-base font-mono mb-10 md:mb-16 max-w-2xl leading-relaxed">
-          Work spans two tracks — enterprise delivery under{' '}
-          <span className="text-accent hover:underline">
-            FueInt Technologies
-          </span>
-          , and independent builds under my freelance studio{' '}
-          <a href={GRADIOLEX_SITE} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-            Gradiolex
-          </a>
-          .
-        </p>
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-10 gap-6">
+          <div>
+            <p className="text-xs font-mono text-canvas/40 uppercase tracking-widest mb-3">Selected Work</p>
+            <h2 className="font-display font-normal text-4xl md:text-6xl text-canvas tracking-tight leading-tight">
+              Selected projects.
+            </h2>
+          </div>
+          <p className="text-canvas/40 text-sm font-mono max-w-sm leading-relaxed">
+            Work spans two tracks — enterprise delivery under{' '}
+            <span className="text-accent/70">FueInt Technologies</span>, and independent
+            builds shipped solo.
+          </p>
+        </div>
 
         {/* Filters */}
         <div className="mb-14 reveal-text">
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2">
             {filters.map((f) => (
               <button
                 key={f}
                 onClick={() => setActive(f)}
-                className={`px-5 py-2 text-base font-mono font-medium transition-all duration-300 ${
+                className={`px-4 py-1.5 text-xs font-mono font-medium transition-all duration-300 ${
                   active === f
                     ? 'bg-accent text-ink scale-105'
                     : 'bg-canvas/10 text-canvas/50 border border-canvas/15 hover:bg-accent/20 hover:text-canvas'
@@ -312,26 +259,27 @@ export default function Projects() {
           <div className="mb-14">
             {showBothGroups && (
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-base font-mono uppercase tracking-widest text-canvas text-opacity-30">Enterprise experience</span>
+                <span className="text-xs font-mono uppercase tracking-widest text-canvas/30">Enterprise experience</span>
                 <div className="flex-1 h-px bg-canvas/10" />
               </div>
             )}
 
-            <p className="text-canvas text-opacity-30 text-base font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
-              Delivered under <span className="text-accent/70 hover:text-accent">FueInt Technologies</span> via <span className="text-accent/70 hover:text-accent">Dialed In Design (Canada)</span>. Projects delivered as part of agency client work. All trademarks belong to their respective owners.
+            <p className="text-canvas/30 text-xs font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
+              Delivered under <span className="text-accent/70">FueInt Technologies</span> via{' '}
+              <span className="text-accent/70">Dialed In Design (Canada)</span>. All trademarks belong to their respective owners.
             </p>
 
             {(() => {
               const globalProjects = filtered.filter((p) => p.group === 'enterprise' && p.subGroup !== 'domestic')
               const domesticProjects = filtered.filter((p) => p.group === 'enterprise' && p.subGroup === 'domestic')
-              
+
               return (
                 <>
                   {globalProjects.length > 0 && (
                     <div className="mb-10">
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {globalProjects.map((p, i) => (
-                          <ProjectCard key={p.name} project={p} index={i + 1} />
+                          <ProjectCard key={p.name} project={p} index={i + 1} groupLabel="FueInt" />
                         ))}
                       </div>
                     </div>
@@ -339,13 +287,13 @@ export default function Projects() {
 
                   {domesticProjects.length > 0 && (
                     <div>
-                      <h4 className="text-base font-mono text-canvas/50 mb-4 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                      <h4 className="text-xs font-mono text-canvas/50 mb-4 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                         Domestic Projects
                       </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {domesticProjects.map((p, i) => (
-                          <ProjectCard key={p.name} project={p} index={globalProjects.length + i + 1} />
+                          <ProjectCard key={p.name} project={p} index={globalProjects.length + i + 1} groupLabel="FueInt" />
                         ))}
                       </div>
                     </div>
@@ -356,71 +304,45 @@ export default function Projects() {
           </div>
         )}
 
-        {/* Freelance group */}
-        {showFreelance && (
+        {/* Independent group */}
+        {showIndependent && (
           <div>
             {showBothGroups && (
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-base font-mono uppercase tracking-widest text-canvas text-opacity-30">Freelance — Gradiolex</span>
+                <span className="text-xs font-mono uppercase tracking-widest text-canvas/30">Independent projects</span>
                 <div className="flex-1 h-px bg-canvas/10" />
-                <a
-                  href={GRADIOLEX_SITE}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group text-base font-mono text-canvas/40 hover:text-accent transition-colors border border-canvas/15 px-3 py-1 hover:border-accent inline-flex items-center gap-1"
-                >
-                  Link
-                  <svg className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                  </svg>
-                </a>
               </div>
             )}
 
             {(() => {
-              const clients = filtered.filter((p) => p.group === 'freelance' && p.subGroup === 'client')
-              const utilities = filtered.filter((p) => p.group === 'freelance' && p.subGroup === 'utility')
-              const domestic = filtered.filter((p) => p.group === 'freelance' && p.subGroup === 'domestic')
-              
+              const clients  = filtered.filter((p) => p.group === 'independent' && p.subGroup === 'client')
+              const utilities = filtered.filter((p) => p.group === 'independent' && p.subGroup === 'utility')
+
               return (
                 <>
                   {clients.length > 0 && (
                     <div className="mb-10">
-                      <h4 className="text-base font-mono text-canvas/50 mb-4 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                        Clients
+                      <h4 className="text-xs font-mono text-canvas/50 mb-4 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        Freelance Client Work
                       </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {clients.map((p, i) => (
-                          <ProjectCard key={p.name} project={p} index={i + 1} />
+                          <ProjectCard key={p.name} project={p} index={i + 1} groupLabel="Independent" />
                         ))}
                       </div>
                     </div>
                   )}
 
                   {utilities.length > 0 && (
-                    <div className="mb-10">
-                      <h4 className="text-base font-mono text-canvas/50 mb-4 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                        Utility Tools
+                    <div>
+                      <h4 className="text-xs font-mono text-canvas/50 mb-4 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        Utility Tools & Personal Builds
                       </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {utilities.map((p, i) => (
-                          <ProjectCard key={p.name} project={p} index={clients.length + i + 1} />
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {domestic.length > 0 && (
-                    <div>
-                      <h4 className="text-base font-mono text-canvas/50 mb-4 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                        Domestic Projects
-                      </h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                        {domestic.map((p, i) => (
-                          <ProjectCard key={p.name} project={p} index={clients.length + utilities.length + i + 1} />
+                          <ProjectCard key={p.name} project={p} index={clients.length + i + 1} groupLabel="Independent" />
                         ))}
                       </div>
                     </div>
@@ -435,19 +357,26 @@ export default function Projects() {
   )
 }
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+const SUBGROUP_BADGE: Record<string, string> = {
+  client:   'Freelance Client',
+  utility:  'Utility Tool',
+  domestic: 'Internal',
+  global:   'Enterprise',
+}
+
+function ProjectCard({ project, index, groupLabel }: { project: Project; index: number; groupLabel: string }) {
+  const badge = project.subGroup ? (SUBGROUP_BADGE[project.subGroup] ?? groupLabel) : groupLabel
+
   return (
-    <article className="group flex flex-col border border-canvas border-opacity-10 hover:border-accent/40 bg-canvas/5 transition-all duration-300 p-6 h-full">
+    <article className="group flex flex-col border border-canvas/10 hover:border-accent/40 bg-canvas/5 transition-all duration-300 p-6 h-full">
       {/* Top row */}
       <div className="flex items-start justify-between mb-6">
-        <span className="text-base font-mono text-canvas/25 group-hover:border-canvas group-hover:text-white">
+        <span className="text-sm font-mono text-canvas/25 group-hover:text-canvas/60 transition-colors">
           {String(index).padStart(2, '0')}
         </span>
-        <div className="flex flex-col items-end gap-1">
-          <span className="text-xs font-mono uppercase tracking-widest text-canvas text-opacity-30 border border-canvas border-opacity-10 group-hover:border-canvas group-hover:text-white px-2 py-0.5">
-            {project.group === 'enterprise' ? 'FueInt' : 'Gradiolex'}
-          </span>
-        </div>
+        <span className="text-xs font-mono uppercase tracking-widest text-canvas/30 border border-canvas/10 group-hover:border-canvas/30 group-hover:text-canvas/50 px-2 py-0.5 transition-colors">
+          {badge}
+        </span>
       </div>
 
       {/* Role */}
@@ -461,7 +390,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       </h3>
 
       {/* Description */}
-      <p className="text-canvas/50 text-base leading-relaxed mb-6 flex-1">
+      <p className="text-canvas/50 text-sm leading-relaxed mb-6 flex-1">
         {project.challenge}
       </p>
 
@@ -470,7 +399,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         {project.stack.map((s) => (
           <span
             key={s}
-            className="text-sm font-mono text-canvas text-opacity-40 border border-canvas border-opacity-10 px-2 py-1 group-hover:border-canvas group-hover:text-white border-opacity-20 transition-colors"
+            className="text-xs font-mono text-canvas/40 border border-canvas/10 px-2 py-1 group-hover:border-canvas/25 group-hover:text-canvas/60 transition-colors"
           >
             {s}
           </span>

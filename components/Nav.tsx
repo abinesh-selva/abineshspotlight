@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const navLinks = [
-  { label: 'About',    url: '#about' },
-  { label: 'Work',     url: '#projects' },
-  { label: 'Skills',   url: '#skills' },
-  { label: 'Writing',  url: '#blog' },
-  { label: 'Contact',  url: '#contact' },
+  { label: 'About',       url: '#about' },
+  { label: 'Skills',      url: '#skills' },
+  { label: 'Projects',    url: '#projects' },
+  { label: 'Blog',        url: '#blog' },
+  { label: 'Contact',     url: '#contact' },
 ]
 
 export default function Nav() {

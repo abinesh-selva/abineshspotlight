@@ -392,20 +392,17 @@ function ProjectCard({ project, index, groupLabel }: { project: Project; index: 
         </span>
       </div>
 
-      {/* Role */}
-      <span className="text-xs font-mono text-accent uppercase tracking-widest mb-2">
-        {project.role}
-      </span>
-
       {/* Name */}
       <h3 className="font-display font-normal text-xl md:text-2xl text-canvas leading-tight mb-4 group-hover:text-accent transition-colors duration-300">
         {project.name}
       </h3>
 
-      {/* Description */}
-      <p className="text-canvas/50 text-sm leading-relaxed mb-6 flex-1">
-        {project.challenge}
-      </p>
+      {/* Description - Hidden by default, revealed on hover */}
+      <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out overflow-hidden mb-2 group-hover:mb-6">
+        <p className="text-canvas/70 text-sm leading-relaxed overflow-hidden transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+          {project.challenge}
+        </p>
+      </div>
 
       {/* Stack tags */}
       <div className="flex flex-wrap gap-1.5 mb-6">
@@ -419,22 +416,7 @@ function ProjectCard({ project, index, groupLabel }: { project: Project; index: 
         ))}
       </div>
 
-      {/* Link */}
-      {project.url && (
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-xs font-mono font-bold text-canvas/50 hover:text-accent transition-colors group/link w-fit mt-auto"
-        >
-          {project.urlLabel ?? 'Visit Project'}
-          <span className="group-hover/link:translate-x-1 transition-transform inline-flex items-center">
-            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
-        </a>
-      )}
+
     </article>
   )
 }

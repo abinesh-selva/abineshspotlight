@@ -106,7 +106,7 @@ export default function Blog() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
           <h2 className="font-display font-normal text-4xl md:text-5xl text-accent leading-tight">
-            Things I&apos;ve<br />written.
+            Things I&apos;ve written.
           </h2>
           <a
             href="https://fueint.com/authors/abinesh-s"

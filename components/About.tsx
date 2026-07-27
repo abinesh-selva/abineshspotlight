@@ -89,7 +89,7 @@ export default function About() {
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-2 text-xs font-mono text-ink bg-paper/50 border border-rule hover:border-accent hover:text-accent transition-all cursor-default shadow-sm"
+                    className="px-3 py-2 text-xs font-mono text-ink bg-paper/50 border border-rule hover:bg-accent hover:border-accent hover:text-forest transition-all cursor-default shadow-sm"
                   >
                     {tag}
                   </span>
@@ -178,7 +178,7 @@ export default function About() {
                       <p className="text-mist text-sm leading-relaxed mb-4">{item.desc}</p>
                       <div className="flex flex-wrap gap-1.5">
                         {item.tags.map((tag) => (
-                          <span key={tag} className="text-xs font-mono text-mist border border-rule px-2 py-0.5 hover:border-accent hover:text-accent transition-all cursor-default">
+                          <span key={tag} className="text-xs font-mono text-mist border border-rule px-2 py-0.5 hover:bg-accent hover:border-accent hover:text-forest transition-all cursor-default">
                             {tag}
                           </span>
                         ))}

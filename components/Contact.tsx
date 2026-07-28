@@ -149,9 +149,6 @@ export default function Contact() {
                     {s.icon}
                   </span>
                   <span className="text-base font-mono group-hover:text-accent transition-colors">{s.label}</span>
-                  <svg className="w-3 h-3 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
                 </a>
               ))}
             </div>

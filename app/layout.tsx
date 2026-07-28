@@ -66,7 +66,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    type: 'website',
+    type: 'profile',
+    firstName: 'Abinesh',
+    lastName: 'Selvarasu',
+    username: 'abineshselvarasu',
+    gender: 'male',
     locale: 'en_US',
     url: BASE_URL,
     siteName: 'Abinesh Selvarasu — Portfolio',
@@ -178,11 +182,6 @@ const websiteSchema = {
   publisher: { '@id': `${BASE_URL}/#person` },
   inLanguage: 'en-US',
   copyrightYear: new Date().getFullYear(),
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: { '@type': 'EntryPoint', urlTemplate: `${BASE_URL}/?q={search_term_string}` },
-    'query-input': 'required name=search_term_string',
-  },
 }
 
 const webPageSchema = {

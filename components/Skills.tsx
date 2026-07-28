@@ -239,7 +239,7 @@ export default function Skills() {
                 >
                   {/* Accurate Logo Container */}
                   <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center mb-3 transition-transform group-hover:scale-110 ${item.color}`}>
-                    {renderSkillIcon(item.icon)}
+                    {renderSkillIcon(item.icon, item.name)}
                   </div>
 
                   {/* Skill Name Below Logo */}
@@ -268,7 +268,7 @@ export default function Skills() {
                 >
                   {/* Accurate Logo Container */}
                   <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center mb-3 transition-transform group-hover:scale-110 ${item.color}`}>
-                    {renderSkillIcon(item.icon)}
+                    {renderSkillIcon(item.icon, item.name)}
                   </div>
 
                   {/* Tool Name Below Logo */}
@@ -297,7 +297,7 @@ export default function Skills() {
 
               <div className="flex items-center gap-4 mb-6">
                 <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center ${selectedSkill.color}`}>
-                  {renderSkillIcon(selectedSkill.icon)}
+                  {renderSkillIcon(selectedSkill.icon, selectedSkill.name)}
                 </div>
                 <div>
                   <span className="text-[10px] font-mono uppercase tracking-widest text-forest font-bold px-2 py-0.5 rounded bg-forest/10 border border-forest/20">
@@ -363,13 +363,13 @@ const iconMap: Record<string, string> = {
   api:     '/icons/api.svg',
 }
 
-function renderSkillIcon(icon: string) {
+function renderSkillIcon(icon: string, name?: string) {
   const src = iconMap[icon]
   if (src) {
     return (
       <img
         src={src}
-        alt={icon}
+        alt={`${name || icon} logo`}
         className="w-8 h-8 object-contain"
       />
     )

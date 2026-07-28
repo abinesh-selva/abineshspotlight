@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import { createSign } from 'crypto'
 
+export const dynamic = 'force-dynamic'
+
+
 const SPREADSHEET_ID = process.env.GOOGLE_SHEETS_ID ?? '1yA7VTc7ZyMWOgLrbJ-fMHLESlSzY5bPDIvOsgbtwlt8'
 const SHEET_NAME = 'Leads'
 

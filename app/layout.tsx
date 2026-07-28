@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    'Senior WordPress Engineer with 4 years architecting production websites for global enterprise clients including Unbounce, ElasticPath, and OGP.',
+    'Senior WordPress Engineer with 3+ years architecting production websites for global enterprise clients including Unbounce, ElasticPath, and OGP.',
 
   keywords: [
     'Abinesh Selvarasu',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     siteName: 'Abinesh Selvarasu — Senior WordPress Engineer & Full Stack Developer',
     title: 'Senior WordPress Engineer & Full Stack Developer | Abinesh Selvarasu',
     description:
-      'Senior WordPress Engineer with 4 years architecting production websites for global enterprise clients including Unbounce, ElasticPath, and OGP.',
+      'Senior WordPress Engineer with 3+ years architecting production websites for global enterprise clients including Unbounce, ElasticPath, and OGP.',
     images: [
       {
         url: `${BASE_URL}/og-image.png`,
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     creator: '@abineshselvarasu',
     title: 'Senior WordPress Engineer & Full Stack Developer | Abinesh Selvarasu',
     description:
-      'Senior WordPress Engineer with 4 years architecting production websites for global enterprise clients including Unbounce, ElasticPath, and OGP.',
+      'Senior WordPress Engineer with 3+ years architecting production websites for global enterprise clients including Unbounce, ElasticPath, and OGP.',
     images: [`${BASE_URL}/og-image.png`],
   },
 

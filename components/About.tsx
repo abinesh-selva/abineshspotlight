@@ -129,22 +129,22 @@ export default function About() {
       </div>
 
       {/* ── Part 2: Career Roadmap (Clean Vertical Timeline) ──────────── */}
-      <div id="timeline" className="container mx-auto px-6 py-16 lg:py-20">
-        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-4 reveal-text">
+      <div id="timeline" className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 sm:mb-16 gap-4 reveal-text">
           <div>
             <p className="text-xs font-mono text-accent uppercase tracking-widest mb-3 font-semibold">Career Roadmap</p>
-            <h2 className="font-display font-normal text-4xl md:text-5xl text-canvas leading-tight">
+            <h2 className="font-display font-normal text-3xl sm:text-4xl md:text-5xl text-canvas leading-tight">
               My journey.
             </h2>
           </div>
-          <p className="text-canvas/50 max-w-xs text-sm font-mono leading-relaxed">
+          <p className="text-canvas/50 max-w-xs text-xs sm:text-sm font-mono leading-relaxed">
             Continuous engineering growth — from intern to Senior WordPress Developer.
           </p>
         </div>
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-canvas/10 md:-translate-x-px" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-6 w-px bg-canvas/10 md:-translate-x-px" />
 
           <div className="space-y-0">
             {milestones.map((item, idx) => {
@@ -159,9 +159,9 @@ export default function About() {
                   }`}
                 >
                   {/* Card */}
-                  <div className={`w-full md:w-[calc(50%-2.5rem)] ${isRight ? 'md:pr-10' : 'md:pl-10'} pl-12 md:pl-0 pb-12`}>
-                    <div className="border border-canvas/10 hover:border-accent/40 bg-canvas/5 p-6 transition-all duration-300 group rounded-xl">
-                      <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                  <div className={`w-full md:w-[calc(50%-2.5rem)] ${isRight ? 'md:pr-10' : 'md:pl-10'} pl-10 sm:pl-12 md:pl-0 pb-8 sm:pb-12`}>
+                    <div className="border border-canvas/10 hover:border-accent/40 bg-canvas/5 p-4 sm:p-6 transition-all duration-300 group rounded-xl">
+                      <div className="flex items-center justify-between mb-3 sm:mb-4 flex-wrap gap-2">
                         <span className={`text-xs font-mono uppercase tracking-widest border px-2 py-0.5 ${style.labelClass}`}>
                           {style.label}
                         </span>
@@ -175,7 +175,7 @@ export default function About() {
                       <p className="text-xs font-mono text-canvas/40 mb-3">
                         {item.company}<span className="mx-1.5">·</span>{item.location}
                       </p>
-                      <p className="text-canvas/70 text-sm leading-relaxed mb-4">{item.desc}</p>
+                      <p className="text-canvas/70 text-xs sm:text-sm leading-relaxed mb-4">{item.desc}</p>
                       <div className="flex flex-wrap gap-1.5">
                         {item.tags.map((tag) => (
                           <span key={tag} className="text-xs font-mono text-canvas/50 border border-canvas/10 px-2 py-0.5 hover:bg-accent hover:border-accent hover:text-ink transition-all cursor-default">
@@ -200,14 +200,16 @@ export default function About() {
             })}
 
             {/* End cap — Seeking Full-Time Roles */}
-            <div className="relative flex flex-col items-center justify-center text-center mt-8">
-              {/* Dot - centered in normal flex flow */}
-              <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center animate-pulse z-10 border-2 border-ink shadow-md mb-4">
-                <span className="w-2.5 h-2.5 rounded-full bg-ink" />
+            <div className="relative flex flex-col md:items-center pl-10 sm:pl-12 md:pl-0 mt-4 sm:mt-8">
+              {/* Dot */}
+              <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center animate-pulse z-10 border-2 border-ink shadow-md">
+                  <span className="w-2.5 h-2.5 rounded-full bg-ink" />
+                </div>
               </div>
 
-              {/* Text Badge - stacked cleanly below dot */}
-              <div className="bg-canvas/5 border border-accent/40 px-6 py-3.5 shadow-sm max-w-full z-10 rounded-xl">
+              {/* Text Badge */}
+              <div className="bg-canvas/5 border border-accent/40 px-4 sm:px-6 py-3 sm:py-3.5 shadow-sm max-w-full z-10 rounded-xl text-left md:text-center md:mt-12">
                 <p className="text-xs font-mono text-accent uppercase tracking-widest font-bold">
                   Open to Full-Time Roles · Present
                 </p>
@@ -219,7 +221,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
     </section>
   )
 }

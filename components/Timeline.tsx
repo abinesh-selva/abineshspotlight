@@ -78,7 +78,7 @@ export default function Timeline() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-rule md:-translate-x-px" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-6 w-px bg-rule md:-translate-x-px" />
 
           <div className="space-y-0">
             {milestones.map((item, idx) => {
@@ -93,10 +93,10 @@ export default function Timeline() {
                   }`}
                 >
                   {/* Card — left or right */}
-                  <div className={`w-full md:w-[calc(50%-2.5rem)] ${isRight ? 'md:pr-10' : 'md:pl-10'} pl-12 md:pl-0 pb-12`}>
-                    <div className="border border-rule hover:border-accent/40 bg-canvas p-6 transition-all duration-300 group">
+                  <div className={`w-full md:w-[calc(50%-2.5rem)] ${isRight ? 'md:pr-10' : 'md:pl-10'} pl-10 sm:pl-12 md:pl-0 pb-8 sm:pb-12`}>
+                    <div className="border border-rule hover:border-accent/40 bg-canvas p-4 sm:p-6 transition-all duration-300 group">
                       {/* Type badge + period */}
-                      <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                      <div className="flex items-center justify-between mb-3 sm:mb-4 flex-wrap gap-2">
                         <span className={`text-xs font-mono uppercase tracking-widest border px-2 py-0.5 ${style.labelClass}`}>
                           {style.label}
                         </span>
@@ -118,7 +118,7 @@ export default function Timeline() {
                       </p>
 
                       {/* Description */}
-                      <p className="text-mist text-sm leading-relaxed mb-4">
+                      <p className="text-mist text-xs sm:text-sm leading-relaxed mb-4">
                         {item.desc}
                       </p>
 
@@ -150,7 +150,7 @@ export default function Timeline() {
             })}
 
             {/* End cap — Present */}
-            <div className="relative flex items-center pl-12 md:pl-0 md:justify-center">
+            <div className="relative flex items-center pl-10 sm:pl-12 md:pl-0 md:justify-center">
               <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2">
                 <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center animate-pulse">
                   <span className="w-2.5 h-2.5 rounded-full bg-canvas" />

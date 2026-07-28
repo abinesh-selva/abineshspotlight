@@ -1,14 +1,15 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://abineshspotlight.online'
+export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: BASE_URL,
-      lastModified: new Date(),
+      url: 'https://abineshspotlight.online',
+      lastModified: new Date('2026-07-28'),
       changeFrequency: 'weekly',
-      priority: 1.0,
+      priority: 1,
     },
   ]
 }
+

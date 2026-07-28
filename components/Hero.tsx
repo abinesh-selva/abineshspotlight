@@ -57,33 +57,33 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-6 pb-12 md:pb-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-rule">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-8 border-t border-rule">
           <div>
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Role</p>
-            <p className="text-ink font-semibold text-base">Senior WP & Full Stack Engineer</p>
+            <p className="text-ink font-semibold text-base">Senior WordPress & Full Stack Engineer</p>
             <p className="text-mist text-sm mt-1 font-mono">WordPress · React · Headless</p>
           </div>
 
           <div>
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Experience</p>
             <p className="text-ink font-semibold text-base">3+ Years</p>
-            <p className="text-mist text-sm mt-1 font-mono">Jul 2022 — May 2026</p>
+            <p className="text-mist text-sm mt-1 font-mono">Jul 2022 — Present</p>
           </div>
 
           <div className="hidden md:block">
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Specialises in</p>
             <p className="text-ink text-opacity-70 text-sm leading-relaxed">
-              Scalable platforms, Headless CMS, and performance-first engineering.
+              Custom WordPress Architecture, Headless CMS, Core Web Vitals &amp; Performance Engineering.
             </p>
           </div>
 
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2.5">
             <a
               href="#projects"
-              className="group px-5 py-3 bg-accent text-white text-sm font-bold hover:bg-forest transition-colors hover:text-accent flex items-center justify-center gap-2"
+              className="group px-4 py-2 bg-accent text-white text-xs font-bold uppercase tracking-wider hover:bg-forest transition-colors hover:text-accent flex items-center justify-center gap-1.5 shadow-sm"
             >
               See my work
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
@@ -91,10 +91,10 @@ export default function Hero() {
               href="/resume/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-3 border border-rule text-white text-sm font-bold bg-forest hover:bg-accent hover:text-forest transition-all text-center flex items-center justify-center gap-2"
+              className="px-4 py-2 border border-rule text-white text-xs font-bold uppercase tracking-wider bg-forest hover:bg-accent hover:text-forest transition-all text-center flex items-center justify-center gap-1.5 shadow-sm"
             >
               Resume
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
               </svg>
             </a>

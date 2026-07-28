@@ -300,7 +300,7 @@ export default function Skills() {
                   {renderSkillIcon(selectedSkill.icon, selectedSkill.name)}
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-forest font-bold px-2 py-0.5 rounded bg-forest/10 border border-forest/20">
+                  <span className="text-xs font-mono uppercase tracking-widest text-forest font-bold px-2 py-0.5 rounded bg-forest/10 border border-forest/20">
                     {selectedSkill.category}
                   </span>
                   <h3 className="text-2xl font-display text-ink font-normal mt-1">
@@ -311,12 +311,12 @@ export default function Skills() {
 
               <div className="space-y-4 mb-6 text-xs font-mono">
                 <div className="bg-canvas p-4 rounded-xl border border-rule">
-                  <p className="text-mist uppercase tracking-widest text-[10px] mb-1">Proficiency Level</p>
+                  <p className="text-mist uppercase tracking-widest text-xs mb-1">Proficiency Level</p>
                   <p className="text-forest font-bold text-sm">{selectedSkill.level}</p>
                 </div>
 
                 <div className="bg-canvas p-4 rounded-xl border border-rule">
-                  <p className="text-mist uppercase tracking-widest text-[10px] mb-1">Enterprise Application</p>
+                  <p className="text-mist uppercase tracking-widest text-xs mb-1">Enterprise Application</p>
                   <p className="text-ink/80 leading-relaxed">{selectedSkill.useCase}</p>
                 </div>
               </div>

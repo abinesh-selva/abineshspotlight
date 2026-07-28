@@ -373,18 +373,18 @@ function BentoCard({ project, index, groupLabel }: { project: Project; index: nu
           </span>
           <div className="flex items-center gap-1.5">
             {isFeatured && (
-              <span className="text-[10px] font-mono uppercase tracking-wider text-accent bg-accent/10 border border-accent/30 px-2 py-0.5 rounded-md font-semibold">
+              <span className="text-xs font-mono uppercase tracking-wider text-accent bg-accent/10 border border-accent/30 px-2 py-0.5 rounded-md font-semibold">
                 ★ Featured
               </span>
             )}
-            <span className="text-[10px] font-mono uppercase tracking-widest text-canvas/40 border border-canvas/10 group-hover:border-canvas/30 group-hover:text-canvas/70 px-2 py-0.5 rounded-md transition-colors">
+            <span className="text-xs font-mono uppercase tracking-widest text-canvas/40 border border-canvas/10 group-hover:border-canvas/30 group-hover:text-canvas/70 px-2 py-0.5 rounded-md transition-colors">
               {badge}
             </span>
           </div>
         </div>
 
         {/* Role Subtitle */}
-        <p className="text-[11px] font-mono text-accent/80 uppercase tracking-widest mb-1.5 font-semibold">
+        <p className="text-xs font-mono text-accent/80 uppercase tracking-widest mb-1.5 font-semibold">
           {project.role}
         </p>
 
@@ -404,7 +404,7 @@ function BentoCard({ project, index, groupLabel }: { project: Project; index: nu
         {project.stack.map((s) => (
           <span
             key={s}
-            className="text-[11px] font-mono text-canvas/50 bg-canvas/5 border border-canvas/10 px-2 py-0.5 rounded-md group-hover:border-canvas/20 group-hover:text-canvas/80 transition-colors"
+            className="text-xs font-mono text-canvas/50 bg-canvas/5 border border-canvas/10 px-2 py-0.5 rounded-md group-hover:border-canvas/20 group-hover:text-canvas/80 transition-colors"
           >
             {s}
           </span>

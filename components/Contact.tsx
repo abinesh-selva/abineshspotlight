@@ -62,7 +62,7 @@ export default function Contact() {
               <span className="text-xs font-mono text-accent uppercase tracking-widest font-bold">Open to Work</span>
               <h3 className="font-display text-2xl text-canvas font-normal mb-1">Abinesh Selvarasu</h3>
               <p className="text-xs font-mono text-canvas/40 uppercase tracking-widest">
-                Senior WordPress & Full Stack Engineer
+                Senior WordPress Developer &amp; Full Stack Engineer
               </p>
             </div>
 

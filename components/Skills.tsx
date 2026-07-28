@@ -199,7 +199,7 @@ export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState<SkillItem | null>(null)
 
   return (
-    <section id="skills" className="py-20 bg-canvas overflow-hidden border-t border-rule">
+    <section id="skills" className="py-20 lg:py-24 bg-canvas overflow-hidden border-t border-rule">
       <div className="container mx-auto px-6">
         
         {/* Section Header */}
@@ -243,9 +243,9 @@ export default function Skills() {
                   </div>
 
                   {/* Skill Name Below Logo */}
-                  <h3 className="font-mono font-normal text-xs sm:text-sm text-ink group-hover:text-forest transition-colors">
+                  <span className="font-mono font-normal text-xs sm:text-sm text-ink group-hover:text-forest transition-colors">
                     {item.name}
-                  </h3>
+                  </span>
                 </div>
               ))}
             </div>
@@ -272,9 +272,9 @@ export default function Skills() {
                   </div>
 
                   {/* Tool Name Below Logo */}
-                  <h3 className="font-mono font-normal text-xs sm:text-sm text-ink group-hover:text-forest transition-colors">
+                  <span className="font-mono font-normal text-xs sm:text-sm text-ink group-hover:text-forest transition-colors">
                     {item.name}
-                  </h3>
+                  </span>
                 </div>
               ))}
             </div>
@@ -309,7 +309,7 @@ export default function Skills() {
                 </div>
               </div>
 
-              <div className="space-y-4 mb-6 text-xs font-mono">
+              <div className="space-y-4 text-xs font-mono">
                 <div className="bg-canvas p-4 rounded-xl border border-rule">
                   <p className="text-mist uppercase tracking-widest text-xs mb-1">Proficiency Level</p>
                   <p className="text-forest font-bold text-sm">{selectedSkill.level}</p>
@@ -320,13 +320,6 @@ export default function Skills() {
                   <p className="text-ink/80 leading-relaxed">{selectedSkill.useCase}</p>
                 </div>
               </div>
-
-              <button
-                onClick={() => setSelectedSkill(null)}
-                className="w-full py-3 rounded-xl bg-forest text-canvas font-mono text-xs font-bold uppercase tracking-widest hover:bg-forest/90 transition-all shadow-md"
-              >
-                Close Details
-              </button>
             </div>
           </div>
         )}

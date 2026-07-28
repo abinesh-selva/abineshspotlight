@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
 
         <h1
-          aria-label="Abinesh Selvarasu — Senior WordPress Engineer & Full Stack Developer"
+          aria-label="Abinesh Selvarasu — Senior WordPress Developer & Full Stack Engineer"
           className="group font-display font-semibold leading-none tracking-tighter uppercase select-none pt-8 cursor-default max-w-full overflow-hidden"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -57,27 +57,27 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-6 pb-12 md:pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-8 border-t border-rule">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 pt-8 border-t border-rule items-start">
+          <div className="lg:col-span-5">
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Role</p>
-            <p className="text-ink font-semibold text-base">Senior WordPress & Full Stack Engineer</p>
-            <p className="text-mist text-sm mt-1 font-mono">WordPress · React · Headless</p>
+            <p className="text-ink font-semibold text-base sm:whitespace-nowrap">Senior WordPress Developer &amp; Full Stack Engineer</p>
+            <p className="text-mist text-sm mt-1 font-mono">WordPress · Full Stack Development · Next.js · TypeScript</p>
           </div>
 
-          <div>
+          <div className="lg:col-span-2">
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Experience</p>
             <p className="text-ink font-semibold text-base">3+ Years</p>
             <p className="text-mist text-sm mt-1 font-mono">Jul 2022 — Present</p>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block lg:col-span-3">
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Specialises in</p>
             <p className="text-ink text-opacity-70 text-sm leading-relaxed">
               Custom WordPress Architecture, Headless CMS, Core Web Vitals &amp; Performance Engineering.
             </p>
           </div>
 
-          <div className="flex flex-col gap-2.5">
+          <div className="lg:col-span-2 flex flex-col gap-2">
             <a
               href="#projects"
               className="group px-4 py-2 bg-accent text-white text-xs font-bold uppercase tracking-wider hover:bg-forest transition-colors hover:text-accent flex items-center justify-center gap-1.5 shadow-sm"

@@ -243,7 +243,7 @@ export default function Projects() {
   const showBothGroups = showEnterprise && showIndependent
 
   return (
-    <section id="projects" className="py-20 bg-ink">
+    <section id="projects" className="py-20 lg:py-24 bg-ink">
       <div className="container mx-auto px-6">
         
         {/* Header */}

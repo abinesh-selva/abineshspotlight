@@ -70,7 +70,7 @@ export default function About() {
             
             <div className="space-y-5 text-canvas/70 text-base leading-relaxed">
               <p>
-                I&apos;m Abinesh Selvarasu — a Senior WordPress Engineer and Full Stack Developer based in Tamil Nadu,
+                I&apos;m Abinesh Selvarasu — a Senior WordPress Developer and Full Stack Engineer based in Tamil Nadu,
                 India. With 3+ years delivering production-grade web platforms for global enterprise clients,
                 I specialise in custom CMS architecture, headless WordPress solutions, and performance engineering.
               </p>
@@ -214,7 +214,7 @@ export default function About() {
                   Open to Full-Time Roles · Present
                 </p>
                 <p className="text-xs font-mono text-canvas/60 mt-0.5">
-                  Senior WordPress Engineer / Full Stack Developer
+                  Senior WordPress Developer &amp; Full Stack Engineer
                 </p>
               </div>
             </div>

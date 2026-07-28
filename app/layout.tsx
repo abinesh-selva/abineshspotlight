@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
-    default: 'Senior WordPress Engineer & Full Stack Developer | Abinesh Selvarasu',
+    default: 'Senior WordPress Developer & Full Stack Engineer | Abinesh Selvarasu',
     template: '%s | Abinesh Selvarasu',
   },
 
   description:
-    'Senior WordPress Engineer with 3+ years architecting production websites for global enterprise clients including Unbounce, ElasticPath, and OGP.',
+    'Senior WordPress Developer & Full Stack Engineer with 3+ years architecting enterprise web platforms for global brands.',
 
   keywords: [
     'Abinesh Selvarasu',
@@ -71,16 +71,16 @@ export const metadata: Metadata = {
     gender: 'male',
     locale: 'en_US',
     url: BASE_URL,
-    siteName: 'Abinesh Selvarasu — Senior WordPress Engineer & Full Stack Developer',
-    title: 'Senior WordPress Engineer & Full Stack Developer | Abinesh Selvarasu',
+    siteName: 'Abinesh Selvarasu — Senior WordPress Developer & Full Stack Engineer',
+    title: 'Senior WordPress Developer & Full Stack Engineer | Abinesh Selvarasu',
     description:
-      'Senior WordPress Engineer with 3+ years architecting production websites for global enterprise clients including Unbounce, ElasticPath, and OGP.',
+      'Senior WordPress Developer & Full Stack Engineer with 3+ years architecting enterprise web platforms for global brands.',
     images: [
       {
         url: `${BASE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Abinesh Selvarasu — Senior WordPress Engineer & Full Stack Developer',
+        alt: 'Abinesh Selvarasu — Senior WordPress Developer & Full Stack Engineer',
         type: 'image/png',
       },
     ],
@@ -90,9 +90,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@abineshselvarasu',
     creator: '@abineshselvarasu',
-    title: 'Senior WordPress Engineer & Full Stack Developer | Abinesh Selvarasu',
+    title: 'Senior WordPress Developer & Full Stack Engineer | Abinesh Selvarasu',
     description:
-      'Senior WordPress Engineer with 3+ years architecting production websites for global enterprise clients including Unbounce, ElasticPath, and OGP.',
+      'Senior WordPress Developer & Full Stack Engineer with 3+ years architecting enterprise web platforms for global brands.',
     images: [`${BASE_URL}/og-image.png`],
   },
 

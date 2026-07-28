@@ -87,22 +87,22 @@ export default function Blog() {
       <div className="absolute inset-0 bg-gradient-to-t from-[#081729]/95 via-[#081729]/40 to-transparent pointer-events-none" />
       <div className="absolute bottom-6 left-5 right-5 z-10">
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="text-base font-mono text-accent uppercase tracking-widest bg-black/60 px-2 py-1 rounded-md backdrop-blur-sm border border-white/10">
+          <span className="text-xs font-mono text-accent uppercase tracking-widest bg-black/60 px-2 py-1 rounded-md backdrop-blur-sm border border-white/10">
             {article.category}
           </span>
-          <span className="text-base font-mono text-mist bg-black/60 px-2 py-1 rounded-md backdrop-blur-sm border border-white/10">
+          <span className="text-xs font-mono text-mist bg-black/60 px-2 py-1 rounded-md backdrop-blur-sm border border-white/10">
             {article.readTime}
           </span>
         </div>
-        <h3 className="text-white font-display text-xl md:text-2xl leading-snug group-hover:text-accent transition-colors duration-300">
+        <p className="text-white font-display text-xl md:text-2xl leading-snug group-hover:text-accent transition-colors duration-300">
           {article.title}
-        </h3>
+        </p>
       </div>
     </a>
   );
 
   return (
-    <section id="blog" className="py-28 md:py-36 bg-canvas border-t border-rule">
+    <section id="blog" className="py-20 lg:py-24 bg-canvas border-t border-rule">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
           <div>

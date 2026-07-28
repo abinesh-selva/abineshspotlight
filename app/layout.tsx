@@ -194,8 +194,10 @@ const webPageSchema = {
   description:
     'Personal portfolio of Abinesh Selvarasu — Senior WordPress Developer & Full Stack Engineer. Showcases enterprise projects, technical skills, career journey, and contact information.',
   isPartOf: { '@id': `${BASE_URL}/#website` },
+  mainEntity: personSchema,
   about: { '@id': `${BASE_URL}/#person` },
   inLanguage: 'en-US',
+  dateCreated: '2023-01-01T08:00:00+05:30',
   dateModified: new Date().toISOString(),
   breadcrumb: { '@id': `${BASE_URL}/#breadcrumb` },
 }

@@ -168,12 +168,14 @@ const Carousel = ({
             <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 pointer-events-none">
                 <button 
                     onClick={goToPreviousSlide} 
+                    aria-label="Previous slide"
                     className='pointer-events-auto p-2 rounded-full backdrop-blur-md bg-ink/40 text-mist shadow-lg border border-accent/30 hover:bg-accent/80 hover:text-white hover:scale-110 transition-all duration-300'
                 >
                     <ChevronLeft size={24} />
                 </button>
                 <button 
                     onClick={goToNextSlide} 
+                    aria-label="Next slide"
                     className='pointer-events-auto p-2 rounded-full backdrop-blur-md bg-ink/40 text-mist shadow-lg border border-accent/30 hover:bg-accent/80 hover:text-white hover:scale-110 transition-all duration-300'
                 >
                     <ChevronRight size={24} />
@@ -197,8 +199,9 @@ const Carousel = ({
                         }
 
                         return (
-                            <div 
+                            <button 
                                 key={slideIndex} 
+                                aria-label={`Go to slide ${slideIndex + 1}`}
                                 onClick={() => {
                                     setIsTransitioning(true)
                                     setCurrentSlideIndex(seamlessLoop ? slideIndex + clonedCount : slideIndex)

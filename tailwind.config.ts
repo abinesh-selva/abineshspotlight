@@ -14,7 +14,7 @@ const config: Config = {
         accent: '#DCBC7D',
         forest: '#14503E',
         blush:  '#F5B8AE',
-        mist:   '#6B7565',
+        mist:   '#4A5446',
         rule:   '#DDD5C5',
       },
       fontFamily: {

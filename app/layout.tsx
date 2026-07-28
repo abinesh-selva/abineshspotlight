@@ -64,11 +64,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    type: 'profile',
-    firstName: 'Abinesh',
-    lastName: 'Selvarasu',
-    username: 'abineshselvarasu',
-    gender: 'male',
+    type: 'website',
     locale: 'en_US',
     url: BASE_URL,
     siteName: 'Abinesh Selvarasu — Senior WordPress Developer & Full Stack Engineer',
@@ -77,11 +73,18 @@ export const metadata: Metadata = {
       'Senior WordPress Developer & Full Stack Engineer with 3+ years architecting enterprise web platforms for global brands.',
     images: [
       {
-        url: `${BASE_URL}/og-image.png`,
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Abinesh Selvarasu — Senior WordPress Developer & Full Stack Engineer',
         type: 'image/png',
+      },
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Abinesh Selvarasu — Senior WordPress Developer & Full Stack Engineer',
+        type: 'image/jpeg',
       },
     ],
   },
@@ -93,7 +96,7 @@ export const metadata: Metadata = {
     title: 'Senior WordPress Developer & Full Stack Engineer | Abinesh Selvarasu',
     description:
       'Senior WordPress Developer & Full Stack Engineer with 3+ years architecting enterprise web platforms for global brands.',
-    images: [`${BASE_URL}/og-image.png`],
+    images: ['/og-image.png'],
   },
 
   robots: {

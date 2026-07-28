@@ -8,7 +8,7 @@ export function useScramble(text: string, trigger: boolean | number, speed: numb
   const [displayText, setDisplayText] = useState(text);
 
   useEffect(() => {
-    if (trigger === false) {
+    if (!trigger) {
       setDisplayText(text);
       return;
     }

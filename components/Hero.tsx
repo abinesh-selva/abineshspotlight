@@ -5,10 +5,8 @@ import ScrambleText, { useScramble } from "./ScrambleText";
 
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
-  const scrambledFull = useScramble("Abinesh.S", 0, 0.15);
-  const parts = scrambledFull.split(".");
-  const firstPart = parts[0];
-  const lastPart = parts.length > 1 ? "." + parts.slice(1).join(".") : "";
+  const firstPart = "Abinesh";
+  const lastPart = ".S";
 
   return (
     <section id="hero" className="relative bg-canvas flex flex-col overflow-hidden">
@@ -59,13 +57,13 @@ export default function Hero() {
       <div className="container mx-auto px-6 pb-12 md:pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 pt-8 border-t border-rule items-start">
           <div className="lg:col-span-5">
-            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Role &amp; Experience</p>
+            <p className="text-xs font-mono text-mist font-bold uppercase tracking-widest mb-2">Role &amp; Experience</p>
             <p className="text-ink font-semibold text-base sm:whitespace-nowrap">Senior WordPress Developer &amp; Full Stack Engineer</p>
-            <p className="text-mist text-sm mt-1 font-mono">3+ Years Experience · Jul 2022 — Present</p>
+            <p className="text-mist text-sm mt-1 font-mono">3+ Years Experience</p>
           </div>
 
           <div className="hidden lg:block lg:col-span-4">
-            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-2">Specialises in</p>
+            <p className="text-xs font-mono text-mist font-bold uppercase tracking-widest mb-2">Specialises in</p>
             <p className="text-ink text-opacity-70 text-sm leading-relaxed">
               Custom WordPress Architecture, Headless CMS, Core Web Vitals &amp; Performance Engineering.
             </p>

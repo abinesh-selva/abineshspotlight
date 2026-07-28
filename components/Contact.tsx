@@ -54,14 +54,14 @@ export default function Contact() {
 
       {/* Main Footer Grid */}
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12">
 
           {/* ── Column 1: Identity ── */}
-          <div className="space-y-6">
+          <div className="space-y-6 md:col-span-5">
             <div>
-              <span className="text-xs font-mono text-accent uppercase tracking-widest font-bold">Open to Work</span>
+              <p className="text-xs font-mono text-accent uppercase tracking-widest font-bold mb-6">Open to Work</p>
               <h3 className="font-display text-2xl text-canvas font-normal mb-1">Abinesh Selvarasu</h3>
-              <p className="text-xs font-mono text-canvas/40 uppercase tracking-widest">
+              <p className="text-xs font-mono text-canvas/70 uppercase tracking-widest">
                 Senior WordPress Developer &amp; Full Stack Engineer
               </p>
             </div>
@@ -70,25 +70,25 @@ export default function Contact() {
             <div className="space-y-3">
               <a
                 href="mailto:mailtoabineshselva@gmail.com"
-                className="group flex items-center gap-3 text-base text-canvas/60 hover:text-accent transition-colors"
+                className="group flex items-center gap-3 text-base text-canvas/80 hover:text-accent transition-colors"
               >
-                <svg className="w-4 h-4 shrink-0 text-accent/60 group-hover:text-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-4 h-4 shrink-0 text-accent/80 group-hover:text-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="4" width="20" height="16" rx="2" />
                   <path d="M2 7l10 7 10-7" />
                 </svg>
-                <span className="font-mono text-base break-all">mailtoabineshselva@gmail.com</span>
+                mailtoabineshselva@gmail.com
               </a>
               <a
                 href="tel:+919042972156"
-                className="group flex items-center gap-3 text-base text-canvas/60 hover:text-accent transition-colors"
+                className="group flex items-center gap-3 text-base text-canvas/80 hover:text-accent transition-colors"
               >
-                <svg className="w-4 h-4 shrink-0 text-accent/60 group-hover:text-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-4 h-4 shrink-0 text-accent/80 group-hover:text-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                 </svg>
-                <span className="font-mono text-base">+91 90429 72156</span>
+                +91 90429 72156
               </a>
-              <div className="flex items-center gap-3 text-base text-canvas/40 font-mono">
-                <svg className="w-4 h-4 shrink-0 text-accent/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex items-center gap-3 text-base text-canvas/80 font-mono">
+                <svg className="w-4 h-4 shrink-0 text-accent/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
                   <circle cx="12" cy="9" r="2.5" />
                 </svg>
@@ -99,7 +99,7 @@ export default function Contact() {
                 href="/resume/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 mt-10 p-3 border border-accent/30 text-accent text-xs font-mono uppercase tracking-widest hover:bg-accent/10 transition-all rounded-lg"
+                className="group inline-flex items-center gap-2 mt-10 p-3 border border-accent/30 text-accent text-xs font-mono uppercase font-bold tracking-widest hover:bg-accent/10 transition-all rounded-lg"
               >
                 <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
@@ -114,14 +114,14 @@ export default function Contact() {
           </div>
 
           {/* ── Column 2: Quick Nav ── */}
-          <div>
-            <p className="text-xs font-mono text-canvas/50 uppercase tracking-widest mb-6">Quick Links</p>
+          <div className="md:col-span-3 lg:col-span-3 lg:pl-6">
+            <p className="text-xs font-mono text-accent font-bold uppercase tracking-widest mb-6">Quick Links</p>
             <nav className="space-y-3">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="group flex items-center gap-2 text-base text-canvas/50 hover:text-accent transition-colors font-mono"
+                  className="group flex items-center gap-2 text-base text-canvas/80 hover:text-accent transition-colors font-mono"
                 >
                   <svg className="w-3 h-3 text-accent/30 group-hover:text-accent transition-all group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7" />
@@ -133,8 +133,8 @@ export default function Contact() {
           </div>
 
           {/* ── Column 3: Socials + CTA ── */}
-          <div>
-            <p className="text-xs font-mono text-canvas/50 uppercase tracking-widest mb-6">Connect</p>
+          <div className="md:col-span-4 lg:col-span-4 lg:pl-10">
+            <p className="text-xs font-mono text-accent font-bold uppercase tracking-widest mb-6">Connect</p>
 
             <div className="space-y-3 mb-8">
               {socials.map((s) => (
@@ -143,7 +143,7 @@ export default function Contact() {
                   href={s.href}
                   target={s.href.startsWith('mailto') ? undefined : '_blank'}
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-3 text-canvas/50 hover:text-accent transition-colors"
+                  className="group flex items-center gap-3 text-canvas/80 hover:text-accent transition-colors"
                 >
                   <span className="w-9 h-9 rounded-xl border border-canvas/10 group-hover:border-accent/40 bg-canvas/5 group-hover:bg-accent/5 flex items-center justify-center transition-all">
                     {s.icon}
@@ -161,7 +161,7 @@ export default function Contact() {
       <div className="border-t border-canvas/10">
         <div className="container mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-base font-mono text-canvas">
-            © {new Date().getFullYear()} abineshspotlight.online · All rights reserved.
+            © {new Date().getFullYear()} <span className="hover:text-accent transition-colors"><a href="#hero"> abineshspotlight.online</a></span> · All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a

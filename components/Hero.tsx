@@ -36,20 +36,19 @@ export default function Hero() {
 
             {/* Top Half */}
             <span
-              className="block text-5xl sm:text-7xl md:text-9xl lg:text-[170px] xl:text-[220px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6"
-              style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}
+              className="block text-5xl sm:text-7xl md:text-9xl lg:text-[170px] xl:text-[220px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6 clip-half-top"
             >
               {firstPart}<span className="text-accent">{lastPart}</span>
             </span>
 
             {/* Bottom Half */}
             <span
-              className="top-0 left-0 text-5xl sm:text-7xl md:text-9xl lg:text-[170px] xl:text-[220px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6 absolute"
-              style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }}
+              className="top-0 left-0 text-5xl sm:text-7xl md:text-9xl lg:text-[170px] xl:text-[220px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6 absolute clip-half-bottom"
               aria-hidden="true"
             >
               {firstPart}<span className="text-accent">{lastPart}</span>
             </span>
+
           </div>
         </h1>
       </div>

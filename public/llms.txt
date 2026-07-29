@@ -1,0 +1,99 @@
+# Abinesh Selvarasu — Senior WordPress Developer | Full Stack Engineer
+
+> Senior WordPress Developer & Full Stack Engineer, Specialist with 3+ years architecting and delivering production-grade web platforms for global enterprise clients through FueInt Technologies and Dialed In Design (Canada). Available for full-time and freelance work.
+
+---
+
+## Personal Information
+
+- **Full Name:** Abinesh Selvarasu
+- **Also known as:** Abinesh S, Abinesh Selva
+- **Location:** Coimbatore, Tamil Nadu, India
+- **Email:** mailtoabineshselva@gmail.com
+- **Phone:** +91 90429 72156
+- **Portfolio:** https://abineshspotlight.online
+- **GitHub:** https://github.com/abineshselvarasu
+- **LinkedIn:** https://linkedin.com/in/abineshselvarasu
+- **Freelance Brand:** Gradiolex
+
+---
+
+## Professional Experience
+
+**FueInt Technologies, Coimbatore** — Engineer – Web Apps
+December 2022 – May 2026 | Full-time
+
+Delivered WordPress, Drupal, and Craft CMS projects for enterprise clients via Dialed In Design (Canada). Worked across 20+ international client sites in Agile/Scrum teams.
+
+**Gradiolex** — Freelance Full Stack Developer
+2025 – Present | Self-employed
+
+Builds and delivers end-to-end web products for local businesses and startups.
+
+---
+
+## Enterprise Client Work
+
+All projects delivered through FueInt Technologies via Dialed In Design (Canada).
+
+- **Unbounce.com** — ACF architecture overhaul, CPT development, performance optimisation (WordPress)
+- **OpenGovernmentPartnership.org** — Large-scale CMS and CPT architecture for 75+ governments (WordPress)
+- **TractionComplete.com** — ACF architecture, performance, custom plugin development (WordPress)
+- **PPIC.org** — ACF architecture, performance and CPT development (WordPress)
+- **Intiveo.com** — Elementor architecture and customisation (WordPress)
+- **Loopio.com** — Marketing website architecture, ACF modular layouts (WordPress)
+- **ElasticPath.com** — WCAG accessibility compliance, Core Web Vitals optimisation (Craft CMS)
+- **PremierBoxingChampions.com** — Custom modules, security hardening, performance (Drupal)
+
+---
+
+## Key Achievements
+
+- Boosted organic traffic by ~15% across audited client sites via JSON-LD structured data and technical SEO fixes
+- Reduced LCP by ~30% through caching, asset optimisation, and PHP-level code refactoring
+- Fixed a URL-encoding sitemap bug affecting 1,700+ indexed URLs, restoring full crawlability within one sprint
+- Scaled integrations UI from 16 → 57+ items with zero regressions
+- Improved CLS by 0.05 across multiple enterprise WordPress platforms
+
+---
+
+## Core Technical Skills
+
+- **PHP & Backend:** PHP 8.x, OOP, MVC, REST API Development, MySQL, Node.js
+- **WordPress:** Custom Themes & Plugins, Gutenberg Blocks, ACF Pro, CPT, Hooks & Filters, WooCommerce, REST API, Multisite, WPGraphQL, Headless WordPress
+- **Drupal:** Drupal 9/10, Custom Modules, Twig Templates, Views, Security Patching
+- **Other CMS:** Craft CMS, Elementor, WCAG Accessibility
+- **Frontend:** JavaScript (ES6+), TypeScript, React.js, Next.js 15, Tailwind CSS, SCSS/CSS3, jQuery, Bootstrap
+- **DevOps & Hosting:** Git, GitHub Actions CI/CD, SSH, Docker, Pantheon, WP Engine, Kinsta, Servd
+- **SEO & Performance:** JSON-LD Schema, Core Web Vitals, LCP/CLS, Google Search Console, PageSpeed Insights
+- **AI & Mobile:** LLM Integration, OCR, Voice Tracking, Flutter (iOS & Android), Firebase Auth, Supabase, Razorpay
+
+---
+
+## Personal Projects
+
+- **MoneyArk** — Personal finance app with LLM AI assistant, OCR receipt scanning, voice expense tracking (Flutter + Supabase): https://moneyark.vercel.app
+- **Videoclips** — Professional video editing platform with real-time canvas rendering (React)
+- **Parithadam** — Event ticketing platform (Next.js 15 + Razorpay + Nodemailer)
+- **MySupportInfo** — Customer support portal: https://mysupportinfo.vercel.app
+- **Instatrove** — E-commerce / product discovery platform: https://instatrove.vercel.app
+- **Developer Academy Quiz App** — Cross-platform quiz app (Flutter + Firebase Auth)
+
+---
+
+## Services Offered
+
+- Custom WordPress Theme & Plugin Development
+- PHP & Drupal Custom Module Development
+- Headless WordPress & Next.js Integration
+- Figma to Responsive Code (WordPress / React / Tailwind)
+- Core Web Vitals Optimisation & Technical SEO Audits
+- Enterprise CMS Migration (WordPress, Drupal, Craft CMS)
+- AI/LLM Feature Integration into Web Applications
+- Flutter Mobile App Development (iOS & Android)
+
+---
+
+## Education
+
+B.E. Computer Science & Engineering — Vidyaa Vikas College of Engineering (Anna University), 2020 | CGPA: 7.04 / 10

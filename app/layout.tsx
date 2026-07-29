@@ -155,10 +155,14 @@ const personSchema = {
   sameAs: [
     'https://linkedin.com/in/abineshselvarasu',
     'https://github.com/abineshselvarasu',
+    'https://www.instagram.com/sak_abinesh',
   ],
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Tamil Nadu',
+    streetAddress: 'Coimbatore',
+    addressLocality: 'Coimbatore',
+    addressRegion: 'Tamil Nadu',
+    postalCode: '641001',
     addressCountry: 'IN',
   },
   alumniOf: {
@@ -170,6 +174,44 @@ const personSchema = {
     '@type': 'Organization',
     name: 'Independent / Freelance',
   },
+}
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `${BASE_URL}/#localbusiness`,
+  name: 'Abinesh Selvarasu — Senior WordPress Developer & Full Stack Engineer',
+  image: `${BASE_URL}/og-image.png`,
+  url: BASE_URL,
+  telephone: '+919042972156',
+  email: 'mailtoabineshselva@gmail.com',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Coimbatore',
+    addressLocality: 'Coimbatore',
+    addressRegion: 'Tamil Nadu',
+    postalCode: '641001',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 11.0168,
+    longitude: 76.9558,
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+  ],
+  sameAs: [
+    'https://linkedin.com/in/abineshselvarasu',
+    'https://github.com/abineshselvarasu',
+    'https://www.instagram.com/sak_abinesh',
+  ],
 }
 
 const websiteSchema = {
@@ -259,6 +301,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <Script
+          id="schema-localbusiness"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
         <Script
           id="schema-website"

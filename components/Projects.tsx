@@ -29,14 +29,14 @@ const projects: Project[] = [
     url: 'https://unbounce.com',
   },
   {
-    name: 'Open Government Partnership',
+    name: 'Intiveo',
     role: 'WordPress Developer',
     category: 'WordPress',
     group: 'FueInt',
     subGroup: 'global',
-    challenge: 'Large-scale CMS and Custom Post Type architecture for an international initiative spanning 75+ governments and millions of annual visitors.',
-    stack: ['WordPress', 'ACF Pro', 'CPT', 'REST API'],
-    url: 'https://www.opengovpartnership.org',
+    challenge: 'Custom WordPress components, interactive element integrations, and conversion flow optimisation for a patient communication SaaS.',
+    stack: ['WordPress', 'PHP', 'JavaScript', 'ACF Pro'],
+    url: null,
   },
   {
     name: 'Open Gov Week',
@@ -51,11 +51,78 @@ const projects: Project[] = [
 
   // Row 2 (Vice Versa — Featured Right!)
   {
+    name: 'Insightly',
+    role: 'WordPress Developer',
+    category: 'WordPress',
+    group: 'FueInt',
+    subGroup: 'global',
+    challenge: 'Marketing site optimisation, Gutenberg blocks, and CRM form integrations for a popular CRM platform website.',
+    stack: ['WordPress', 'PHP', 'ACF Pro', 'CRM Integration'],
+    url: null,
+  },
+  {
+    name: 'PPIC',
+    role: 'WordPress Developer',
+    category: 'WordPress',
+    group: 'FueInt',
+    subGroup: 'global',
+    challenge: 'Custom theme development, complex block architectures, and content migrations for a leading policy research and analysis center.',
+    stack: ['WordPress', 'PHP', 'ACF Pro', 'CSS'],
+    url: null,
+  },
+  {
+    name: 'Open Government Partnership',
+    role: 'WordPress Developer',
+    category: 'WordPress',
+    group: 'FueInt',
+    subGroup: 'global',
+    featured: true,
+    challenge: 'Large-scale CMS and Custom Post Type architecture for an international initiative spanning 75+ governments and millions of annual visitors.',
+    stack: ['WordPress', 'ACF Pro', 'CPT', 'REST API'],
+    url: 'https://www.opengovpartnership.org',
+  },
+
+  // Row 4 (Vice Versa — Featured Right!)
+  {
+    name: 'Loopio',
+    role: 'WordPress Developer',
+    category: 'WordPress',
+    group: 'FueInt',
+    subGroup: 'global',
+    challenge: 'Marketing website architecture, ACF modular layouts, and performance tuning for a leading RFP response software platform.',
+    stack: ['WordPress', 'PHP', 'ACF Pro', 'Webpack'],
+    url: null,
+  },
+  {
+    name: 'Traction Complete',
+    role: 'WordPress Developer',
+    category: 'WordPress',
+    group: 'FueInt',
+    subGroup: 'global',
+    featured: true,
+    challenge: 'ACF architecture, performance improvements, and custom plugin development for a Salesforce-native data management SaaS.',
+    stack: ['WordPress', 'ACF Pro', 'PHP', 'Plugin Dev'],
+    url: 'https://www.tractioncomplete.com',
+  },
+
+  // Row 3 (Featured Left)
+  {
+    name: 'ElasticPath',
+    role: 'Craft CMS Developer',
+    category: 'CMS',
+    group: 'FueInt',
+    subGroup: 'global',
+    challenge: 'Full WCAG accessibility compliance and Core Web Vitals optimisation for an enterprise headless commerce platform with global reach.',
+    stack: ['Craft CMS', 'WCAG', 'Performance', 'SEO'],
+    url: 'https://www.elasticpath.com',
+  },
+  {
     name: 'Premier Boxing Champions',
     role: 'Drupal Developer',
     category: 'Drupal',
     group: 'FueInt',
     subGroup: 'global',
+    featured: true,
     challenge: 'Security hardening and performance work for a major US boxing promoter, including live fight-night features built to handle peak concurrency.',
     stack: ['Drupal', 'PHP', 'Security', 'Performance'],
     url: 'https://www.premierboxingchampions.com',
@@ -71,78 +138,11 @@ const projects: Project[] = [
     url: 'https://dialedin.ca/',
   },
   {
-    name: 'ElasticPath',
-    role: 'Craft CMS Developer',
-    category: 'CMS',
-    group: 'FueInt',
-    subGroup: 'global',
-    featured: true,
-    challenge: 'Full WCAG accessibility compliance and Core Web Vitals optimisation for an enterprise headless commerce platform with global reach.',
-    stack: ['Craft CMS', 'WCAG', 'Performance', 'SEO'],
-    url: 'https://www.elasticpath.com',
-  },
-
-  // Row 3 (Featured Left)
-  {
-    name: 'Traction Complete',
-    role: 'WordPress Developer',
-    category: 'WordPress',
-    group: 'FueInt',
-    subGroup: 'global',
-    featured: true,
-    challenge: 'ACF architecture, performance improvements, and custom plugin development for a Salesforce-native data management SaaS.',
-    stack: ['WordPress', 'ACF Pro', 'PHP', 'Plugin Dev'],
-    url: 'https://www.tractioncomplete.com',
-  },
-  {
-    name: 'PPIC',
-    role: 'WordPress Developer',
-    category: 'WordPress',
-    group: 'FueInt',
-    subGroup: 'global',
-    challenge: 'Custom theme development, complex block architectures, and content migrations for a leading policy research and analysis center.',
-    stack: ['WordPress', 'PHP', 'ACF Pro', 'CSS'],
-    url: null,
-  },
-  {
-    name: 'Intiveo',
-    role: 'WordPress Developer',
-    category: 'WordPress',
-    group: 'FueInt',
-    subGroup: 'global',
-    challenge: 'Custom WordPress components, interactive element integrations, and conversion flow optimisation for a patient communication SaaS.',
-    stack: ['WordPress', 'PHP', 'JavaScript', 'ACF Pro'],
-    url: null,
-  },
-
-  // Row 4 (Vice Versa — Featured Right!)
-  {
-    name: 'Loopio',
-    role: 'WordPress Developer',
-    category: 'WordPress',
-    group: 'FueInt',
-    subGroup: 'global',
-    challenge: 'Marketing website architecture, ACF modular layouts, and performance tuning for a leading RFP response software platform.',
-    stack: ['WordPress', 'PHP', 'ACF Pro', 'Webpack'],
-    url: null,
-  },
-  {
-    name: 'Insightly',
-    role: 'WordPress Developer',
-    category: 'WordPress',
-    group: 'FueInt',
-    subGroup: 'global',
-    challenge: 'Marketing site optimisation, Gutenberg blocks, and CRM form integrations for a popular CRM platform website.',
-    stack: ['WordPress', 'PHP', 'ACF Pro', 'CRM Integration'],
-    url: null,
-  },
-  {
-    name: 'FUEiNT Technologies',
+    name: 'FUEiNT',
     role: 'Next.js Developer',
     category: 'Next.js',
     group: 'FueInt',
     subGroup: 'domestic',
-    featured: true,
     challenge: 'Rebuilt the company website in Next.js, improving performance, modernising the UI, and creating a scalable codebase for future growth.',
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
     url: null,
@@ -197,7 +197,6 @@ const projects: Project[] = [
     category: 'Next.js',
     group: 'independent',
     subGroup: 'client',
-    featured: true,
     challenge: 'Local bakery website with custom ordering, gallery, and brand identity — pixel-perfect from Figma to code.',
     stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
     url: 'https://navibakesandcakes.vercel.app/',
@@ -208,6 +207,7 @@ const projects: Project[] = [
     category: 'WordPress',
     group: 'independent',
     subGroup: 'client',
+    featured: true,
     challenge: 'B2B wholesale cement and steel trader website with product catalogue and trade enquiry flows.',
     stack: ['WordPress', 'ACF', 'Pantheon'],
     url: 'https://dev-sri-dhanamoorthy-traders.pantheonsite.io',
@@ -252,27 +252,27 @@ export default function Projects() {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-10 gap-6">
           <div>
-            <p className="reveal-text text-xs font-mono text-accent uppercase tracking-widest mb-3 font-semibold">Selected Work</p>
+            <p className="reveal-text text-sm font-mono text-accent uppercase tracking-widest mb-3 font-semibold">Selected Work</p>
             <h2 className="reveal-text font-display font-normal text-4xl md:text-6xl text-canvas tracking-tight leading-tight delay-100">
               Featured projects.
             </h2>
           </div>
-          <p className="reveal-text text-canvas/50 max-w-xs text-sm font-mono leading-relaxed delay-200">
+          <p className="reveal-text text-canvas/60 max-w-xs text-base font-mono leading-relaxed delay-200">
             Enterprise platforms, headless CMS builds, and independent full-stack applications.
           </p>
         </div>
 
         {/* Filters */}
         <div className="mb-12 reveal-text">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2.5">
             {filters.map((f) => (
               <button
                 key={f}
                 onClick={() => setActive(f)}
-                className={`px-4 py-1.5 text-xs font-mono font-medium rounded-full transition-all duration-300 ${
+                className={`px-4 py-1.5 text-sm font-mono font-medium rounded-full transition-all duration-300 ${
                   active === f
                     ? 'bg-accent text-ink font-bold shadow-md scale-105'
-                    : 'bg-canvas/5 text-canvas/50 border border-canvas/10 hover:bg-accent/20 hover:text-canvas'
+                    : 'bg-canvas/5 text-canvas/60 border border-canvas/10 hover:bg-accent/20 hover:text-canvas'
                 }`}
               >
                 {f}
@@ -286,12 +286,12 @@ export default function Projects() {
           <div className="mb-16">
             {showBothGroups && (
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-xs font-mono uppercase tracking-widest text-accent font-semibold">Enterprise experience</span>
+                <span className="text-sm font-mono uppercase tracking-widest text-accent font-semibold">Enterprise experience</span>
                 <div className="flex-1 h-px bg-canvas/10" />
               </div>
             )}
 
-            <p className="text-canvas/40 text-xs font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
+            <p className="text-canvas/50 text-base font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
               Delivered under <span className="text-accent/90">FueInt Technologies</span> via{' '}
               <span className="text-accent/90">Dialed In Design (Canada)</span>. All trademarks belong to their respective owners.
             </p>
@@ -312,12 +312,12 @@ export default function Projects() {
           <div>
             {showBothGroups && (
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-xs font-mono uppercase tracking-widest text-accent font-semibold">Independent Builds</span>
+                <span className="text-sm font-mono uppercase tracking-widest text-accent font-semibold">Independent Builds</span>
                 <div className="flex-1 h-px bg-canvas/10" />
               </div>
             )}
 
-            <p className="text-canvas/40 text-xs font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
+            <p className="text-canvas/50 text-sm font-mono mb-8 border-l-2 border-accent/40 pl-4 leading-relaxed">
               Client & utility builds shipped under{' '}
               <a
                 href="https://gradiolex.vercel.app/"
@@ -369,43 +369,43 @@ function BentoCard({ project, index, groupLabel }: { project: Project; index: nu
       <div>
         {/* Header Badges */}
         <div className="reveal-text flex items-center justify-between mb-4">
-          <span className="text-xs font-mono text-accent font-bold">
+          <span className="text-sm font-mono text-accent font-bold">
             {String(index).padStart(2, '0')}
           </span>
           <div className="flex items-center gap-1.5">
-            {isFeatured && (
-              <span className="text-xs font-mono uppercase tracking-wider text-accent bg-accent/10 border border-accent/30 px-2 py-0.5 rounded-md font-semibold">
+{/*            {isFeatured && (
+              <span className="text-sm font-mono uppercase tracking-wider text-accent bg-accent/10 border border-accent/30 px-2.5 py-0.5 rounded-md font-semibold">
                 ★ Featured
               </span>
-            )}
-            <span className="text-xs font-mono uppercase tracking-widest text-canvas/40 border border-canvas/10 group-hover:border-canvas/30 group-hover:text-canvas/70 px-2 py-0.5 rounded-md transition-colors">
+            )}*/}
+            <span className="text-sm font-mono uppercase tracking-widest text-canvas/50 border border-canvas/10 group-hover:border-canvas/30 group-hover:text-canvas/80 px-2.5 py-0.5 rounded-md transition-colors">
               {badge}
             </span>
           </div>
         </div>
 
         {/* Role Subtitle */}
-        <p className="reveal-text text-xs font-mono text-accent/80 uppercase tracking-widest mb-1.5 font-semibold delay-100">
+        <p className="reveal-text text-sm font-mono text-accent/80 uppercase tracking-widest mb-1.5 font-semibold delay-100">
           {project.role}
         </p>
 
         {/* Project Title */}
-        <h3 className="reveal-text font-display font-normal text-xl sm:text-2xl text-canvas leading-tight mb-3 group-hover:text-accent transition-colors duration-300 delay-200">
+        <h3 className="reveal-text font-display font-normal text-2xl sm:text-3xl text-canvas leading-tight mb-3 group-hover:text-accent transition-colors duration-300 delay-200">
           {project.name}
         </h3>
 
         {/* Description — Always Visible */}
-        <p className="reveal-text text-canvas/60 text-xs sm:text-sm leading-relaxed mb-5 delay-300">
+        <p className="reveal-text text-canvas/70 text-sm sm:text-base leading-relaxed mb-5 delay-300">
           {project.challenge}
         </p>
       </div>
 
       {/* Stack Tags */}
-      <div className="reveal-text flex flex-wrap gap-1.5 pt-4 border-t border-canvas/5 group-hover:border-canvas/10 transition-colors delay-400">
+      <div className="reveal-text flex flex-wrap gap-2 pt-4 border-t border-canvas/5 group-hover:border-canvas/10 transition-colors delay-400">
         {project.stack.map((s) => (
           <span
             key={s}
-            className="text-xs font-mono text-canvas/50 bg-canvas/5 border border-canvas/10 px-2 py-0.5 rounded-md group-hover:border-canvas/20 group-hover:text-canvas/80 transition-colors"
+            className="text-sm font-mono text-canvas/60 bg-canvas/5 border border-canvas/10 px-2.5 py-0.5 rounded-md group-hover:border-canvas/20 group-hover:text-canvas/90 transition-colors"
           >
             {s}
           </span>

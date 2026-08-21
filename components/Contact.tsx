@@ -61,9 +61,9 @@ export default function Contact() {
           {/* ── Column 1: Identity & Address ── */}
           <div className="space-y-6 md:col-span-5 reveal-text" itemScope itemType="https://schema.org/ProfessionalService">
             <div>
-              <p className="text-xs font-mono text-accent uppercase tracking-widest font-bold mb-6">Open to Work</p>
-              <h3 className="font-display text-2xl text-canvas font-normal mb-1" itemProp="name">Abinesh Selvarasu</h3>
-              <p className="text-xs font-mono text-canvas/70 uppercase tracking-widest" itemProp="jobTitle">
+              <p className="text-sm font-mono text-accent uppercase tracking-widest font-bold mb-6">Open to Work</p>
+              <h3 className="font-display text-2xl sm:text-3xl text-canvas font-normal mb-1" itemProp="name">Abinesh Selvarasu</h3>
+              <p className="text-sm font-mono text-canvas/70 uppercase tracking-widest" itemProp="jobTitle">
                 Senior WordPress Developer &amp; Full Stack Engineer
               </p>
             </div>
@@ -72,7 +72,7 @@ export default function Contact() {
             <div className="space-y-3">
               <a
                 href="mailto:mailtoabineshselva@gmail.com"
-                className="group flex items-center gap-3 text-base text-canvas/80 hover:text-accent transition-colors"
+                className="group flex items-center gap-3 text-base sm:text-lg text-canvas/80 hover:text-accent transition-colors"
                 aria-label="Email Abinesh Selvarasu"
               >
                 <svg className="w-4 h-4 shrink-0 text-accent/80 group-hover:text-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -83,7 +83,7 @@ export default function Contact() {
               </a>
               <a
                 href="tel:+919042972156"
-                className="group flex items-center gap-3 text-base text-canvas/80 hover:text-accent transition-colors"
+                className="group flex items-center gap-3 text-base sm:text-lg text-canvas/80 hover:text-accent transition-colors"
                 itemProp="telephone"
               >
                 <svg className="w-4 h-4 shrink-0 text-accent/80 group-hover:text-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -92,7 +92,7 @@ export default function Contact() {
                 +91 90429 72156
               </a>
               <div
-                className="flex items-center gap-2 text-base text-canvas/80 font-mono"
+                className="flex items-center gap-2 text-base sm:text-lg text-canvas/80 font-mono"
                 itemProp="address"
                 itemScope
                 itemType="https://schema.org/PostalAddress"
@@ -111,9 +111,9 @@ export default function Contact() {
                 href="/resume/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 mt-10 p-3 border border-accent/30 text-accent text-xs font-mono uppercase font-bold tracking-widest hover:bg-accent/10 transition-all rounded-full"
+                className="group inline-flex items-center gap-2 mt-10 p-3.5 border border-accent/30 text-accent text-sm font-mono uppercase font-bold tracking-widest hover:bg-accent/10 transition-all rounded-full"
               >
-                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
                   <polyline points="14 2 14 8 20 8" />
                   <line x1="16" y1="13" x2="8" y2="13" />
@@ -127,15 +127,15 @@ export default function Contact() {
 
           {/* ── Column 2: Quick Nav ── */}
           <div className="md:col-span-3 lg:col-span-3 lg:pl-6 reveal-text">
-            <p className="text-xs font-mono text-accent font-bold uppercase tracking-widest mb-6">Quick Links</p>
-            <nav className="space-y-3">
+            <p className="text-sm font-mono text-accent font-bold uppercase tracking-widest mb-6">Quick Links</p>
+            <nav className="space-y-3.5">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="group flex items-center gap-2 text-base text-canvas/80 hover:text-accent transition-colors font-mono"
+                  className="group flex items-center gap-2 text-base sm:text-lg text-canvas/80 hover:text-accent transition-colors font-mono"
                 >
-                  <svg className="w-3 h-3 text-accent/30 group-hover:text-accent transition-all group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg className="w-3.5 h-3.5 text-accent/30 group-hover:text-accent transition-all group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                   {link.label}
@@ -146,21 +146,21 @@ export default function Contact() {
 
           {/* ── Column 3: Socials + CTA ── */}
           <div className="md:col-span-4 lg:col-span-4 lg:pl-10 reveal-text">
-            <p className="text-xs font-mono text-accent font-bold uppercase tracking-widest mb-6">Connect</p>
+            <p className="text-sm font-mono text-accent font-bold uppercase tracking-widest mb-6">Connect</p>
 
-            <div className="space-y-3 mb-8">
+            <div className="space-y-3.5 mb-8">
               {socials.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
                   target={s.href.startsWith('mailto') ? undefined : '_blank'}
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-3 text-canvas/80 hover:text-accent transition-colors"
+                  className="group flex items-center gap-3 text-base sm:text-lg text-canvas/80 hover:text-accent transition-colors"
                 >
                   <span className="w-9 h-9 rounded-full border border-canvas/10 group-hover:border-accent/40 bg-canvas/5 group-hover:bg-accent/5 flex items-center justify-center transition-all">
                     {s.icon}
                   </span>
-                  <span className="text-base font-mono group-hover:text-accent transition-colors">{s.label}</span>
+                  <span className="text-base sm:text-lg font-mono group-hover:text-accent transition-colors">{s.label}</span>
                 </a>
               ))}
             </div>

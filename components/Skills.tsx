@@ -208,12 +208,12 @@ export default function Skills() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 gap-6 reveal-text">
           <div>
-            <p className="text-xs font-mono text-forest uppercase tracking-widest mb-3 font-semibold">Technical Stack</p>
+            <p className="text-sm font-mono text-forest uppercase tracking-widest mb-3 font-semibold">Technical Stack</p>
             <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight">
               Skills & tools.
             </h2>
           </div>
-          <p className="text-mist max-w-xs text-sm font-mono leading-relaxed">
+          <p className="text-mist max-w-xs text-base font-mono leading-relaxed">
             Technologies I use to architect, build, and ship production-grade web products.
           </p>
         </div>
@@ -228,7 +228,7 @@ export default function Skills() {
           {/* Row 1: Core Skills Track (Moving Left) */}
           <div>
             <div className="flex items-center gap-2 mb-3 px-3">
-              <span className="text-xs font-mono text-forest uppercase tracking-widest font-bold">
+              <span className="text-sm font-mono text-forest uppercase tracking-widest font-bold">
                 Core Skills
               </span>
             </div>
@@ -246,7 +246,7 @@ export default function Skills() {
                   </div>
 
                   {/* Skill Name Below Logo */}
-                  <span className="font-mono font-normal text-xs sm:text-sm text-ink group-hover:text-forest transition-colors">
+                  <span className="font-mono font-medium text-sm sm:text-base text-ink group-hover:text-forest transition-colors">
                     {item.name}
                   </span>
                 </div>
@@ -257,7 +257,7 @@ export default function Skills() {
           {/* Row 2: Tools & DevOps Track (Moving Right) */}
           <div>
             <div className="flex items-center gap-2 mb-3 px-3">
-              <span className="text-xs font-mono text-mist uppercase tracking-widest font-bold">
+              <span className="text-sm font-mono text-mist uppercase tracking-widest font-bold">
                 Tools & Performance
               </span>
             </div>
@@ -275,7 +275,7 @@ export default function Skills() {
                   </div>
 
                   {/* Tool Name Below Logo */}
-                  <span className="font-mono font-normal text-xs sm:text-sm text-ink group-hover:text-forest transition-colors">
+                  <span className="font-mono font-medium text-sm sm:text-base text-ink group-hover:text-forest transition-colors">
                     {item.name}
                   </span>
                 </div>

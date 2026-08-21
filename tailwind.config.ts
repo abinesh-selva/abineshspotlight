@@ -28,6 +28,7 @@ const config: Config = {
         'shooting-star-rl': 'shooting-star-rl 2s linear forwards',
         'shooting-star-tb': 'shooting-star-tb 2s linear forwards',
         'shooting-star-bt': 'shooting-star-bt 2s linear forwards',
+        'timeline-flow': 'timeline-flow 2s linear infinite',
       },
       keyframes: {
         'shooting-star-lr': {
@@ -49,6 +50,10 @@ const config: Config = {
           '0%': { transform: 'translateY(200px)', opacity: '1' },
           '70%': { opacity: '1' },
           '100%': { transform: 'translateY(-120vh)', opacity: '0' },
+        },
+        'timeline-flow': {
+          '0%': { strokeDashoffset: '48' },
+          '100%': { strokeDashoffset: '0' },
         },
       },
       transitionDelay: {

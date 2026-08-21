@@ -88,14 +88,14 @@ export default function Blog() {
       <div className="absolute inset-0 bg-gradient-to-t from-[#081729]/95 via-[#081729]/40 to-transparent pointer-events-none" />
       <div className="absolute bottom-6 left-5 right-5 z-10">
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="text-xs font-mono text-accent uppercase tracking-widest bg-black/60 px-2 py-1 rounded-md backdrop-blur-sm border border-white/10">
+          <span className="text-sm font-mono text-accent uppercase tracking-widest bg-black/60 px-2.5 py-1 rounded-md backdrop-blur-sm border border-white/10 font-semibold">
             {article.category}
           </span>
-          <span className="text-xs font-mono text-mist bg-black/60 px-2 py-1 rounded-md backdrop-blur-sm border border-white/10">
+          <span className="text-sm font-mono text-canvas/70 bg-black/60 px-2.5 py-1 rounded-md backdrop-blur-sm border border-white/10">
             {article.readTime}
           </span>
         </div>
-        <p className="text-white font-display text-xl md:text-2xl leading-snug group-hover:text-accent transition-colors duration-300">
+        <p className="text-white font-display text-2xl md:text-3xl leading-snug group-hover:text-accent transition-colors duration-300">
           {article.title}
         </p>
       </div>
@@ -108,7 +108,7 @@ export default function Blog() {
       <div className="relative z-10 container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
           <div>
-            <p className="reveal-text text-xs font-mono text-forest uppercase tracking-widest mb-3 font-semibold">Publications</p>
+            <p className="reveal-text text-sm font-mono text-forest uppercase tracking-widest mb-3 font-semibold">Publications</p>
             <h2 className="reveal-text font-display font-normal text-4xl md:text-5xl text-ink leading-tight delay-100">
               Things I&apos;ve written.
             </h2>
@@ -117,7 +117,7 @@ export default function Blog() {
             href="https://fueint.com/authors/abinesh-s"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="reveal-text hidden md:inline-flex group items-center gap-2 text-base font-mono text-mist hover:text-forest transition-colors delay-200"
+            className="reveal-text hidden md:inline-flex group items-center gap-2 text-lg font-mono text-mist hover:text-forest transition-colors delay-200"
           >
             All articles{' '}
             <span className="group-hover:translate-x-1 transition-transform inline-flex items-center">

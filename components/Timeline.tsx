@@ -52,9 +52,9 @@ const milestones = [
 ]
 
 const TYPE_STYLES = {
-  education: { dot: 'bg-mist', label: 'Education', labelClass: 'text-mist border-mist/30' },
-  work:      { dot: 'bg-accent', label: 'Employment', labelClass: 'text-accent border-accent/30' },
-  freelance: { dot: 'bg-forest', label: 'Freelance', labelClass: 'text-forest border-forest/30' },
+  education: { dot: 'bg-mist', label: 'Education', labelClass: 'text-mist border-mist/30 rounded-full' },
+  work:      { dot: 'bg-accent', label: 'Employment', labelClass: 'text-accent border-accent/30 rounded-full' },
+  freelance: { dot: 'bg-forest', label: 'Freelance', labelClass: 'text-forest border-forest/30 rounded-full' },
 }
 
 export default function Timeline() {
@@ -63,14 +63,14 @@ export default function Timeline() {
       <div className="container mx-auto px-6">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-4 reveal-text">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-4">
           <div>
-            <p className="text-xs font-mono text-mist uppercase tracking-widest mb-3">Career Roadmap</p>
-            <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight">
+            <p className="reveal-text text-xs font-mono text-mist uppercase tracking-widest mb-3">Career Roadmap</p>
+            <h2 className="reveal-text font-display font-normal text-4xl md:text-5xl text-ink leading-tight delay-100">
               My journey.
             </h2>
           </div>
-          <p className="text-mist max-w-xs text-sm font-mono leading-relaxed">
+          <p className="reveal-text text-mist max-w-xs text-sm font-mono leading-relaxed delay-200">
             From first principles to production-grade enterprise platforms — July 2022 to present.
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function Timeline() {
               return (
                 <div
                   key={idx}
-                  className={`relative flex flex-col md:flex-row md:items-start gap-0 reveal-text ${
+                  className={`relative flex flex-col md:flex-row md:items-start gap-0 ${
                     isRight ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}
                 >
@@ -96,7 +96,7 @@ export default function Timeline() {
                   <div className={`w-full md:w-[calc(50%-2.5rem)] ${isRight ? 'md:pr-10' : 'md:pl-10'} pl-10 sm:pl-12 md:pl-0 pb-8 sm:pb-12`}>
                     <div className="border border-rule hover:border-accent/40 bg-canvas p-4 sm:p-6 transition-all duration-300 group">
                       {/* Type badge + period */}
-                      <div className="flex items-center justify-between mb-3 sm:mb-4 flex-wrap gap-2">
+                      <div className="reveal-text flex items-center justify-between mb-3 sm:mb-4 flex-wrap gap-2">
                         <span className={`text-xs font-mono uppercase tracking-widest border px-2 py-0.5 ${style.labelClass}`}>
                           {style.label}
                         </span>
@@ -106,25 +106,25 @@ export default function Timeline() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-ink font-semibold text-base group-hover:text-accent transition-colors mb-1">
+                      <h3 className="reveal-text text-ink font-semibold text-base group-hover:text-accent transition-colors mb-1 delay-100">
                         {item.title}
                       </h3>
 
                       {/* Company & location */}
-                      <p className="text-xs font-mono text-mist mb-3">
+                      <p className="reveal-text text-xs font-mono text-mist mb-3 delay-200">
                         {item.company}
                         <span className="mx-1.5">·</span>
                         {item.location}
                       </p>
 
                       {/* Description */}
-                      <p className="text-mist text-xs sm:text-sm leading-relaxed mb-4">
+                      <p className="reveal-text text-mist text-xs sm:text-sm leading-relaxed mb-4 delay-300">
                         {item.desc}
                       </p>
 
                       {/* Tags */}
                       {item.tags && item.tags.length > 0 && item.tags[0] !== '' && (
-                        <div className="flex flex-wrap gap-1.5">
+                        <div className="reveal-text flex flex-wrap gap-1.5 delay-400">
                           {item.tags.filter(tag => tag.trim() !== '').map((tag) => (
                             <span
                               key={tag}

@@ -68,10 +68,10 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="lg:col-span-3 flex flex-col gap-2">
+          <div className="lg:col-span-3 flex flex-col items-start gap-4">
             <a
               href="#projects"
-              className="group px-4 py-2 bg-accent text-white text-xs font-bold uppercase tracking-wider hover:bg-forest transition-colors hover:text-accent flex items-center justify-center gap-1.5 shadow-sm rounded-full"
+              className="group px-4 py-2 bg-accent text-white text-base font-bold uppercase tracking-wider hover:bg-forest transition-colors hover:text-accent flex items-center justify-center gap-1.5 shadow-sm rounded-full"
             >
               See my work
               <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -82,7 +82,7 @@ export default function Hero() {
               href="/resume/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 border border-rule text-white text-xs font-bold uppercase tracking-wider bg-forest hover:bg-accent hover:text-forest transition-all text-center flex items-center justify-center gap-1.5 shadow-sm rounded-full"
+              className="px-4 py-2 border border-rule text-white text-base font-bold uppercase tracking-wider bg-forest hover:bg-accent hover:text-forest transition-all text-center flex items-center justify-center gap-1.5 shadow-sm rounded-full"
             >
               Resume
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

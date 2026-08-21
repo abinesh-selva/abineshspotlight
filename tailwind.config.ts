@@ -25,6 +25,10 @@ const config: Config = {
       animation: {
         'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
+      transitionDelay: {
+        '400': '400ms',
+        '600': '600ms',
+      },
     },
   },
   plugins: [],

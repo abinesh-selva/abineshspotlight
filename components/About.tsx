@@ -49,8 +49,8 @@ const milestones = [
 ]
 
 const TYPE_STYLES = {
-  education: { dot: 'bg-mist border-mist',    label: 'Education',  labelClass: 'text-mist border-mist/40' },
-  work:      { dot: 'bg-accent border-accent', label: 'Full-Time',  labelClass: 'text-accent border-accent/40' },
+  education: { dot: 'bg-accent border-accent',    label: 'Education',  labelClass: 'text-accent border-accent/40 rounded-full' },
+  work:      { dot: 'bg-accent border-accent', label: 'Full-Time',  labelClass: 'text-accent border-accent/40 rounded-full' },
 }
 
 export default function About() {
@@ -62,19 +62,19 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Bio & Narrative (7 cols) */}
-          <div className="lg:col-span-7 reveal-text">
-            <p className="text-xs font-mono text-accent uppercase tracking-widest mb-4 font-semibold">About me</p>
-            <h2 className="font-display font-normal text-4xl md:text-5xl text-canvas leading-tight mb-8">
+          <div className="lg:col-span-7">
+            <p className="reveal-text text-xs font-mono text-accent uppercase tracking-widest mb-4 font-semibold">About me</p>
+            <h2 className="reveal-text font-display font-normal text-4xl md:text-5xl text-canvas leading-tight mb-8 delay-100">
               Building the web,<br />one commit at a time.
             </h2>
             
             <div className="space-y-5 text-canvas/70 text-base leading-relaxed">
-              <p>
+              <p className="reveal-text delay-200">
                 I&apos;m Abinesh Selvarasu — a Senior WordPress Developer and Full Stack Engineer based in Tamil Nadu,
                 India. With 3+ years delivering production-grade web platforms for global enterprise clients,
                 I specialise in custom CMS architecture, headless WordPress solutions, and performance engineering.
               </p>
-              <p>
+              <p className="reveal-text delay-300">
                 Day-to-day: architecting scalable CMS components with ACF Pro and Gutenberg, integrating REST & GraphQL APIs,
                 and solving the complex Core Web Vitals and technical SEO challenges that keep platforms fast, secure, and accessible.
               </p>
@@ -82,8 +82,8 @@ export default function About() {
           </div>
 
           {/* Right Column: Core Technical Stack, Quote & Socials (5 cols) */}
-          <div className="lg:col-span-5 reveal-text space-y-6">
-            <div>
+          <div className="lg:col-span-5 space-y-6">
+            <div className="reveal-text delay-400">
               <p className="text-xs font-mono text-canvas/40 uppercase tracking-widest mb-4">Core Technical Stack</p>
               <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
@@ -97,12 +97,12 @@ export default function About() {
               </div>
             </div>
 
-            <blockquote className="border-l-4 border-accent pl-5 text-canvas/90 italic font-serif py-1">
+            <blockquote className="reveal-text border-l-4 border-accent pl-5 text-canvas/90 italic font-serif py-1 delay-500">
               &ldquo;Fast websites shouldn&apos;t be a premium feature — they should be the baseline.&rdquo;
             </blockquote>
 
             {/* Social Action Links */}
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="reveal-text flex flex-wrap gap-3 pt-2 delay-600">
               <a
                 href="https://linkedin.com/in/abineshselvarasu/"
                 target="_blank"
@@ -154,14 +154,14 @@ export default function About() {
               return (
                 <div
                   key={idx}
-                  className={`relative flex flex-col md:items-start reveal-text ${
+                  className={`relative flex flex-col md:items-start ${
                     isRight ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}
                 >
                   {/* Card */}
                   <div className={`w-full md:w-[calc(50%-2.5rem)] ${isRight ? 'md:pr-10' : 'md:pl-10'} pl-10 sm:pl-12 md:pl-0 pb-8 sm:pb-12`}>
                     <div className="border border-canvas/10 hover:border-accent/40 bg-canvas/5 p-4 sm:p-6 transition-all duration-300 group rounded-xl">
-                      <div className="flex items-center justify-between mb-3 sm:mb-4 flex-wrap gap-2">
+                      <div className="reveal-text flex items-center justify-between mb-3 sm:mb-4 flex-wrap gap-2">
                         <span className={`text-xs font-mono uppercase tracking-widest border px-2 py-0.5 ${style.labelClass}`}>
                           {style.label}
                         </span>
@@ -169,15 +169,15 @@ export default function About() {
                           {item.year} — {item.end}
                         </span>
                       </div>
-                      <h3 className="text-canvas font-semibold text-base group-hover:text-accent transition-colors mb-1">
+                      <h3 className="reveal-text text-canvas font-semibold text-base group-hover:text-accent transition-colors mb-1 delay-100">
                         {item.title}
                       </h3>
-                      <p className="text-xs font-mono text-canvas/40 mb-3">
+                      <p className="reveal-text text-xs font-mono text-canvas/40 mb-3 delay-200">
                         {item.company}<span className="mx-1.5">·</span>{item.location}
                       </p>
-                      <p className="text-canvas/70 text-xs sm:text-sm leading-relaxed mb-4">{item.desc}</p>
+                      <p className="reveal-text text-canvas/70 text-xs sm:text-sm leading-relaxed mb-4 delay-300">{item.desc}</p>
                       {item.tags && item.tags.length > 0 && item.tags[0] !== '' && (
-                        <div className="flex flex-wrap gap-1.5">
+                        <div className="reveal-text flex flex-wrap gap-1.5 delay-400">
                           {item.tags.filter(tag => tag.trim() !== '').map((tag) => (
                             <span key={tag} className="text-xs font-mono text-canvas/50 border border-canvas/10 px-2 py-0.5 hover:bg-accent hover:border-accent hover:text-ink transition-all cursor-default">
                               {tag}

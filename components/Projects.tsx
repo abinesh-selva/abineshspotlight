@@ -247,17 +247,15 @@ export default function Projects() {
       <div className="container mx-auto px-6">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between md:items-end mb-10 gap-6 reveal-text">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-10 gap-6">
           <div>
-            <p className="text-xs font-mono text-accent uppercase tracking-widest mb-3 font-semibold">Selected Work</p>
-            <h2 className="font-display font-normal text-4xl md:text-6xl text-canvas tracking-tight leading-tight">
-              Selected projects.
+            <p className="reveal-text text-xs font-mono text-accent uppercase tracking-widest mb-3 font-semibold">Selected Work</p>
+            <h2 className="reveal-text font-display font-normal text-4xl md:text-6xl text-canvas tracking-tight leading-tight delay-100">
+              Featured projects.
             </h2>
           </div>
-          <p className="text-canvas/50 text-sm font-mono max-w-sm leading-relaxed">
-            Work spans two tracks — enterprise experience under{' '}
-            <span className="text-accent">FueInt Technologies</span>, and independent
-            builds shipped solo.
+          <p className="reveal-text text-canvas/50 max-w-xs text-sm font-mono leading-relaxed delay-200">
+            Enterprise platforms, headless CMS builds, and independent full-stack applications.
           </p>
         </div>
 
@@ -358,7 +356,7 @@ function BentoCard({ project, index, groupLabel }: { project: Project; index: nu
 
   return (
     <article
-      className={`reveal-text group relative flex flex-col justify-between border border-canvas/10 hover:border-accent/50 bg-canvas/5 hover:bg-canvas/[0.08] transition-all duration-300 p-5 sm:p-6 rounded-2xl shadow-md ${
+      className={`group relative flex flex-col justify-between border border-canvas/10 hover:border-accent/50 bg-canvas/5 hover:bg-canvas/[0.08] transition-all duration-300 p-5 sm:p-6 rounded-2xl shadow-md ${
         isFeatured ? 'col-span-1 md:col-span-2 lg:col-span-2 border-accent/20 bg-canvas/[0.07]' : 'col-span-1'
       }`}
     >
@@ -367,7 +365,7 @@ function BentoCard({ project, index, groupLabel }: { project: Project; index: nu
 
       <div>
         {/* Header Badges */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="reveal-text flex items-center justify-between mb-4">
           <span className="text-xs font-mono text-accent font-bold">
             {String(index).padStart(2, '0')}
           </span>
@@ -384,23 +382,23 @@ function BentoCard({ project, index, groupLabel }: { project: Project; index: nu
         </div>
 
         {/* Role Subtitle */}
-        <p className="text-xs font-mono text-accent/80 uppercase tracking-widest mb-1.5 font-semibold">
+        <p className="reveal-text text-xs font-mono text-accent/80 uppercase tracking-widest mb-1.5 font-semibold delay-100">
           {project.role}
         </p>
 
         {/* Project Title */}
-        <h3 className="font-display font-normal text-xl sm:text-2xl text-canvas leading-tight mb-3 group-hover:text-accent transition-colors duration-300">
+        <h3 className="reveal-text font-display font-normal text-xl sm:text-2xl text-canvas leading-tight mb-3 group-hover:text-accent transition-colors duration-300 delay-200">
           {project.name}
         </h3>
 
         {/* Description — Always Visible */}
-        <p className="text-canvas/60 text-xs sm:text-sm leading-relaxed mb-5">
+        <p className="reveal-text text-canvas/60 text-xs sm:text-sm leading-relaxed mb-5 delay-300">
           {project.challenge}
         </p>
       </div>
 
       {/* Stack Tags */}
-      <div className="flex flex-wrap gap-1.5 pt-4 border-t border-canvas/5 group-hover:border-canvas/10 transition-colors">
+      <div className="reveal-text flex flex-wrap gap-1.5 pt-4 border-t border-canvas/5 group-hover:border-canvas/10 transition-colors delay-400">
         {project.stack.map((s) => (
           <span
             key={s}

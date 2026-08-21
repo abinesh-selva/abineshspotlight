@@ -104,10 +104,10 @@ export default function Blog() {
   return (
     <section id="blog" className="py-20 lg:py-24 bg-canvas border-t border-rule">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6 reveal-text">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
           <div>
-            <p className="text-xs font-mono text-forest uppercase tracking-widest mb-3 font-semibold">Publications</p>
-            <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight">
+            <p className="reveal-text text-xs font-mono text-forest uppercase tracking-widest mb-3 font-semibold">Publications</p>
+            <h2 className="reveal-text font-display font-normal text-4xl md:text-5xl text-ink leading-tight delay-100">
               Things I&apos;ve written.
             </h2>
           </div>
@@ -115,7 +115,7 @@ export default function Blog() {
             href="https://fueint.com/authors/abinesh-s"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="hidden md:inline-flex group items-center gap-2 text-base font-mono text-mist hover:text-forest transition-colors"
+            className="reveal-text hidden md:inline-flex group items-center gap-2 text-base font-mono text-mist hover:text-forest transition-colors delay-200"
           >
             All articles{' '}
             <span className="group-hover:translate-x-1 transition-transform inline-flex items-center">

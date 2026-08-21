@@ -53,7 +53,7 @@ export default function Services() {
   return (
     <section id="services" className="py-20 lg:py-24 bg-canvas border-t border-rule">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between">
+        <div className="flex flex-col md:flex-row justify-between reveal-text">
           <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight mb-10 md:mb-20">
             My expertise.
           </h2>

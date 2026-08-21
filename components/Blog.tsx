@@ -104,7 +104,7 @@ export default function Blog() {
   return (
     <section id="blog" className="py-20 lg:py-24 bg-canvas border-t border-rule">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6 reveal-text">
           <div>
             <p className="text-xs font-mono text-forest uppercase tracking-widest mb-3 font-semibold">Publications</p>
             <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight">
@@ -127,21 +127,21 @@ export default function Blog() {
         </div>
 
         {/* Desktop Carousel (3 items per view, slides 1 at a time) */}
-        <div className="hidden lg:block w-full max-w-7xl mx-auto h-[450px]">
+        <div className="hidden lg:block w-full max-w-7xl mx-auto h-[450px] reveal-text">
           <Carousel slidesToShow={3}>
             {articles.map(article => renderCard(article))}
           </Carousel>
         </div>
 
         {/* Tablet Carousel (2 items per view, slides 1 at a time) */}
-        <div className="hidden md:block lg:hidden w-full max-w-5xl mx-auto h-[420px]">
+        <div className="hidden md:block lg:hidden w-full max-w-5xl mx-auto h-[420px] reveal-text">
           <Carousel slidesToShow={2}>
             {articles.map(article => renderCard(article))}
           </Carousel>
         </div>
 
-        {/* Mobile Carousel (1 item per view, slides 1 at a time) */}
-        <div className="block md:hidden w-full mx-auto h-[400px]">
+        {/* Mobile Carousel (1 item per view) */}
+        <div className="block md:hidden w-full mx-auto h-[450px] reveal-text">
           <Carousel slidesToShow={1}>
             {articles.map(article => renderCard(article))}
           </Carousel>

@@ -6,7 +6,7 @@ const milestones = [
     company: 'Vidyaa Vikas College of Engineering — Anna University',
     location: 'Tamil Nadu, India',
     desc: 'Began formal study in algorithms, data structures, databases, and web fundamentals — the foundation for a full-stack development career.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'C++'],
+    tags: [],
     end: '2020',
   },
   {
@@ -32,7 +32,7 @@ const milestones = [
   {
     year: 'Jan 2025',
     type: 'work',
-    title: 'Senior Web Developer & WordPress Engineer',
+    title: 'Web Developer & WordPress Developer',
     company: 'FueInt Technologies',
     location: 'Tamil Nadu, India',
     desc: 'Architected CMS solutions across WordPress, Drupal, and Craft CMS for global enterprise clients — Unbounce, ElasticPath, OpenGovernmentPartnership, Premier Boxing Champions and more. Reduced LCP by ~30% via deep performance optimisation.',
@@ -63,7 +63,7 @@ export default function Timeline() {
       <div className="container mx-auto px-6">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-4">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-4 reveal-text">
           <div>
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-3">Career Roadmap</p>
             <h2 className="font-display font-normal text-4xl md:text-5xl text-ink leading-tight">
@@ -123,16 +123,18 @@ export default function Timeline() {
                       </p>
 
                       {/* Tags */}
-                      <div className="flex flex-wrap gap-1.5">
-                        {item.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-xs font-mono text-mist border border-rule px-2 py-0.5 hover:border-accent hover:text-accent transition-all cursor-default"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+                      {item.tags && item.tags.length > 0 && item.tags[0] !== '' && (
+                        <div className="flex flex-wrap gap-1.5">
+                          {item.tags.filter(tag => tag.trim() !== '').map((tag) => (
+                            <span
+                              key={tag}
+                              className="text-xs font-mono text-mist border border-rule px-2 py-0.5 hover:border-accent hover:text-accent transition-all cursor-default"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
 

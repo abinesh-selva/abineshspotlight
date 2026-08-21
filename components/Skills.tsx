@@ -235,7 +235,7 @@ export default function Skills() {
                 <div
                   key={`r1-${item.name}-${idx}`}
                   onClick={() => setSelectedSkill(item)}
-                  className="w-auto shrink-0 mx-2.5 p-4 sm:p-5 rounded-2xl bg-paper border border-rule hover:border-forest/40 hover:bg-paper/80 hover:scale-105 transition-all duration-300 cursor-pointer group flex flex-col items-center justify-center text-center shadow-sm"
+                  className="w-auto shrink-0 mx-2.5 p-4 sm:p-5 hover:scale-105 transition-all duration-300 cursor-pointer group flex flex-col items-center justify-center text-center"
                 >
                   {/* Accurate Logo Container */}
                   <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center mb-3 transition-transform group-hover:scale-110 ${item.color}`}>
@@ -264,7 +264,7 @@ export default function Skills() {
                 <div
                   key={`r2-${item.name}-${idx}`}
                   onClick={() => setSelectedSkill(item)}
-                  className="w-auto shrink-0 mx-2.5 p-4 sm:p-5 rounded-2xl bg-paper border border-rule hover:border-forest/40 hover:bg-paper/80 hover:scale-105 transition-all duration-300 cursor-pointer group flex flex-col items-center justify-center text-center shadow-sm"
+                  className="w-auto shrink-0 mx-2.5 p-4 sm:p-5 hover:scale-105 transition-all duration-300 cursor-pointer group flex flex-col items-center justify-center text-center"
                 >
                   {/* Accurate Logo Container */}
                   <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center mb-3 transition-transform group-hover:scale-110 ${item.color}`}>

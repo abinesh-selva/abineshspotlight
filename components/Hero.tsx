@@ -36,14 +36,14 @@ export default function Hero() {
 
             {/* Top Half */}
             <span
-              className="block whitespace-nowrap text-6xl sm:text-7xl md:text-9xl lg:text-[170px] xl:text-[220px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6 clip-half-top"
+              className="block whitespace-nowrap text-6xl sm:text-7xl md:text-9xl lg:text-[200px] xl:text-[260px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6 clip-half-top"
             >
               {firstPart}<span className="text-accent">{lastPart}</span>
             </span>
 
             {/* Bottom Half */}
             <span
-              className="absolute top-0 left-0 whitespace-nowrap text-6xl sm:text-7xl md:text-9xl lg:text-[170px] xl:text-[220px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6 clip-half-bottom"
+              className="absolute top-0 left-0 whitespace-nowrap text-6xl sm:text-7xl md:text-9xl lg:text-[200px] xl:text-[260px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6 clip-half-bottom"
               aria-hidden="true"
             >
               {firstPart}<span className="text-accent">{lastPart}</span>
@@ -54,7 +54,7 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-6 pb-12 md:pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 pt-8 border-t border-rule items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-8 pt-8 border-t border-rule items-start">
           <div className="lg:col-span-5">
             <p className="text-xs font-mono text-mist font-bold uppercase tracking-widest mb-2">Role &amp; Experience</p>
             <p className="text-ink font-semibold text-base sm:whitespace-nowrap">Senior WordPress Developer &amp; Full Stack Engineer</p>
@@ -71,7 +71,7 @@ export default function Hero() {
           <div className="lg:col-span-3 flex flex-col gap-2">
             <a
               href="#projects"
-              className="group px-4 py-2 bg-accent text-white text-xs font-bold uppercase tracking-wider hover:bg-forest transition-colors hover:text-accent flex items-center justify-center gap-1.5 shadow-sm"
+              className="group px-4 py-2 bg-accent text-white text-xs font-bold uppercase tracking-wider hover:bg-forest transition-colors hover:text-accent flex items-center justify-center gap-1.5 shadow-sm rounded-full"
             >
               See my work
               <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -82,7 +82,7 @@ export default function Hero() {
               href="/resume/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 border border-rule text-white text-xs font-bold uppercase tracking-wider bg-forest hover:bg-accent hover:text-forest transition-all text-center flex items-center justify-center gap-1.5 shadow-sm"
+              className="px-4 py-2 border border-rule text-white text-xs font-bold uppercase tracking-wider bg-forest hover:bg-accent hover:text-forest transition-all text-center flex items-center justify-center gap-1.5 shadow-sm rounded-full"
             >
               Resume
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

@@ -247,7 +247,7 @@ export default function Projects() {
       <div className="container mx-auto px-6">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between md:items-end mb-10 gap-6">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-10 gap-6 reveal-text">
           <div>
             <p className="text-xs font-mono text-accent uppercase tracking-widest mb-3 font-semibold">Selected Work</p>
             <h2 className="font-display font-normal text-4xl md:text-6xl text-canvas tracking-tight leading-tight">
@@ -268,7 +268,7 @@ export default function Projects() {
               <button
                 key={f}
                 onClick={() => setActive(f)}
-                className={`px-4 py-1.5 text-xs font-mono font-medium rounded-lg transition-all duration-300 ${
+                className={`px-4 py-1.5 text-xs font-mono font-medium rounded-full transition-all duration-300 ${
                   active === f
                     ? 'bg-accent text-ink font-bold shadow-md scale-105'
                     : 'bg-canvas/5 text-canvas/50 border border-canvas/10 hover:bg-accent/20 hover:text-canvas'
@@ -358,7 +358,7 @@ function BentoCard({ project, index, groupLabel }: { project: Project; index: nu
 
   return (
     <article
-      className={`group relative flex flex-col justify-between border border-canvas/10 hover:border-accent/50 bg-canvas/5 hover:bg-canvas/[0.08] transition-all duration-300 p-5 sm:p-6 rounded-2xl shadow-md ${
+      className={`reveal-text group relative flex flex-col justify-between border border-canvas/10 hover:border-accent/50 bg-canvas/5 hover:bg-canvas/[0.08] transition-all duration-300 p-5 sm:p-6 rounded-2xl shadow-md ${
         isFeatured ? 'col-span-1 md:col-span-2 lg:col-span-2 border-accent/20 bg-canvas/[0.07]' : 'col-span-1'
       }`}
     >

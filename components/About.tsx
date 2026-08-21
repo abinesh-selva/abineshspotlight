@@ -14,7 +14,7 @@ const milestones = [
     company: 'Vidyaa Vikas College of Engineering — Anna University',
     location: 'Tamil Nadu, India',
     desc: 'Foundational study in algorithms, data structures, databases, and web technologies — building the engineering base for production software development.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'C++'],
+    tags: [],
   },
   {
     year: 'Jul 2022',
@@ -24,7 +24,7 @@ const milestones = [
     company: 'FueInt Technologies',
     location: 'Tamil Nadu, India',
     desc: 'Gained hands-on agency experience — WordPress theme customization, responsive UI implementation, bug fixing, and version control workflows.',
-    tags: ['WordPress', 'HTML', 'CSS', 'Git'],
+    tags: ['WordPress', 'HTML', 'CSS', 'PHP', 'Git'],
   },
   {
     year: 'Jan 2023',
@@ -34,17 +34,17 @@ const milestones = [
     company: 'FueInt Technologies',
     location: 'Tamil Nadu, India',
     desc: 'Converted Figma designs into pixel-perfect WordPress websites. Built custom Gutenberg blocks and ACF Pro components for North American enterprise clients.',
-    tags: ['WordPress', 'ACF Pro', 'PHP', 'Gutenberg', 'SCSS', 'Figma'],
+    tags: ['WordPress', 'Drupal', 'ACF Pro', 'PHP', 'Gutenberg', 'SCSS', 'Figma'],
   },
   {
     year: 'Jan 2025',
     end: 'May 2026',
     type: 'work',
-    title: 'Senior Web Developer & WordPress Engineer',
+    title: 'Web Developer & WordPress Developer',
     company: 'FueInt Technologies',
     location: 'Tamil Nadu, India',
     desc: 'Architected enterprise CMS solutions across WordPress, Drupal, and Craft CMS for global brands — Unbounce, ElasticPath, OpenGovernmentPartnership, and Premier Boxing Champions. Reduced LCP by ~30% via deep asset and rendering optimizations.',
-    tags: ['WordPress', 'Drupal', 'Craft CMS', 'ACF Pro', 'Core Web Vitals', 'Technical SEO'],
+    tags: ['WordPress', 'Craft CMS', 'ACF Pro', 'Tailwind CSS', 'TypeScript','Next.js', 'React', 'Core Web Vitals', 'Technical SEO'],
   },
 ]
 
@@ -89,7 +89,7 @@ export default function About() {
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-2 text-xs font-mono text-canvas/80 bg-canvas/5 border border-canvas/10 hover:bg-accent hover:border-accent hover:text-ink transition-all cursor-default shadow-sm"
+                    className="px-3 py-2 text-xs font-mono text-canvas/80 bg-canvas/5 border border-canvas/10 hover:bg-accent hover:border-accent hover:text-ink transition-all cursor-default shadow-sm rounded-full"
                   >
                     {tag}
                   </span>
@@ -108,7 +108,7 @@ export default function About() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
-                className="group flex items-center gap-2.5 px-4 py-2 border border-canvas/10 bg-canvas/5 text-xs font-mono text-canvas hover:border-accent hover:text-accent hover:bg-canvas/10 transition-all shadow-sm"
+                className="group flex items-center gap-2.5 px-4 py-2 border border-canvas/10 bg-canvas/5 text-xs font-mono text-canvas hover:border-accent hover:text-accent hover:bg-canvas/10 transition-all shadow-sm rounded-full"
               >
                 <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 LinkedIn Profile
@@ -118,7 +118,7 @@ export default function About() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
-                className="group flex items-center gap-2.5 px-4 py-2 border border-canvas/10 bg-canvas/5 text-xs font-mono text-canvas hover:border-accent hover:text-accent hover:bg-canvas/10 transition-all shadow-sm"
+                className="group flex items-center gap-2.5 px-4 py-2 border border-canvas/10 bg-canvas/5 text-xs font-mono text-canvas hover:border-accent hover:text-accent hover:bg-canvas/10 transition-all shadow-sm rounded-full"
               >
                 <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                 GitHub Profile
@@ -176,13 +176,15 @@ export default function About() {
                         {item.company}<span className="mx-1.5">·</span>{item.location}
                       </p>
                       <p className="text-canvas/70 text-xs sm:text-sm leading-relaxed mb-4">{item.desc}</p>
-                      <div className="flex flex-wrap gap-1.5">
-                        {item.tags.map((tag) => (
-                          <span key={tag} className="text-xs font-mono text-canvas/50 border border-canvas/10 px-2 py-0.5 hover:bg-accent hover:border-accent hover:text-ink transition-all cursor-default">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+                      {item.tags && item.tags.length > 0 && item.tags[0] !== '' && (
+                        <div className="flex flex-wrap gap-1.5">
+                          {item.tags.filter(tag => tag.trim() !== '').map((tag) => (
+                            <span key={tag} className="text-xs font-mono text-canvas/50 border border-canvas/10 px-2 py-0.5 hover:bg-accent hover:border-accent hover:text-ink transition-all cursor-default">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
 

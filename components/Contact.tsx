@@ -56,7 +56,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12">
 
           {/* ── Column 1: Identity & Address ── */}
-          <div className="space-y-6 md:col-span-5" itemScope itemType="https://schema.org/ProfessionalService">
+          <div className="space-y-6 md:col-span-5 reveal-text" itemScope itemType="https://schema.org/ProfessionalService">
             <div>
               <p className="text-xs font-mono text-accent uppercase tracking-widest font-bold mb-6">Open to Work</p>
               <h3 className="font-display text-2xl text-canvas font-normal mb-1" itemProp="name">Abinesh Selvarasu</h3>
@@ -108,7 +108,7 @@ export default function Contact() {
                 href="/resume/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 mt-10 p-3 border border-accent/30 text-accent text-xs font-mono uppercase font-bold tracking-widest hover:bg-accent/10 transition-all rounded-lg"
+                className="group inline-flex items-center gap-2 mt-10 p-3 border border-accent/30 text-accent text-xs font-mono uppercase font-bold tracking-widest hover:bg-accent/10 transition-all rounded-full"
               >
                 <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
@@ -123,7 +123,7 @@ export default function Contact() {
           </div>
 
           {/* ── Column 2: Quick Nav ── */}
-          <div className="md:col-span-3 lg:col-span-3 lg:pl-6">
+          <div className="md:col-span-3 lg:col-span-3 lg:pl-6 reveal-text">
             <p className="text-xs font-mono text-accent font-bold uppercase tracking-widest mb-6">Quick Links</p>
             <nav className="space-y-3">
               {navLinks.map((link) => (
@@ -142,7 +142,7 @@ export default function Contact() {
           </div>
 
           {/* ── Column 3: Socials + CTA ── */}
-          <div className="md:col-span-4 lg:col-span-4 lg:pl-10">
+          <div className="md:col-span-4 lg:col-span-4 lg:pl-10 reveal-text">
             <p className="text-xs font-mono text-accent font-bold uppercase tracking-widest mb-6">Connect</p>
 
             <div className="space-y-3 mb-8">
@@ -154,7 +154,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 text-canvas/80 hover:text-accent transition-colors"
                 >
-                  <span className="w-9 h-9 rounded-xl border border-canvas/10 group-hover:border-accent/40 bg-canvas/5 group-hover:bg-accent/5 flex items-center justify-center transition-all">
+                  <span className="w-9 h-9 rounded-full border border-canvas/10 group-hover:border-accent/40 bg-canvas/5 group-hover:bg-accent/5 flex items-center justify-center transition-all">
                     {s.icon}
                   </span>
                   <span className="text-base font-mono group-hover:text-accent transition-colors">{s.label}</span>

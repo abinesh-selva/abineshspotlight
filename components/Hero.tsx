@@ -22,11 +22,11 @@ export default function Hero() {
 
         <h1
           aria-label="Abinesh Selvarasu — Senior WordPress Developer & Full Stack Engineer"
-          className="group font-display font-semibold leading-none tracking-tighter uppercase select-none pt-8 cursor-default max-w-full overflow-hidden"
+          className="group font-display font-semibold leading-none tracking-tighter uppercase select-none pt-8 cursor-default max-w-full"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="relative max-w-full overflow-hidden">
+          <div className="relative max-w-full">
             {/* Revealed Text (Center) */}
             <span className="absolute inset-0 flex items-center justify-center opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 z-10 pointer-events-none">
               <span className="text-xs sm:text-base md:text-2xl lg:text-4xl xl:text-5xl text-accent tracking-[0.15em] md:tracking-widest uppercase font-mono font-bold whitespace-nowrap drop-shadow-md">
@@ -36,14 +36,14 @@ export default function Hero() {
 
             {/* Top Half */}
             <span
-              className="block text-5xl sm:text-7xl md:text-9xl lg:text-[170px] xl:text-[220px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6 clip-half-top"
+              className="block whitespace-nowrap text-6xl sm:text-7xl md:text-9xl lg:text-[170px] xl:text-[220px] text-ink transition-transform duration-500 ease-out group-hover:-translate-y-3 md:group-hover:-translate-y-6 clip-half-top"
             >
               {firstPart}<span className="text-accent">{lastPart}</span>
             </span>
 
             {/* Bottom Half */}
             <span
-              className="top-0 left-0 text-5xl sm:text-7xl md:text-9xl lg:text-[170px] xl:text-[220px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6 absolute clip-half-bottom"
+              className="absolute top-0 left-0 whitespace-nowrap text-6xl sm:text-7xl md:text-9xl lg:text-[170px] xl:text-[220px] text-ink transition-transform duration-500 ease-out group-hover:translate-y-3 md:group-hover:translate-y-6 clip-half-bottom"
               aria-hidden="true"
             >
               {firstPart}<span className="text-accent">{lastPart}</span>

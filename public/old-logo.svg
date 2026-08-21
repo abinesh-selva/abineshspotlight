@@ -1,0 +1,35 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    PRECISION REPLICA OF THE ABINESH MASTERPIECE 
+    Interconnected Geometric 'ABINESH' in Gold (#DCBC7D)
+  -->
+  <style>
+    .brand-line { fill: none; stroke: #DCBC7D; stroke-width: 3.5; stroke-linecap: butt; stroke-linejoin: miter; }
+    .brand-bold { fill: #DCBC7D; }
+  </style>
+
+  <!-- Grouped for the exact interlocking flow seen in the reference -->
+  <g transform="translate(10, 20)">
+    
+    <!-- A + B Connection (Intertwined) -->
+    <path d="M5 80L40 5L75 80M12 68H55" class="brand-line"/>
+    <path d="M55 68C85 68 110 60 110 37C110 15 85 10 60 10V85C60 85 115 85 115 62C115 45 95 40 75 40" class="brand-line"/>
+
+    <!-- I -->
+    <path d="M135 5V80" class="brand-line"/>
+
+    <!-- N + E -->
+    <path d="M155 80V5L190 80V5" class="brand-line"/>
+    <path d="M205 10H245M205 45H240M205 80H245M205 5V85" class="brand-line"/>
+
+    <!-- S (Multi-curve) -->
+    <path d="M295 25C295 5 260 5 260 30C260 55 295 55 295 80C295 105 260 105 260 80" class="brand-line"/>
+
+    <!-- H -->
+    <path d="M315 5V80M350 5V80M315 42H350" class="brand-line"/>
+
+    <!-- Double Outline Effects (Replicating the depth) -->
+    <path d="M20 74L40 18L60 74M16 62H45" class="brand-line" opacity="0.4"/>
+    <path d="M68 62C80 62 100 58 100 40M68 20V78" class="brand-line" opacity="0.4"/>
+  </g>
+</svg>

@@ -11,7 +11,6 @@ type Project = {
   featured?: boolean
   challenge: string
   stack: string[]
-  url: string | null
 }
 
 const projects: Project[] = [
@@ -26,7 +25,6 @@ const projects: Project[] = [
     featured: true,
     challenge: 'ACF architecture overhaul, CPT development, and performance optimisation for a leading SaaS landing page platform used by 120,000+ marketers.',
     stack: ['WordPress', 'ACF Pro', 'PHP', 'Performance'],
-    url: 'https://unbounce.com',
   },
   {
     name: 'Intiveo',
@@ -36,7 +34,6 @@ const projects: Project[] = [
     subGroup: 'global',
     challenge: 'Custom WordPress components, interactive element integrations, and conversion flow optimisation for a patient communication SaaS.',
     stack: ['WordPress', 'PHP', 'JavaScript', 'ACF Pro'],
-    url: null,
   },
   {
     name: 'Open Gov Week',
@@ -46,7 +43,6 @@ const projects: Project[] = [
     subGroup: 'global',
     challenge: 'Custom CMS and taxonomy architecture for a major international open government event platform.',
     stack: ['WordPress', 'ACF Pro', 'CPT', 'REST API'],
-    url: 'https://www.opengovweek.org',
   },
 
   // Row 2 (Vice Versa — Featured Right!)
@@ -58,7 +54,6 @@ const projects: Project[] = [
     subGroup: 'global',
     challenge: 'Marketing site optimisation, Gutenberg blocks, and CRM form integrations for a popular CRM platform website.',
     stack: ['WordPress', 'PHP', 'ACF Pro', 'CRM Integration'],
-    url: null,
   },
   {
     name: 'PPIC',
@@ -68,7 +63,6 @@ const projects: Project[] = [
     subGroup: 'global',
     challenge: 'Custom theme development, complex block architectures, and content migrations for a leading policy research and analysis center.',
     stack: ['WordPress', 'PHP', 'ACF Pro', 'CSS'],
-    url: null,
   },
   {
     name: 'Open Government Partnership',
@@ -79,7 +73,6 @@ const projects: Project[] = [
     featured: true,
     challenge: 'Large-scale CMS and Custom Post Type architecture for an international initiative spanning 75+ governments and millions of annual visitors.',
     stack: ['WordPress', 'ACF Pro', 'CPT', 'REST API'],
-    url: 'https://www.opengovpartnership.org',
   },
 
   // Row 4 (Vice Versa — Featured Right!)
@@ -91,7 +84,6 @@ const projects: Project[] = [
     subGroup: 'global',
     challenge: 'Marketing website architecture, ACF modular layouts, and performance tuning for a leading RFP response software platform.',
     stack: ['WordPress', 'PHP', 'ACF Pro', 'Webpack'],
-    url: null,
   },
   {
     name: 'Traction Complete',
@@ -102,7 +94,6 @@ const projects: Project[] = [
     featured: true,
     challenge: 'ACF architecture, performance improvements, and custom plugin development for a Salesforce-native data management SaaS.',
     stack: ['WordPress', 'ACF Pro', 'PHP', 'Plugin Dev'],
-    url: 'https://www.tractioncomplete.com',
   },
 
   // Row 3 (Featured Left)
@@ -114,7 +105,6 @@ const projects: Project[] = [
     subGroup: 'global',
     challenge: 'Full WCAG accessibility compliance and Core Web Vitals optimisation for an enterprise headless commerce platform with global reach.',
     stack: ['Craft CMS', 'WCAG', 'Performance', 'SEO'],
-    url: 'https://www.elasticpath.com',
   },
   {
     name: 'Premier Boxing Champions',
@@ -125,7 +115,6 @@ const projects: Project[] = [
     featured: true,
     challenge: 'Security hardening and performance work for a major US boxing promoter, including live fight-night features built to handle peak concurrency.',
     stack: ['Drupal', 'PHP', 'Security', 'Performance'],
-    url: 'https://www.premierboxingchampions.com',
   },
   {
     name: 'DialedIn',
@@ -135,7 +124,6 @@ const projects: Project[] = [
     subGroup: 'global',
     challenge: 'Developed and maintained a Drupal-based website for a cloud contact center platform, focusing on custom features, performance improvements, and ongoing site maintenance.',
     stack: ['Drupal', 'PHP', 'JavaScript', 'Performance'],
-    url: 'https://dialedin.ca/',
   },
   {
     name: 'FUEiNT',
@@ -145,7 +133,6 @@ const projects: Project[] = [
     subGroup: 'domestic',
     challenge: 'Rebuilt the company website in Next.js, improving performance, modernising the UI, and creating a scalable codebase for future growth.',
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-    url: null,
   },
 
   {
@@ -156,7 +143,6 @@ const projects: Project[] = [
     subGroup: 'domestic',
     challenge: 'Migrated a legacy WordPress website to React/Next.js to modernise performance and user experience.',
     stack: ['Next.js', 'React', 'Tailwind'],
-    url: null,
   },
   {
     name: 'Siswa',
@@ -166,7 +152,6 @@ const projects: Project[] = [
     subGroup: 'domestic',
     challenge: 'A cross-platform mobile application for student collaboration, academic tracking, and real-time notifications.',
     stack: ['Flutter', 'Firebase', 'Dart', 'State Management'],
-    url: null,
   },
   {
     name: 'Naicee',
@@ -176,7 +161,6 @@ const projects: Project[] = [
     subGroup: 'domestic',
     challenge: 'A platform dedicated to preserving native Tamil Nadu dog breeds — multilingual support, breed search filters, adopt workflows, and optimised image galleries.',
     stack: ['Next.js', 'React', 'Tailwind'],
-    url: null,
   },
   {
     name: 'Parithadam',
@@ -186,7 +170,6 @@ const projects: Project[] = [
     subGroup: 'domestic',
     challenge: 'E-commerce platform for 100% natural honey, traditional snacks, and chemical-free rice — with Nodemailer-based order notifications.',
     stack: ['Next.js 15', 'React', 'Tailwind', 'Nodemailer'],
-    url: null,
   },
 
   // ── Independent Projects ─────────────────────────────────────────
@@ -199,7 +182,6 @@ const projects: Project[] = [
     subGroup: 'client',
     challenge: 'Local bakery website with custom ordering, gallery, and brand identity — pixel-perfect from Figma to code.',
     stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
-    url: 'https://navibakesandcakes.vercel.app/',
   },
   {
     name: 'Sri Dhanamoorthy Traders',
@@ -210,7 +192,6 @@ const projects: Project[] = [
     featured: true,
     challenge: 'B2B wholesale cement and steel trader website with product catalogue and trade enquiry flows.',
     stack: ['WordPress', 'ACF', 'Pantheon'],
-    url: 'https://dev-sri-dhanamoorthy-traders.pantheonsite.io',
   },
   {
     name: 'MySupportInfo',
@@ -220,7 +201,6 @@ const projects: Project[] = [
     subGroup: 'utility',
     challenge: 'A customer support portal designed to centralise ticketing, knowledge base, and user communication for growing businesses.',
     stack: ['Next.js', 'React', 'Tailwind', 'Vercel'],
-    url: 'https://mysupportinfo.vercel.app',
   },
 ]
 

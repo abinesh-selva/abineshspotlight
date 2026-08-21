@@ -239,40 +239,40 @@ export default function About() {
                   }`}
                 >
                   {/* Card */}
-                  <div className={`w-full md:w-[calc(50%-2.5rem)] ${isRight ? 'md:pr-10' : 'md:pl-10'} pl-10 sm:pl-12 md:pl-0 pb-8 sm:pb-12 relative`}>
-                    <div className="border border-canvas/10 hover:border-accent/40 bg-canvas/5 p-5 sm:p-7 transition-all duration-300 group rounded-xl relative">
+                  <div className={`w-full md:w-[calc(50%-2.5rem)] ${isRight ? 'md:pr-10' : 'md:pl-10'} pl-8 sm:pl-10 md:pl-0 pb-8 sm:pb-12 relative`}>
+                    <div className="border border-canvas/10 hover:border-accent/40 bg-canvas/5 p-4 sm:p-6 md:p-7 transition-all duration-300 group rounded-xl relative">
                       
                       {/* Node Dot on Card Top */}
                       <div
                         ref={(el) => { dotRefs.current[idx] = el }}
-                        className={`absolute -top-3.5 ${
-                          isRight ? 'left-6 md:left-auto md:right-8' : 'left-6 md:left-8'
+                        className={`absolute -top-3.5 left-0 md:left-auto ${
+                          isRight ? 'md:right-8' : 'md:left-8'
                         } flex items-center justify-center z-20`}
                       >
-                        <div className={`w-7 h-7 rounded-full border-2 border-ink ${style.dot} flex items-center justify-center shadow-lg`}>
-                          <span className="w-2 h-2 rounded-full bg-canvas" />
+                        <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-ink ${style.dot} flex items-center justify-center shadow-lg`}>
+                          <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-canvas" />
                         </div>
                       </div>
 
                       <div className="reveal-text flex items-center justify-between mb-3 sm:mb-4 flex-wrap gap-2 pt-1">
-                        <span className={`text-sm font-mono uppercase tracking-widest border px-2.5 py-0.5 ${style.labelClass}`}>
+                        <span className={`text-xs sm:text-sm font-mono uppercase tracking-widest border px-2.5 py-0.5 ${style.labelClass}`}>
                           {style.label}
                         </span>
-                        <span className="text-sm font-mono text-canvas/50">
+                        <span className="text-xs sm:text-sm font-mono text-canvas/50">
                           {item.year} — {item.end}
                         </span>
                       </div>
-                      <h3 className="reveal-text text-canvas font-semibold text-lg md:text-xl group-hover:text-accent transition-colors mb-1.5 delay-100">
+                      <h3 className="reveal-text text-canvas font-semibold text-base sm:text-lg md:text-xl group-hover:text-accent transition-colors mb-1.5 delay-100">
                         {item.title}
                       </h3>
-                      <p className="reveal-text text-sm font-mono text-canvas/50 mb-3.5 delay-200">
+                      <p className="reveal-text text-xs sm:text-sm font-mono text-canvas/50 mb-3 delay-200">
                         {item.company}<span className="mx-1.5">·</span>{item.location}
                       </p>
                       <p className="reveal-text text-canvas/80 text-sm sm:text-base leading-relaxed mb-4 delay-300">{item.desc}</p>
                       {item.tags && item.tags.length > 0 && item.tags[0] !== '' && (
-                        <div className="reveal-text flex flex-wrap gap-2 delay-400">
+                        <div className="reveal-text flex flex-wrap gap-1.5 sm:gap-2 delay-400">
                           {item.tags.filter(tag => tag.trim() !== '').map((tag) => (
-                            <span key={tag} className="text-sm font-mono text-canvas/70 border border-canvas/15 px-2.5 py-1 hover:bg-accent hover:border-accent hover:text-ink transition-all cursor-default rounded-md">
+                            <span key={tag} className="text-xs sm:text-sm font-mono text-canvas/70 border border-canvas/15 px-2 sm:px-2.5 py-0.5 sm:py-1 hover:bg-accent hover:border-accent hover:text-ink transition-all cursor-default rounded-md">
                               {tag}
                             </span>
                           ))}
@@ -288,23 +288,23 @@ export default function About() {
             })}
 
             {/* End cap — Seeking Full-Time Roles */}
-            <div className="relative flex flex-col md:items-center pl-10 sm:pl-12 md:pl-0 mt-4 sm:mt-8">
+            <div className="relative flex flex-col md:items-center pl-8 sm:pl-10 md:pl-0 mt-4 sm:mt-8">
               {/* Dot */}
               <div
                 ref={(el) => { dotRefs.current[milestones.length] = el }}
-                className="absolute left-6 md:left-1/2 md:-translate-x-1/2 -top-3.5 flex flex-col items-center z-20"
+                className="absolute left-0 md:left-1/2 md:-translate-x-1/2 -top-3.5 flex flex-col items-center z-20"
               >
-                <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center animate-pulse border-2 border-ink shadow-lg">
-                  <span className="w-2.5 h-2.5 rounded-full bg-ink" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-accent flex items-center justify-center animate-pulse border-2 border-ink shadow-lg">
+                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-ink" />
                 </div>
               </div>
 
               {/* Text Badge */}
-              <div className="bg-canvas/5 border border-accent/40 px-5 sm:px-7 py-3.5 sm:py-4 shadow-sm max-w-full z-10 rounded-xl text-left md:text-center mt-2 md:mt-6">
-                <p className="text-sm sm:text-base font-mono text-accent uppercase tracking-widest font-bold">
+              <div className="bg-canvas/5 border border-accent/40 px-4 sm:px-6 py-3 sm:py-4 shadow-sm w-full md:w-auto z-10 rounded-xl text-left md:text-center mt-2 md:mt-6">
+                <p className="text-xs sm:text-sm md:text-base font-mono text-accent uppercase tracking-widest font-bold">
                   Open to Full-Time Roles · Present
                 </p>
-                <p className="text-sm font-mono text-canvas/70 mt-1">
+                <p className="text-xs sm:text-sm font-mono text-canvas/70 mt-1">
                   Senior WordPress Developer &amp; Full Stack Engineer
                 </p>
               </div>

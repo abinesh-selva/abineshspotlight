@@ -226,6 +226,8 @@ const projects: Project[] = [
 
 const filters = ['All', 'Enterprise', 'Independent', 'WordPress', 'Next.js', 'Flutter', 'CMS', 'Drupal']
 
+import ShootingStarsGrid from './ShootingStarsGrid'
+
 export default function Projects() {
   const [active, setActive] = useState('All')
 
@@ -243,8 +245,9 @@ export default function Projects() {
   const showBothGroups = showEnterprise && showIndependent
 
   return (
-    <section id="projects" className="py-20 lg:py-24 bg-ink">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="relative py-20 lg:py-24 bg-ink">
+      <ShootingStarsGrid />
+      <div className="relative z-10 container mx-auto px-6">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-10 gap-6">

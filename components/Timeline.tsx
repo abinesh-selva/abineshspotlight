@@ -57,10 +57,13 @@ const TYPE_STYLES = {
   freelance: { dot: 'bg-forest', label: 'Freelance', labelClass: 'text-forest border-forest/30 rounded-full' },
 }
 
+import GameOfLife from './GameOfLife'
+
 export default function Timeline() {
   return (
-    <section id="timeline" className="py-16 bg-canvas border-t border-rule">
-      <div className="container mx-auto px-6">
+    <section id="timeline" className="relative py-16 bg-transparent border-t border-rule">
+      <GameOfLife />
+      <div className="relative z-10 container mx-auto px-6">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-4">

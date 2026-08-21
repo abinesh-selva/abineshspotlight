@@ -53,12 +53,15 @@ const TYPE_STYLES = {
   work:      { dot: 'bg-accent border-accent', label: 'Full-Time',  labelClass: 'text-accent border-accent/40 rounded-full' },
 }
 
+import ShootingStarsGrid from './ShootingStarsGrid'
+
 export default function About() {
   return (
-    <section id="about" className="bg-ink text-canvas border-t border-canvas/10">
-
+    <section id="about" className="relative bg-ink text-canvas border-t border-canvas/10">
+      <ShootingStarsGrid />
+      
       {/* ── Part 1: About Me (Balanced 2-Column Layout) ───────────────── */}
-      <div className="container mx-auto px-6 py-16 lg:py-20 border-b border-canvas/10">
+      <div className="relative z-10 container mx-auto px-6 py-16 lg:py-20 border-b border-canvas/10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Bio & Narrative (7 cols) */}
@@ -129,7 +132,7 @@ export default function About() {
       </div>
 
       {/* ── Part 2: Career Roadmap (Clean Vertical Timeline) ──────────── */}
-      <div id="timeline" className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+      <div id="timeline" className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 sm:mb-16 gap-4 reveal-text">
           <div>
             <p className="text-xs font-mono text-accent uppercase tracking-widest mb-3 font-semibold">Career Roadmap</p>

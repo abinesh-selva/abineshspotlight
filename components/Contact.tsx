@@ -1,4 +1,5 @@
 'use client'
+import ShootingStarsGrid from './ShootingStarsGrid'
 
 export default function Contact() {
   const navLinks = [
@@ -8,6 +9,8 @@ export default function Contact() {
     { label: 'Projects',   href: '#projects' },
     { label: 'Blog',       href: '#blog' },
   ]
+
+  const currentYear = new Date().getFullYear()
 
   const socials = [
     {
@@ -49,10 +52,10 @@ export default function Contact() {
   ]
 
   return (
-    <footer id="contact" className="bg-ink border-t border-canvas/10">
-
+    <footer id="contact" className="relative bg-ink border-t border-canvas/10">
+      <ShootingStarsGrid />
       {/* Main Footer Grid */}
-      <div className="container mx-auto px-6 py-16">
+      <div className="relative z-10 container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12">
 
           {/* ── Column 1: Identity & Address ── */}
@@ -167,18 +170,18 @@ export default function Contact() {
       </div>
 
       {/* ── Bottom Bar ── */}
-      <div className="border-t border-canvas/10">
+      <div className="relative z-10 border-t border-canvas/10">
         <div className="container mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-base font-mono text-canvas">
-            © {new Date().getFullYear()} <span className="hover:text-accent transition-colors"><a href="#hero"> abineshspotlight.online</a></span> · All rights reserved.
+          <p className="text-sm sm:text-base font-mono text-canvas/90">
+            © {new Date().getFullYear()} <span className="text-canvas hover:text-accent transition-colors"><a href="#hero">abineshspotlight.online</a></span> · All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a
               href="#hero"
-              className="group flex items-center gap-1.5 text-base font-mono text-canvas hover:text-accent transition-colors"
+              className="group flex items-center gap-1.5 text-sm sm:text-base font-mono font-medium text-canvas hover:text-accent transition-colors"
             >
               Back to top
-              <svg className="w-3.5 h-3.5 transition-transform group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-4 h-4 text-accent transition-transform group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 19V5M5 12l7-7 7 7" />
               </svg>
             </a>

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Carousel from './Carousel'
+import GameOfLife from './GameOfLife'
 
 const articles = [
   {
@@ -102,8 +103,9 @@ export default function Blog() {
   );
 
   return (
-    <section id="blog" className="py-20 lg:py-24 bg-canvas border-t border-rule">
-      <div className="container mx-auto px-6">
+    <section id="blog" className="relative py-20 lg:py-24 bg-transparent border-t border-rule">
+      <GameOfLife />
+      <div className="relative z-10 container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
           <div>
             <p className="reveal-text text-xs font-mono text-forest uppercase tracking-widest mb-3 font-semibold">Publications</p>

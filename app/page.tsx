@@ -6,7 +6,6 @@ import Projects from '@/components/Projects'
 import Blog from '@/components/Blog'
 import Contact from '@/components/Contact'
 import RevealObserver from '@/components/RevealObserver'
-
 export default function Home() {
   return (
     <>

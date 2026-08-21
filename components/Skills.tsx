@@ -195,12 +195,15 @@ const row2Tools: SkillItem[] = [
   },
 ]
 
+import GameOfLife from './GameOfLife'
+
 export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState<SkillItem | null>(null)
 
   return (
-    <section id="skills" className="py-20 lg:py-24 bg-canvas overflow-hidden border-t border-rule">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="relative py-20 lg:py-24 bg-transparent overflow-hidden border-t border-rule">
+      <GameOfLife />
+      <div className="relative z-10 container mx-auto px-6">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 gap-6 reveal-text">

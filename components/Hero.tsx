@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ScrambleText, { useScramble } from "./ScrambleText";
+import GameOfLife from "./GameOfLife";
 
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
@@ -9,8 +10,9 @@ export default function Hero() {
   const lastPart = ".S";
 
   return (
-    <section id="hero" className="relative bg-canvas flex flex-col overflow-hidden">
-      <div className="container mx-auto px-6 flex flex-col justify-center py-6 md:py-10 pt-32 md:pt-36">
+    <section id="hero" className="relative bg-transparent flex flex-col overflow-hidden">
+      <GameOfLife />
+      <div className="relative z-10 container mx-auto px-6 flex flex-col justify-center py-6 md:py-10 pt-32 md:pt-36">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-rule pb-5 gap-4 md:gap-0">
           <span className="flex items-center gap-2 text-xs font-mono text-mist uppercase tracking-widest">
             Open To Work

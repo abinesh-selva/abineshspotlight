@@ -12,12 +12,31 @@ export default function RevealObserver() {
           }
         })
       },
-      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -40px 0px' }
     )
 
-    document.querySelectorAll('.reveal-text').forEach((el) => observer.observe(el))
+    const observeElements = () => {
+      document.querySelectorAll('.reveal-text:not(.is-visible)').forEach((el) => {
+        observer.observe(el)
+      })
+    }
 
-    return () => observer.disconnect()
+    observeElements()
+
+    // Watch for dynamic DOM updates (e.g. project filter clicks)
+    const mutationObserver = new MutationObserver(() => {
+      observeElements()
+    })
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    })
+
+    return () => {
+      observer.disconnect()
+      mutationObserver.disconnect()
+    }
   }, [])
 
   return null

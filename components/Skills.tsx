@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface SkillItem {
   name: string
@@ -200,6 +200,20 @@ import GameOfLife from './GameOfLife'
 export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState<SkillItem | null>(null)
 
+  useEffect(() => {
+    if (!selectedSkill) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedSkill(null)
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = originalOverflow
+    }
+  }, [selectedSkill])
+
   return (
     <section id="skills" className="relative py-20 lg:py-24 bg-transparent overflow-hidden border-t border-rule">
       <GameOfLife />
@@ -287,14 +301,20 @@ export default function Skills() {
 
         {/* Selected Item Detail Interactive Modal / Drawer */}
         {selectedSkill && (
-          <div className="fixed inset-0 bg-ink/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-paper border-2 border-forest p-6 md:p-8 max-w-lg w-full rounded-2xl shadow-2xl relative animate-fadeIn">
+          <div 
+            onClick={() => setSelectedSkill(null)}
+            className="fixed inset-0 bg-ink/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          >
+            <div 
+              onClick={(e) => e.stopPropagation()}
+              className="bg-paper border-2 border-forest p-6 md:p-8 max-w-lg w-full rounded-2xl shadow-2xl relative animate-fadeIn"
+            >
               
               {/* Close button */}
               <button
                 onClick={() => setSelectedSkill(null)}
                 aria-label="Close details"
-                className="absolute top-4 right-4 w-8 h-8 rounded-full bg-canvas border border-rule text-mist hover:text-ink hover:border-forest flex items-center justify-center transition-all group"
+                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-canvas border border-rule text-mist hover:text-ink hover:border-forest flex items-center justify-center transition-all group"
               >
                 <svg className="w-4 h-4 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18" />
@@ -307,24 +327,24 @@ export default function Skills() {
                   {renderSkillIcon(selectedSkill.icon, selectedSkill.name)}
                 </div>
                 <div>
-                  <span className="text-xs font-mono uppercase tracking-widest text-forest font-bold px-2 py-0.5 rounded bg-forest/10 border border-forest/20">
+                  <span className="text-xs font-mono uppercase tracking-widest text-forest font-bold px-2.5 py-0.5 rounded bg-forest/10 border border-forest/20">
                     {selectedSkill.category}
                   </span>
-                  <h3 className="text-2xl font-display text-ink font-normal mt-1">
+                  <h3 className="text-2xl sm:text-3xl font-display text-ink font-normal mt-1">
                     {selectedSkill.name}
                   </h3>
                 </div>
               </div>
 
-              <div className="space-y-4 text-xs font-mono">
+              <div className="space-y-4 text-sm font-mono">
                 <div className="bg-canvas p-4 rounded-xl border border-rule">
-                  <p className="text-mist uppercase tracking-widest text-xs mb-1">Proficiency Level</p>
-                  <p className="text-forest font-bold text-sm">{selectedSkill.level}</p>
+                  <p className="text-mist uppercase tracking-widest text-xs font-semibold mb-1">Proficiency Level</p>
+                  <p className="text-forest font-bold text-base">{selectedSkill.level}</p>
                 </div>
 
                 <div className="bg-canvas p-4 rounded-xl border border-rule">
-                  <p className="text-mist uppercase tracking-widest text-xs mb-1">Enterprise Application</p>
-                  <p className="text-ink/80 leading-relaxed">{selectedSkill.useCase}</p>
+                  <p className="text-mist uppercase tracking-widest text-xs font-semibold mb-1">Enterprise Application</p>
+                  <p className="text-ink/90 text-sm sm:text-base leading-relaxed">{selectedSkill.useCase}</p>
                 </div>
               </div>
             </div>

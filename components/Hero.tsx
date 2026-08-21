@@ -27,6 +27,7 @@ export default function Hero() {
           className="group font-display font-semibold leading-none tracking-tighter uppercase select-none pt-8 cursor-default max-w-full"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onClick={() => setIsHovered((prev) => !prev)}
         >
           <div className="relative max-w-full">
             {/* Revealed Text (Center) */}

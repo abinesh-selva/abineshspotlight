@@ -15,9 +15,21 @@ export default function ShootingStarsGrid() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Generate new stars rapidly
+    let isVisible = true;
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    observer.observe(container);
+
+    // Generate new stars rapidly when visible
     const interval = setInterval(() => {
-      if (!containerRef.current) return;
+      if (!isVisible || !containerRef.current) return;
       const height = containerRef.current.offsetHeight;
       const width = containerRef.current.offsetWidth;
       const gridSpacing = 40; // match the grid pattern size
@@ -46,7 +58,10 @@ export default function ShootingStarsGrid() {
       setStars(prev => [...prev.slice(-14), newStar]); // Keep at most last 15 stars in DOM
     }, 350); // Spawn a star very frequently
 
-    return () => clearInterval(interval);
+    return () => {
+      observer.disconnect();
+      clearInterval(interval);
+    };
   }, []);
 
   return (
